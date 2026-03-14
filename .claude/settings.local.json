@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"SQL\\\\|SELECT\\\\|INSERT\\\\|UPDATE\\\\|DELETE\" /c/Users/pc/source/repos/baker__id02/*.cs --include=*.cs)",
+      "Bash(mv CourseArea.aspx CourseArea.aspx.cs CourseArea.aspx.designer.cs CourseSignup.aspx CourseSignup.aspx.cs CourseSignup.aspx.designer.cs Login.aspx Login.aspx.cs Login.aspx.designer.cs Videos.aspx Videos.aspx.cs Videos.aspx.designer.cs Presentations.aspx Presentations.aspx.cs Presentations.aspx.designer.cs Course/)",
+      "Bash(mv Users.aspx Users.aspx.cs Users.aspx.designer.cs Admin/)",
+      "Bash(sed -e 's|href=\"\"StyleSheet1.css\"\"|href=\"\"/StyleSheet1.css\"\"|g' -e \"s|url\\(''picture/book.jpg''\\)|url\\(''/picture/book.jpg''\\)|g\" -e 's|href=\"\"main.aspx\"\"|href=\"\"/main.aspx\"\"|g' -e 's|href=\"\"about.aspx\"\"|href=\"\"/About.aspx\"\"|g' -e 's|href=\"\"CourseSignup.aspx\"\"|href=\"\"/Course/CourseSignup.aspx\"\"|g' -e 's|href=\"\"Login.aspx\"\"|href=\"\"/Course/Login.aspx\"\"|g' -e 's|href=\"\"Users.aspx\"\"|href=\"\"/Admin/Users.aspx\"\"|g' -e 's|href=\"\"products.aspx\"\"|href=\"\"/products.aspx\"\"|g' -e 's|href=\"\"SimpleMixCakes.aspx\"\"|href=\"\"/Recipes/SimpleMixCakes.aspx\"\"|g' -e 's|href=\"\"CreamCakes.aspx\"\"|href=\"\"/Recipes/CreamCakes.aspx\"\"|g' -e 's|href=\"\"Cookies.aspx\"\"|href=\"\"/Recipes/Cookies.aspx\"\"|g' -e 's|href=\"\"Pralines.aspx\"\"|href=\"\"/Recipes/Pralines.aspx\"\"|g' -e 's|href=\"\"Macarons.aspx\"\"|href=\"\"/Recipes/Macarons.aspx\"\"|g' -e 's|href=\"\"EclairsAndChoux.aspx\"\"|href=\"\"/Recipes/EclairsAndChoux.aspx\"\"|g' -e 's|href=\"\"SweetYeastPastries.aspx\"\"|href=\"\"/Recipes/SweetYeastPastries.aspx\"\"|g' -e 's|href=\"\"PersonalDesserts.aspx\"\"|href=\"\"/Recipes/PersonalDesserts.aspx\"\"|g' all.Master.orig)",
+      "Bash(rm all.Master.orig)",
+      "Bash(xxd all.Master)",
+      "Bash(xxd StyleSheet1.css)",
+      "Bash(git add:*)",
+      "Bash(git rm:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git tag:*)",
+      "Bash(git checkout:*)"
+    ]
+  }
+}
