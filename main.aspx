@@ -13,7 +13,7 @@
     <div class="body">
         <div class="text-box">
             <h1>Ido Bakery & Pastry</h1>
-            <img src="picture/bake picture (1).jpg" width="350" />
+            <img src="/picture/bake picture (1).jpg" width="350" />
 
             <h2>ברוכים הבאים לעידו – אפייה וקונדיטוריה</h2>
 
@@ -31,17 +31,17 @@
             <ul>
                 <li>
                     <a href="/About.aspx" class="topic-box">
-                        <img src="picture/WhatsApp Image 2025-11-24 at 21.58.35.jpeg" />
+                        <img src="/picture/WhatsApp Image 2025-11-24 at 21.58.35.jpeg" />
                     </a>
                 </li>
                 <li>
                     <a href="/Course/CourseSignup.aspx" class="topic-box">
-                        <img src="picture/course.jpeg" />
+                        <img src="/picture/course.jpeg" />
                     </a>
                 </li>
                 <li>
                     <a href="/products.aspx" class="topic-box">
-                        <img src="picture/recpies.jpeg" />
+                        <img src="/picture/recpies.jpeg" />
                     </a>
                 </li>
             </ul>

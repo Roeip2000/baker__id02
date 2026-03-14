@@ -1,5 +1,6 @@
 using System;
 using System.Data;
+using System.Data.SqlClient;
 using System.Web.UI;
 
 public partial class Login : System.Web.UI.Page
@@ -15,8 +16,15 @@ public partial class Login : System.Web.UI.Page
         string uName = txtUserName.Text.Trim();
         string pw = txtPassword.Text.Trim();
 
-        string sql = "SELECT * FROM Users WHERE uName='" + uName + "' AND pw='" + pw + "'";
-        DataTable dt = Helper.ExecuteDataTable("Database1.mdf", sql);
+        SqlConnection conn = Helper.ConnectToDb("Database1.mdf");
+        SqlCommand cmd = new SqlCommand("SELECT * FROM Users WHERE uName=@uName AND pw=@pw", conn);
+        cmd.Parameters.AddWithValue("@uName", uName);
+        cmd.Parameters.AddWithValue("@pw", pw);
+        conn.Open();
+        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        conn.Close();
 
         if (dt.Rows.Count > 0)
         {
