@@ -20,7 +20,7 @@
         <div style="margin-top:10px;">
             <a href="main.aspx" style="margin:0 10px;">דף ראשי</a>
             <a href="about.aspx" style="margin:0 10px;">אודות</a>
-             <a href="CourseInfo2.aspx" style="margin:0 10px;">קורסים</a>
+
             <a href="CourseSignup.aspx" style="margin:0 10px;">הרשמה לקורס</a>
             <a href="products.aspx" style="margin:0 10px;">ספר המתכונים:</a>
            <span style="margin:0 10px;">|</span>
