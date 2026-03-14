@@ -24,7 +24,7 @@
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
                 <a href="/Recipes/SimpleMixCakes.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Simple Mix Cakes
+                    עוגות בחושות
                 </a>
             </div>
         </div>
@@ -32,7 +32,7 @@
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
                 <a href="/Recipes/CreamCakes.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Cream Cakes
+                    עוגות מוס וקרם
                 </a>
             </div>
         </div>
@@ -40,7 +40,7 @@
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
                 <a href="/Recipes/SweetYeastPastries.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Sweet Yeast Pastries
+                    מאפי שמרים
                 </a>
             </div>
         </div>
@@ -48,7 +48,7 @@
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
                 <a href="/Recipes/PersonalDesserts.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Personal Desserts
+                    קינוחים אישיים
                 </a>
             </div>
         </div>
@@ -56,7 +56,7 @@
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
                 <a href="/Recipes/Cookies.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Cookies
+                    עוגיות
                 </a>
             </div>
         </div>
@@ -64,7 +64,7 @@
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
                 <a href="/Recipes/EclairsAndChoux.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Eclairs &amp; Choux
+                    אקלרים ופחזניות
                 </a>
             </div>
         </div>
@@ -72,7 +72,7 @@
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
                 <a href="/Recipes/Macarons.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Macarons
+                    מקרונים
                 </a>
             </div>
         </div>
@@ -80,7 +80,7 @@
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
                 <a href="/Recipes/Pralines.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Pralines
+                    פרלינים
                 </a>
             </div>
         </div>
