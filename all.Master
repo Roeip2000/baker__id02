@@ -20,13 +20,8 @@
             <a href="/main.aspx" style="margin:0 10px;">דף ראשי</a>
             <a href="/About.aspx" style="margin:0 10px;">אודות</a>
             <a href="/Course/CourseSignup.aspx" style="margin:0 10px;">הרשמה לקורס</a>
-            <a href="/Course/Login.aspx" style="margin:0 10px;">התחברות</a>
-            <a href="/Admin/Users.aspx" style="margin:0 10px;">אנשים רשומים</a>
-            <asp:Button ID="btnLogout" runat="server" Text="התנתק" OnClick="btnLogout_Click"
-                Visible="false"
-                style="margin:0 10px; background:transparent; border:1px solid white; color:white; cursor:pointer; font-size:14px; padding:4px 12px; border-radius:6px;" />
             <a href="/products.aspx" style="margin:0 10px;">ספר המתכונים:</a>
-            <span style="margin:0 10px;">|</span>
+           <span style="margin:0 10px;">|</span>
             <a href="/Recipes/SimpleMixCakes.aspx" style="margin:0 10px;">עוגות בחושות</a>
             <a href="/Recipes/CreamCakes.aspx" style="margin:0 10px;">עוגות מוס וקרם</a>
             <a href="/Recipes/Cookies.aspx" style="margin:0 10px;">עוגיות</a>
@@ -35,6 +30,12 @@
             <a href="/Recipes/EclairsAndChoux.aspx" style="margin:0 10px;">אקלרים ופחזניות</a>
             <a href="/Recipes/SweetYeastPastries.aspx" style="margin:0 10px;">מאפי שמרים</a>
             <a href="/Recipes/PersonalDesserts.aspx" style="margin:0 10px;">קינוחים אישיים</a>
+            <span style="margin:0 10px;">|</span>
+            <a href="/Course/Login.aspx" style="margin:0 10px;">התחברות</a>
+            <a href="/Admin/Users.aspx" style="margin:0 10px;">אנשים רשומים</a>
+            <asp:Button ID="btnLogout" runat="server" Text="התנתק" OnClick="btnLogout_Click"
+                Visible="false"
+                style="margin:0 10px; background:transparent; border:1px solid white; color:white; cursor:pointer; font-size:14px; padding:4px 12px; border-radius:6px;" />
         </div>
 
         <h2>

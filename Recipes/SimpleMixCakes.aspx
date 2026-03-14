@@ -14,7 +14,7 @@
 
       
         <div class="recipe-box">
-            <img src="picture/carot.jpeg" class="recipe-img" />
+            <img src="/picture/carot.jpeg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>עוגת גזר בחושה (Carrot Cake – Simple Mix)</h3>
@@ -43,7 +43,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/chocolet.jpeg" class="recipe-img" />
+            <img src="/picture/chocolet.jpeg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>עוגת שוקולד בחושה</h3>
@@ -72,7 +72,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/vanil.jpg" class="recipe-img" />
+            <img src="/picture/vanil.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>עוגת וניל בחושה</h3>

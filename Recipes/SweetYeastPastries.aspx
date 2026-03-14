@@ -14,7 +14,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/kurto_hungarian.jpg" class="recipe-img" />
+            <img src="/picture/kurto_hungarian.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>קורטוש הונגרי (כמו בבודפשט)</h3>
@@ -44,7 +44,7 @@
 
      
         <div class="recipe-box">
-            <img src="picture/cinnabon_cloud.jpg" class="recipe-img" />
+            <img src="/picture/cinnabon_cloud.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>סינבון עננים רך ומושלם</h3>
@@ -74,7 +74,7 @@
 
     
         <div class="recipe-box">
-            <img src="picture/rogelach_homemade.jpg" class="recipe-img" />
+            <img src="/picture/rogelach_homemade.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>רוגלך ביתי</h3>

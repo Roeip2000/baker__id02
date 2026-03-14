@@ -14,7 +14,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/amsterdam_cookies.jpg" class="recipe-img" />
+            <img src="/picture/amsterdam_cookies.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>עוגיות אמסטרדם קלאסיות</h3>
@@ -45,7 +45,7 @@
 
 
         <div class="recipe-box">
-            <img src="picture/choc_chip_cookies.jpg" class="recipe-img" />
+            <img src="/picture/choc_chip_cookies.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>עוגיות שוקולד צ'יפס קלאסיות</h3>
@@ -78,7 +78,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/tahini_cookies.jpg" class="recipe-img" />
+            <img src="/picture/tahini_cookies.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>עוגיות טחינה ביתיות</h3>

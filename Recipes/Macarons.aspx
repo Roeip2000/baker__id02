@@ -14,7 +14,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/lemon_cream_macarons.jpg" class="recipe-img" />
+            <img src="/picture/lemon_cream_macarons.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>מקרונים לימוניים קלאסיים</h3>
@@ -52,7 +52,7 @@
 
             <div class="recipe-text">
                 <h3>מקרונים Tea Party לימוניים</h3>
-                <img src="picture/tea_party_macarons..jpg" />
+                <img src="/picture/tea_party_macarons..jpg" />
                 <p><b>מרכיבים:</b></p>
                 <ul>
                     <li>200 גרם אבקת סוכר</li>
@@ -84,7 +84,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/mako_macarons.jpg" class="recipe-img" />
+            <img src="/picture/mako_macarons.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>מקרונים שוקולדיים</h3>

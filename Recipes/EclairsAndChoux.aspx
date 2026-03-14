@@ -14,7 +14,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/saint_honore_puffs.jpg" class="recipe-img" />
+            <img src="/picture/saint_honore_puffs.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>פחזניות סנט אונורה (קרם וניל + קרמל)</h3>
@@ -59,7 +59,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/whipped_puffs_mold.jpg" class="recipe-img" />
+            <img src="/picture/whipped_puffs_mold.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>פחזניות קצפת מושלמות</h3>
@@ -95,7 +95,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/lemon_mint_eclair.jpg" class="recipe-img" />
+            <img src="/picture/lemon_mint_eclair.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>אקלר לימון ונענע</h3>

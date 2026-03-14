@@ -14,7 +14,7 @@
 
       
         <div class="recipe-box">
-            <img src="picture/21pralines_espresso.png" class="recipe-img" />
+            <img src="/picture/21pralines_espresso.png" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>פרלינים שוקולד מריר ואספרסו</h3>
@@ -37,7 +37,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/pralines_marzipan_cherries.jpg" class="recipe-img" />
+            <img src="/picture/pralines_marzipan_cherries.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>פרלינים מרציפן ודובדבנים בציפוי שוקולד</h3>
@@ -62,7 +62,7 @@
 
        
         <div class="recipe-box">
-            <img src="picture/coffee_pralines.jpg" class="recipe-img" />
+            <img src="/picture/coffee_pralines.jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>פרלין שוקולד מריר במילוי קרם קפה</h3>
