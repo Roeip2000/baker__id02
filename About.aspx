@@ -40,7 +40,7 @@
 
         <p class="footer-text">© 2025 Ido Bakery & Pastry – כל הזכויות שמורות</p>
 
-        <a href="main.aspx">לחזור לדף הראשי</a>
+        <a href="/main.aspx">לחזור לדף הראשי</a>
 
     </div>
 

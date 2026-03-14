@@ -26,7 +26,7 @@ public partial class CourseSignup : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@prefix", ddlPrefix.SelectedValue);
             cmd.Parameters.AddWithValue("@phone", txtPhone.Text.Trim());
             cmd.Parameters.AddWithValue("@city", txtCity.Text.Trim());
-            cmd.Parameters.AddWithValue("@pw", txtUserName.Text.Trim());
+            cmd.Parameters.AddWithValue("@pw", txtPassword.Text.Trim());
 
             conn.Open();
             cmd.ExecuteNonQuery();

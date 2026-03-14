@@ -97,6 +97,28 @@
     margin-bottom: 10px;
 }
 
+.body {
+    padding: 20px;
+}
+
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+.msg-text {
+    display: block;
+    text-align: center;
+    color: green;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
 .text-box {
     background: rgba(255, 255, 255, 0.85);
     padding: 15px;

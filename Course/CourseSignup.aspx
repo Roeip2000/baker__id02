@@ -24,6 +24,11 @@
         </tr>
 
         <tr>
+            <td>סיסמה:</td>
+            <td><asp:TextBox ID="txtPassword" runat="server" TextMode="Password" /></td>
+        </tr>
+
+        <tr>
             <td>שם פרטי:</td>
             <td><asp:TextBox ID="txtFirstName" runat="server" /></td>
         </tr>

@@ -1,5 +1,6 @@
 using System;
 using System.Data;
+using System.Web;
 using System.Web.UI;
 
 namespace baker_ido
@@ -31,11 +32,11 @@ namespace baker_ido
                 {
                     usersList += "<tr style='border-bottom:1px solid #eee;'>";
                     usersList += "<td style='padding:8px;'>" + (i + 1) + "</td>";
-                    usersList += "<td style='padding:8px;'>" + table.Rows[i]["uName"] + "</td>";
-                    usersList += "<td style='padding:8px;'>" + table.Rows[i]["fName"] + "</td>";
-                    usersList += "<td style='padding:8px;'>" + table.Rows[i]["lName"] + "</td>";
-                    usersList += "<td style='padding:8px;'>" + table.Rows[i]["email"] + "</td>";
-                    usersList += "<td style='padding:8px;'>" + table.Rows[i]["city"] + "</td>";
+                    usersList += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["uName"]) + "</td>";
+                    usersList += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["fName"]) + "</td>";
+                    usersList += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["lName"]) + "</td>";
+                    usersList += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["email"]) + "</td>";
+                    usersList += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["city"]) + "</td>";
                     usersList += "</tr>";
                 }
 
