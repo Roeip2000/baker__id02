@@ -104,6 +104,7 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -121,19 +122,17 @@
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Recipes\Cookies.aspx" />
-    <Content Include="Course\CourseArea.aspx" />
-    <Content Include="CourseArea.css" />
-    <Content Include="Course\CourseSignup.aspx" />
-    <Content Include="Recipes\CreamCakes.aspx" />
+    <Content Include="Cookies.aspx" />
+    <Content Include="CourseInfo2.aspx" />
+    <Content Include="CourseSignup.aspx" />
+    <Content Include="CreamCakes.aspx" />
     <Content Include="Default.aspx" />
-    <Content Include="Recipes\EclairsAndChoux.aspx" />
+    <Content Include="EclairsAndChoux.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Course\Login.aspx" />
-    <Content Include="Recipes\Macarons.aspx" />
+    <Content Include="Macarons.aspx" />
     <Content Include="main.aspx" />
-    <Content Include="Recipes\PersonalDesserts.aspx" />
+    <Content Include="PersonalDesserts.aspx" />
     <Content Include="picture\03732f2c-49c6-42f9-87cb-4b9e735da620_500 %281%29.jpg" />
     <Content Include="picture\03732f2c-49c6-42f9-87cb-4b9e735da620_500.jpg" />
     <Content Include="picture\21pralines_espresso.png" />
@@ -179,7 +178,7 @@
     <Content Include="picture\vanil.jpg" />
     <Content Include="picture\WhatsApp Image 2025-11-24 at 21.58.35.jpeg" />
     <Content Include="picture\whipped_puffs_mold.jpg" />
-    <Content Include="Recipes\Pralines.aspx" />
+    <Content Include="Pralines.aspx" />
     <Content Include="products.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -210,16 +209,6 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="all.Master" />
-    <Content Include="CourseArea2.Master" />
-    <Content Include="Course\Presentations.aspx" />
-    <Content Include="course_presentations\Cream_Cake_Masterclass.pdf" />
-    <Content Include="course_presentations\Gourmet_Chocolate_Masterclass.pdf" />
-    <Content Include="course_presentations\Mousse_Blueprint.pdf" />
-    <Content Include="course_presentations\The_Baker_s_Blueprint.pdf" />
-    <Content Include="course_presentations\The_Choux_Blueprint.pdf" />
-    <Content Include="course_presentations\The_Cookie_Blueprint.pdf" />
-    <Content Include="course_presentations\The_Macaron_Blueprint.pdf" />
-    <Content Include="course_presentations\The_Yeast_Blueprint.pdf" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
@@ -247,14 +236,15 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
-    <Content Include="Recipes\SimpleMixCakes.aspx" />
+    <Content Include="SimpleMixCakes.aspx" />
+    <Content Include="Site.Master" />
     <Content Include="StyleSheet1.css" />
-    <Content Include="Recipes\SweetYeastPastries.aspx" />
-    <Content Include="Admin\Users.aspx" />
-    <Content Include="Course\Videos.aspx" />
+    <Content Include="SweetYeastPastries.aspx" />
+    <Content Include="Users.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="all.Master.cs">
@@ -265,7 +255,6 @@
       <DependentUpon>all.Master</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="DAL\DBHelper.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -275,39 +264,39 @@
     </Compile>
     <Compile Include="App_Start\Helper.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Recipes\Cookies.aspx.cs">
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cookies.aspx.cs">
       <DependentUpon>Cookies.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Recipes\Cookies.aspx.designer.cs">
+    <Compile Include="Cookies.aspx.designer.cs">
       <DependentUpon>Cookies.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Course\CourseArea.aspx.cs">
-      <DependentUpon>CourseArea.aspx</DependentUpon>
+    <Compile Include="CourseInfo2.aspx.cs">
+      <DependentUpon>CourseInfo2.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Course\CourseArea.aspx.designer.cs">
-      <DependentUpon>CourseArea.aspx</DependentUpon>
+    <Compile Include="CourseInfo2.aspx.designer.cs">
+      <DependentUpon>CourseInfo2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="CourseArea2.Master.cs">
-      <DependentUpon>CourseArea2.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CourseArea2.Master.designer.cs">
-      <DependentUpon>CourseArea2.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Course\CourseSignup.aspx.cs">
+    <Compile Include="CourseSignup.aspx.cs">
       <DependentUpon>CourseSignup.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Course\CourseSignup.aspx.designer.cs">
+    <Compile Include="CourseSignup.aspx.designer.cs">
       <DependentUpon>CourseSignup.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Recipes\CreamCakes.aspx.cs">
+    <Compile Include="CreamCakes.aspx.cs">
       <DependentUpon>CreamCakes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Recipes\CreamCakes.aspx.designer.cs">
+    <Compile Include="CreamCakes.aspx.designer.cs">
       <DependentUpon>CreamCakes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
@@ -317,28 +306,21 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Recipes\EclairsAndChoux.aspx.cs">
+    <Compile Include="EclairsAndChoux.aspx.cs">
       <DependentUpon>EclairsAndChoux.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Recipes\EclairsAndChoux.aspx.designer.cs">
+    <Compile Include="EclairsAndChoux.aspx.designer.cs">
       <DependentUpon>EclairsAndChoux.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Course\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Course\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Recipes\Macarons.aspx.cs">
+    <Compile Include="Macarons.aspx.cs">
       <DependentUpon>Macarons.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Recipes\Macarons.aspx.designer.cs">
+    <Compile Include="Macarons.aspx.designer.cs">
       <DependentUpon>Macarons.aspx</DependentUpon>
     </Compile>
     <Compile Include="main.aspx.cs">
@@ -348,18 +330,18 @@
     <Compile Include="main.aspx.designer.cs">
       <DependentUpon>main.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Recipes\PersonalDesserts.aspx.cs">
+    <Compile Include="PersonalDesserts.aspx.cs">
       <DependentUpon>PersonalDesserts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Recipes\PersonalDesserts.aspx.designer.cs">
+    <Compile Include="PersonalDesserts.aspx.designer.cs">
       <DependentUpon>PersonalDesserts.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Recipes\Pralines.aspx.cs">
+    <Compile Include="Pralines.aspx.cs">
       <DependentUpon>Pralines.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Recipes\Pralines.aspx.designer.cs">
+    <Compile Include="Pralines.aspx.designer.cs">
       <DependentUpon>Pralines.aspx</DependentUpon>
     </Compile>
     <Compile Include="products.aspx.cs">
@@ -370,33 +352,40 @@
       <DependentUpon>products.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recipes\SimpleMixCakes.aspx.cs">
+    <Compile Include="SimpleMixCakes.aspx.cs">
       <DependentUpon>SimpleMixCakes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Recipes\SimpleMixCakes.aspx.designer.cs">
+    <Compile Include="SimpleMixCakes.aspx.designer.cs">
       <DependentUpon>SimpleMixCakes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Recipes\SweetYeastPastries.aspx.cs">
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SweetYeastPastries.aspx.cs">
       <DependentUpon>SweetYeastPastries.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Recipes\SweetYeastPastries.aspx.designer.cs">
+    <Compile Include="SweetYeastPastries.aspx.designer.cs">
       <DependentUpon>SweetYeastPastries.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Users.aspx.cs">
+    <Compile Include="Users.aspx.cs">
       <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Users.aspx.designer.cs">
+    <Compile Include="Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Course\Videos.aspx.cs">
-      <DependentUpon>Videos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Course\Videos.aspx.designer.cs">
-      <DependentUpon>Videos.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
@@ -404,13 +393,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Course\Presentations.aspx.cs">
-      <DependentUpon>Presentations.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Course\Presentations.aspx.designer.cs">
-      <DependentUpon>Presentations.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

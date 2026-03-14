@@ -1,4 +1,4 @@
-body {
+﻿body {
     font-family: Arial;
     margin: 0;
     text-align: center;
@@ -25,14 +25,6 @@ body {
         text-align: center;
     }
 
-    .top-header a {
-        color: white;
-        text-decoration: none;
-    }
-
-    .top-header a:hover {
-        text-decoration: underline;
-    }
 
 
 .container {
@@ -138,19 +130,19 @@ body {
     font-size: 17px;
 }
 
-
+   
     .recipe-text h3 {
         margin-top: 0;
         font-size: 26px;
     }
 
-
+  
     .recipe-text ul,
     .recipe-text ol {
         margin-bottom: 22px;
     }
 
-
+    
     .recipe-text p {
         margin-top: 20px;
         margin-bottom: 10px;
