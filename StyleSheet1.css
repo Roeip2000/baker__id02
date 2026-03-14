@@ -25,6 +25,14 @@
         text-align: center;
     }
 
+    .top-header a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .top-header a:hover {
+        text-decoration: underline;
+    }
 
 
 .container {
