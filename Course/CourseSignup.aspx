@@ -1,7 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/all.master"
-    AutoEventWireup="true"
-    CodeBehind="CourseSignup.aspx.cs"
-    Inherits="baker_id02.CourseSignup" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeFile="CourseSignup.aspx.cs" Inherits="CourseSignup" %>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     טופס הרשמה לקורס – Ido Bakery & Pastry

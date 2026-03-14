@@ -23,7 +23,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="SimpleMixCakes.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/Recipes/SimpleMixCakes.aspx" style="color: black; text-decoration: none; font-size: 24px;">
                     Simple Mix Cakes
                 </a>
             </div>
@@ -31,7 +31,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="CreamCakes.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/Recipes/CreamCakes.aspx" style="color: black; text-decoration: none; font-size: 24px;">
                     Cream Cakes
                 </a>
             </div>
@@ -39,7 +39,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="SweetYeastPastries.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/Recipes/SweetYeastPastries.aspx" style="color: black; text-decoration: none; font-size: 24px;">
                     Sweet Yeast Pastries
                 </a>
             </div>
@@ -47,7 +47,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="PersonalDesserts.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/Recipes/PersonalDesserts.aspx" style="color: black; text-decoration: none; font-size: 24px;">
                     Personal Desserts
                 </a>
             </div>
@@ -55,7 +55,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="Cookies.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/Recipes/Cookies.aspx" style="color: black; text-decoration: none; font-size: 24px;">
                     Cookies
                 </a>
             </div>
@@ -63,7 +63,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="EclairsAndChoux.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/Recipes/EclairsAndChoux.aspx" style="color: black; text-decoration: none; font-size: 24px;">
                     Eclairs &amp; Choux
                 </a>
             </div>
@@ -71,7 +71,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="Macarons.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/Recipes/Macarons.aspx" style="color: black; text-decoration: none; font-size: 24px;">
                     Macarons
                 </a>
             </div>
@@ -79,7 +79,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="Pralines.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/Recipes/Pralines.aspx" style="color: black; text-decoration: none; font-size: 24px;">
                     Pralines
                 </a>
             </div>

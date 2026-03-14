@@ -30,17 +30,17 @@
 
             <ul>
                 <li>
-                    <a href="about.aspx" class="topic-box">
+                    <a href="/About.aspx" class="topic-box">
                         <img src="picture/WhatsApp Image 2025-11-24 at 21.58.35.jpeg" />
                     </a>
                 </li>
                 <li>
-                    <a href="CourseInfo2.aspx" class="topic-box">
+                    <a href="/Course/CourseSignup.aspx" class="topic-box">
                         <img src="picture/course.jpeg" />
                     </a>
                 </li>
                 <li>
-                    <a href="products.aspx" class="topic-box">
+                    <a href="/products.aspx" class="topic-box">
                         <img src="picture/recpies.jpeg" />
                     </a>
                 </li>
