@@ -11,8 +11,8 @@
 <asp:Content ID="Body1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-box">
         <h2>רשימת נרשמים לקורסים</h2>
-        <%= usersList%>
+        <asp:Literal ID="litUsers" runat="server" />
         <br /><br />
-        מספר הרשומות: <strong><%= usersCount %></strong>
+        מספר הרשומות: <strong><asp:Literal ID="litCount" runat="server" /></strong>
     </div>
 </asp:Content>
