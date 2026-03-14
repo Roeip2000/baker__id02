@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/all.master" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" %>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     מתכונים – Ido Bakery & Pastry
@@ -12,78 +12,51 @@
 
     <div class="intro-box">
         <p>
-            עמוד המתכונים נועד לאפשר לכם להיחשף למתכונים קלים, ברורים וטעימים
-            שתוכלו להכין בבית. כל מתכון כולל רשימת מרכיבים ברורה, שלבי הכנה
-            מסודרים וטיפים חשובים להצלחה. המתכונים מתאימים למתחילים ולמנוסים
-            וכוללים מגוון תחומים מעולם הקונדיטוריה.
+            עמוד המתכונים נועד לאפשר לכם להיחשף למתכונים קלים, ברורים וטעימים שתוכלו להכין בבית.
+            כל מתכון כולל רשימת מרכיבים ברורה, שלבי הכנה מסודרים וטיפים חשובים להצלחה.
+            המתכונים מתאימים למתחילים ולמנוסים וכוללים מגוון תחומים מעולם הקונדיטוריה.
         </p>
     </div>
+ 
+<div style="max-width:900px; margin:20px auto 30px auto; background-color:white; padding:22px; border-radius:14px; box-shadow:0 6px 14px lightgray; text-align:center; border:2px solid cornflowerblue;">
+    <span style="font-size:32px; font-weight:bold; color:steelblue; letter-spacing:0.5px;">
+        קטגוריות המתכונים
+    </span>
+</div>
 
     <div class="topics-grid">
 
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="SimpleMixCakes.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Simple Mix Cakes
-                </a>
-            </div>
-        </div>
+        <a href="/Recipes/SimpleMixCakes.aspx" class="topic-box">
+            <div class="topic-title">עוגות בחושות</div>
+        </a>
 
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="CreamCakes.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Cream Cakes
-                </a>
-            </div>
-        </div>
+        <a href="/Recipes/CreamCakes.aspx" class="topic-box">
+            <div class="topic-title">עוגות קרם</div>
+        </a>
 
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="SweetYeastPastries.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Sweet Yeast Pastries
-                </a>
-            </div>
-        </div>
+        <a href="/Recipes/SweetYeastPastries.aspx" class="topic-box">
+            <div class="topic-title">מאפי שמרים</div>
+        </a>
 
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="PersonalDesserts.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Personal Desserts
-                </a>
-            </div>
-        </div>
+        <a href="/Recipes/PersonalDesserts.aspx" class="topic-box">
+            <div class="topic-title">קינוחים אישיים</div>
+        </a>
 
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="Cookies.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Cookies
-                </a>
-            </div>
-        </div>
+        <a href="/Recipes/Cookies.aspx" class="topic-box">
+            <div class="topic-title">עוגיות</div>
+        </a>
 
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="EclairsAndChoux.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Eclairs &amp; Choux
-                </a>
-            </div>
-        </div>
+        <a href="/Recipes/EclairsAndChoux.aspx" class="topic-box">
+            <div class="topic-title">אקלרים ופחזניות</div>
+        </a>
 
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="Macarons.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Macarons
-                </a>
-            </div>
-        </div>
+        <a href="/Recipes/Macarons.aspx" class="topic-box">
+            <div class="topic-title">מקרונים</div>
+        </a>
 
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="Pralines.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    Pralines
-                </a>
-            </div>
-        </div>
+        <a href="/Recipes/Pralines.aspx" class="topic-box">
+            <div class="topic-title">פרלינים</div>
+        </a>
 
     </div>
 

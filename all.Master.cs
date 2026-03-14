@@ -11,7 +11,14 @@ namespace baker_ido
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            btnLogout.Visible = Session["uName"] != null;
+        }
 
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Session.Abandon();
+            Response.Redirect("~/Course/Login.aspx");
         }
     }
 }
