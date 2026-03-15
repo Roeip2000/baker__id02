@@ -18,11 +18,19 @@
         <table>
             <tr>
                 <td>שם משתמש:</td>
-                <td><asp:TextBox ID="txtUserName" runat="server" CssClass="input-box" /></td>
+                <td>
+                    <asp:TextBox ID="txtUserName" runat="server" CssClass="input-box" />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUserName"
+                        ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
+                </td>
             </tr>
             <tr>
                 <td>סיסמה:</td>
-                <td><asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="input-box" /></td>
+                <td>
+                    <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" CssClass="input-box" />
+                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword"
+                        ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
+                </td>
             </tr>
             <tr>
                 <td colspan="2" style="text-align:center; padding-top:15px;">

@@ -11,7 +11,7 @@ namespace baker_ido
         {
             try
             {
-                string sql = "SELECT uName, fName, lName, email, city FROM Users ORDER BY fName ASC";
+                string sql = "SELECT uName, fName, lName, email, city, course FROM Users ORDER BY fName ASC";
                 DataTable table = Helper.ExecuteDataTable("Database1.mdf", sql);
                 int length = table.Rows.Count;
 
@@ -25,6 +25,7 @@ namespace baker_ido
                     html += "<th style='padding:8px;'>שם משפחה</th>";
                     html += "<th style='padding:8px;'>אימייל</th>";
                     html += "<th style='padding:8px;'>עיר</th>";
+                    html += "<th style='padding:8px;'>קורס</th>";
                     html += "</tr>";
 
                     for (int i = 0; i < length; i++)
@@ -36,6 +37,7 @@ namespace baker_ido
                         html += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["lName"]) + "</td>";
                         html += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["email"]) + "</td>";
                         html += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["city"]) + "</td>";
+                        html += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["course"]) + "</td>";
                         html += "</tr>";
                     }
 

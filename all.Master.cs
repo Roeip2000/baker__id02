@@ -9,7 +9,10 @@ namespace baker_ido
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            btnLogout.Visible = Session["uName"] != null;
+            bool loggedIn = Session["uName"] != null;
+            btnLogout.Visible = loggedIn;
+            lnkCourseArea.Visible = loggedIn;
+            lnkLogin.Visible = !loggedIn;
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)

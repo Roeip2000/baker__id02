@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/all.master" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/all.Master" %>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     מקרונים – Ido Bakery & Pastry
@@ -48,11 +48,10 @@
         </div>
 
         <div class="recipe-box">
-          
+            <img src="/picture/tea_party_macarons..jpg" class="recipe-img" />
 
             <div class="recipe-text">
                 <h3>מקרונים Tea Party לימוניים</h3>
-                <img src="/picture/tea_party_macarons..jpg" />
                 <p><b>מרכיבים:</b></p>
                 <ul>
                     <li>200 גרם אבקת סוכר</li>

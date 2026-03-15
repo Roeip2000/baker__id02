@@ -8,8 +8,11 @@ namespace baker_ido
 {
     public partial class all
     {
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder TitleContent;
+        protected global::System.Web.UI.WebControls.HyperLink lnkLogin;
+        protected global::System.Web.UI.WebControls.HyperLink lnkCourseArea;
         protected global::System.Web.UI.WebControls.Button btnLogout;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder PageHeader;
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
     }
 }

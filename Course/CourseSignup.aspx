@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeFile="CourseSignup.aspx.cs" Inherits="CourseSignup" %>
+<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeFile="CourseSignup.aspx.cs" Inherits="CourseSignup" %>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     טופס הרשמה לקורס – Ido Bakery & Pastry
@@ -20,32 +20,56 @@
 
         <tr>
             <td>שם משתמש:</td>
-            <td><asp:TextBox ID="txtUserName" runat="server" /></td>
+            <td>
+                <asp:TextBox ID="txtUserName" runat="server" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUserName"
+                    ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
+            </td>
         </tr>
 
         <tr>
             <td>סיסמה:</td>
-            <td><asp:TextBox ID="txtPassword" runat="server" TextMode="Password" /></td>
+            <td>
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword"
+                    ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
+            </td>
         </tr>
 
         <tr>
             <td>שם פרטי:</td>
-            <td><asp:TextBox ID="txtFirstName" runat="server" /></td>
+            <td>
+                <asp:TextBox ID="txtFirstName" runat="server" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtFirstName"
+                    ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
+            </td>
         </tr>
 
         <tr>
             <td>שם משפחה:</td>
-            <td><asp:TextBox ID="txtLastName" runat="server" /></td>
+            <td>
+                <asp:TextBox ID="txtLastName" runat="server" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtLastName"
+                    ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
+            </td>
         </tr>
 
         <tr>
             <td>אימייל:</td>
-            <td><asp:TextBox ID="txtEmail" runat="server" TextMode="Email" /></td>
+            <td>
+                <asp:TextBox ID="txtEmail" runat="server" TextMode="Email" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail"
+                    ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
+            </td>
         </tr>
 
         <tr>
             <td>שנת לידה:</td>
-            <td><asp:TextBox ID="txtYearBorn" runat="server" TextMode="Number" /></td>
+            <td>
+                <asp:TextBox ID="txtYearBorn" runat="server" TextMode="Number" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtYearBorn"
+                    ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
+            </td>
         </tr>
 
         <tr>
@@ -68,12 +92,18 @@
                 </asp:DropDownList>
                 -
                 <asp:TextBox ID="txtPhone" runat="server" MaxLength="7" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPhone"
+                    ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
             </td>
         </tr>
 
         <tr>
             <td>עיר:</td>
-            <td><asp:TextBox ID="txtCity" runat="server" /></td>
+            <td>
+                <asp:TextBox ID="txtCity" runat="server" />
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="txtCity"
+                    ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
+            </td>
         </tr>
 
         <tr>
@@ -84,6 +114,8 @@
                     <asp:ListItem Value="קורס קינוחים אישיים">קורס קינוחים אישיים</asp:ListItem>
                     <asp:ListItem Value="קורס קונדיטוריה למתחילים">קורס קונדיטוריה למתחילים</asp:ListItem>
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlCourse"
+                    InitialValue="" ErrorMessage="בחר קורס" ForeColor="Red" Display="Dynamic" />
             </td>
         </tr>
 

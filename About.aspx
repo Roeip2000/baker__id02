@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/all.master" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/all.Master" %>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     אודות עידו – קונדיטוריה
@@ -38,7 +38,7 @@
             חוויה מתוקה, אסתטית ומלאת השקעה בכל קינוח.
         </h2>
 
-        <p class="footer-text">© 2025 Ido Bakery & Pastry – כל הזכויות שמורות</p>
+        <p class="footer-text">© 2026 Ido Bakery & Pastry – כל הזכויות שמורות</p>
 
         <a href="/main.aspx">לחזור לדף הראשי</a>
 

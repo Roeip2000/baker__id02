@@ -19,7 +19,18 @@
       "Bash(git mv:*)",
       "Bash(git -C /c/Users/pc/source/repos/baker__id02 add Admin/Users.aspx Admin/Users.aspx.cs Admin/Users.aspx.designer.cs Course/Login.aspx Course/Login.aspx.cs Course/Login.aspx.designer.cs Course/CourseArea.aspx Course/CourseArea.aspx.cs Course/CourseArea.aspx.designer.cs Course/Videos.aspx Course/Videos.aspx.cs Course/Videos.aspx.designer.cs Course/Presentations.aspx Course/Presentations.aspx.cs Course/Presentations.aspx.designer.cs)",
       "Bash(git -C /c/Users/pc/source/repos/baker__id02 add -A)",
-      "Bash(git -C:*)"
+      "Bash(git -C:*)",
+      "Bash(ls C:Userspcsourcereposbaker__id02/*.master)",
+      "Bash(python3 -c \":*)",
+      "Bash(powershell -Command \":*)",
+      "Bash(grep -r \"class=\"\"\" /c/Users/pc/source/repos/baker__id02/*.aspx)",
+      "Bash(grep -r class= /c/Users/pc/source/repos/baker__id02/Course/*.aspx /c/Users/pc/source/repos/baker__id02/Recipes/*.aspx /c/Users/pc/source/repos/baker__id02/Admin/*.aspx)",
+      "Bash(grep -r \"class=\"\"msg-text\\\\|class=\"\"input-box\\\\|class=\"\"btn-row\\\\|class=\"\"form-table\\\\|class=\"\"body\"\"\" /c/Users/pc/source/repos/baker__id02/*.aspx /c/Users/pc/source/repos/baker__id02/**/*.aspx)",
+      "Bash(grep -r src=/picture/ /c/Users/pc/source/repos/baker__id02/*.aspx /c/Users/pc/source/repos/baker__id02/**/*.aspx)",
+      "Bash(ls -la /c/Users/pc/source/repos/baker__id02/StyleSheet*)",
+      "Bash(grep -h \"Inherits=\" /c/Users/pc/source/repos/baker__id02/**/*.aspx)",
+      "WebSearch",
+      "Bash(dotnet msbuild:*)"
     ]
   }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/all.master" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/all.Master" %>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     עוגיות – Ido Bakery & Pastry
