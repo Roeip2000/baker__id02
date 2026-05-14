@@ -13,7 +13,7 @@ namespace baker_ido
 
     public partial class Users
     {
-        protected global::System.Web.UI.WebControls.Literal litUsers;
-        protected global::System.Web.UI.WebControls.Literal litCount;
+        protected global::System.Web.UI.WebControls.GridView gvUsers;
+        protected global::System.Web.UI.WebControls.Label lblCount;
     }
 }

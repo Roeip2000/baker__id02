@@ -9,17 +9,29 @@ namespace baker_ido
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            bool loggedIn = Session["uName"] != null;
-            btnLogout.Visible = loggedIn;
-            lnkCourseArea.Visible = loggedIn;
-            lnkLogin.Visible = !loggedIn;
+            // ������ �-uName ��� ������ ����� ��� �-Login ���
+            if (Session["uName"] != null)
+            {
+                // ��� �����
+                lnkLogin.Visible = false;
+                lnkCourseArea.Visible = true;
+                btnLogout.Visible = true;
+            }
+            else
+            {
+                // ��� ����
+                lnkLogin.Visible = true;
+                lnkCourseArea.Visible = false;
+                btnLogout.Visible = false;
+            }
         }
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            Session.Clear();
+            // ����� �-Session ������ ��� ����
             Session.Abandon();
-            Response.Redirect("~/Course/Login.aspx");
+            Session.Clear();
+            Response.Redirect("~/Default.aspx");
         }
     }
 }

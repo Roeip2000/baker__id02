@@ -2,6 +2,7 @@ using System;
 using System.Data;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 
 namespace baker_ido
 {
@@ -9,52 +10,48 @@ namespace baker_ido
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try
+            // 1. אבטחה: מוודא שהמשתמש מחובר
+            if (Session["uName"] == null)
             {
-                string sql = "SELECT uName, fName, lName, email, city, course FROM Users ORDER BY fName ASC";
-                DataTable table = Helper.ExecuteDataTable("Database1.mdf", sql);
-                int length = table.Rows.Count;
-
-                if (length > 0)
-                {
-                    string html = "<table style='border:1px solid lightgray; border-collapse:collapse; width:100%;'>";
-                    html += "<tr style='background:skyblue; color:white;'>";
-                    html += "<th style='padding:8px;'>#</th>";
-                    html += "<th style='padding:8px;'>שם משתמש</th>";
-                    html += "<th style='padding:8px;'>שם פרטי</th>";
-                    html += "<th style='padding:8px;'>שם משפחה</th>";
-                    html += "<th style='padding:8px;'>אימייל</th>";
-                    html += "<th style='padding:8px;'>עיר</th>";
-                    html += "<th style='padding:8px;'>קורס</th>";
-                    html += "</tr>";
-
-                    for (int i = 0; i < length; i++)
-                    {
-                        html += "<tr style='border-bottom:1px solid #eee;'>";
-                        html += "<td style='padding:8px;'>" + (i + 1) + "</td>";
-                        html += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["uName"]) + "</td>";
-                        html += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["fName"]) + "</td>";
-                        html += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["lName"]) + "</td>";
-                        html += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["email"]) + "</td>";
-                        html += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["city"]) + "</td>";
-                        html += "<td style='padding:8px;'>" + HttpUtility.HtmlEncode(table.Rows[i]["course"]) + "</td>";
-                        html += "</tr>";
-                    }
-
-                    html += "</table>";
-                    litUsers.Text = html;
-                    litCount.Text = length.ToString();
-                }
-                else
-                {
-                    litUsers.Text = "<p>אין נרשמים עדיין.</p>";
-                    litCount.Text = "0";
-                }
+                Response.Redirect("~/Course/Login.aspx");
+                return;
             }
-            catch (Exception ex)
+
+            // 2. הרשאות: מוודא שרק מנהל (isAdmin=1) נכנס לדף
+            if (Session["isAdmin"] == null || (bool)Session["isAdmin"] == false)
             {
-                litUsers.Text = "<p style='color:red;'>שגיאה בטעינת הנתונים: " + HttpUtility.HtmlEncode(ex.Message) + "</p>";
-                litCount.Text = "0";
+                Response.Redirect("~/NoAdmin.aspx");
+                return;
+            }
+
+            if (!IsPostBack)
+            {
+                BindUsers();
+            }
+        }
+
+        private void BindUsers()
+        {
+            // שם קובץ ה-Database בתיקיית App_Data
+            string fileName = "Database1.mdf";
+
+            // שאילתה עם שמות העמודות המדויקים מה-SQL שלך
+            string sql = "SELECT uName, fName, lName, email, city, pw, isAdmin FROM Users";
+
+            // קריאה ל-Helper (שם הפעולה חייב להיות ExecuteDataTable)
+            DataTable dt = Helper.ExecuteDataTable(fileName, sql);
+
+            if (dt != null)
+            {
+                // קישור הנתונים לטבלה gvUsers
+                gvUsers.DataSource = dt;
+                gvUsers.DataBind();
+
+                // עדכון המונה lblCount
+                if (lblCount != null)
+                {
+                    lblCount.Text = "סה\"כ נרשמים באתר: " + dt.Rows.Count.ToString();
+                }
             }
         }
     }

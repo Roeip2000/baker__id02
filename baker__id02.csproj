@@ -99,11 +99,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="About.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="CmingSoon.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -129,8 +131,7 @@
     <Content Include="Course\Videos.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
-    <Content Include="Global.asax" />
-    <Content Include="main.aspx" />
+    <Content Include="NoAdmin.aspx" />
     <Content Include="picture\03732f2c-49c6-42f9-87cb-4b9e735da620_500 %281%29.jpg" />
     <Content Include="picture\03732f2c-49c6-42f9-87cb-4b9e735da620_500.jpg" />
     <Content Include="picture\21pralines_espresso.png" />
@@ -241,12 +242,24 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="CourseArea.css" />
     <Content Include="StyleSheet1.css" />
+    <Content Include="course_presentations\The_Baker_s_Blueprint.pdf" />
+    <Content Include="course_presentations\Cream_Cake_Masterclass.pdf" />
+    <Content Include="course_presentations\Mousse_Blueprint.pdf" />
+    <Content Include="course_presentations\The_Cookie_Blueprint.pdf" />
+    <Content Include="course_presentations\Gourmet_Chocolate_Masterclass.pdf" />
+    <Content Include="course_presentations\The_Macaron_Blueprint.pdf" />
+    <Content Include="course_presentations\The_Choux_Blueprint.pdf" />
+    <Content Include="course_presentations\The_Yeast_Blueprint.pdf" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="all.Master.cs">
       <DependentUpon>all.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -271,6 +284,13 @@
     </Compile>
     <Compile Include="App_Start\Helper.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CmingSoon.aspx.cs">
+      <DependentUpon>CmingSoon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CmingSoon.aspx.designer.cs">
+      <DependentUpon>CmingSoon.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Course\CourseArea.aspx.cs">
       <DependentUpon>CourseArea.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -313,15 +333,12 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="main.aspx.cs">
-      <DependentUpon>main.aspx</DependentUpon>
+    <Compile Include="NoAdmin.aspx.cs">
+      <DependentUpon>NoAdmin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="main.aspx.designer.cs">
-      <DependentUpon>main.aspx</DependentUpon>
+    <Compile Include="NoAdmin.aspx.designer.cs">
+      <DependentUpon>NoAdmin.aspx</DependentUpon>
     </Compile>
     <Compile Include="products.aspx.cs">
       <DependentUpon>products.aspx</DependentUpon>

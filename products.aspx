@@ -14,24 +14,34 @@
         <p>
             עמוד המתכונים נועד לאפשר לכם להיחשף למתכונים קלים, ברורים וטעימים
             שתוכלו להכין בבית. כל מתכון כולל רשימת מרכיבים ברורה, שלבי הכנה
-            מסודרים וטיפים חשובים להצלחה. המתכונים מתאימים למתחילים ולמנוסים
-            וכוללים מגוון תחומים מעולם הקונדיטוריה.
+            מסודרים וטיפים חשובים להצלחה.
         </p>
     </div>
 
     <div class="topics-grid">
 
+        <%-- מתכון פעיל 1 --%>
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/SimpleMixCakes.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    עוגות בחושות
+                <a href="/Recipes/SimpleMixCakes.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
+                    עוגות בחושות 🍰
                 </a>
             </div>
         </div>
 
+        <%-- מתכון פעיל 2 --%>
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/CreamCakes.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/Recipes/Macarons.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
+                    מקרונים 🍭
+                </a>
+            </div>
+        </div>
+
+        <%-- כל שאר המתכונים נשלחים לדף בקרוב --%>
+        <div class="topic-box">
+            <div style="text-align: center; margin: 20px 0;">
+                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
                     עוגות מוס וקרם
                 </a>
             </div>
@@ -39,7 +49,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/SweetYeastPastries.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
                     מאפי שמרים
                 </a>
             </div>
@@ -47,7 +57,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/PersonalDesserts.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
                     קינוחים אישיים
                 </a>
             </div>
@@ -55,7 +65,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/Cookies.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
                     עוגיות
                 </a>
             </div>
@@ -63,7 +73,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/EclairsAndChoux.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
                     אקלרים ופחזניות
                 </a>
             </div>
@@ -71,15 +81,7 @@
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/Macarons.aspx" style="color: black; text-decoration: none; font-size: 24px;">
-                    מקרונים
-                </a>
-            </div>
-        </div>
-
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/Pralines.aspx" style="color: black; text-decoration: none; font-size: 24px;">
+                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
                     פרלינים
                 </a>
             </div>
@@ -89,9 +91,8 @@
 
     <div class="intro-box">
         <p>
-            בעמודים הבאים נרחיב על כל קטגוריה ונציג מתכונים מלאים ומפורטים.
-            המטרה שלי היא לתת לכם גישה לעולם רחב של טכניקות, טעמים ורעיונות
-            שתוכלו ליישם בקלות במטבח הביתי.
+            בקרוב נעדכן את שאר הקטגוריות עם מתכונים חדשים ומפתיעים. 
+            המטרה היא לתת לכם גישה לעולם רחב של טעמים שתוכלו ליישם בקלות במטבח הביתי.
         </p>
     </div>
 

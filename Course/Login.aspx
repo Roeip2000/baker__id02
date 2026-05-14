@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="Login" %>
+<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Login" %>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     התחברות – Ido Bakery & Pastry

@@ -30,7 +30,12 @@
       "Bash(ls -la /c/Users/pc/source/repos/baker__id02/StyleSheet*)",
       "Bash(grep -h \"Inherits=\" /c/Users/pc/source/repos/baker__id02/**/*.aspx)",
       "WebSearch",
-      "Bash(dotnet msbuild:*)"
+      "Bash(dotnet msbuild:*)",
+      "Bash(grep:*)",
+      "Bash(cd:*)",
+      "Bash(\"/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe\" \"C:/Users/pc/source/repos/baker__id02/baker__id02.csproj\" -t:Build -p:Configuration=Debug -verbosity:quiet 2>&1 | head -80)",
+      "Bash(\"/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe\" \"C:/Users/pc/source/repos/baker__id02/baker__id02.csproj\" -t:Rebuild -p:Configuration=Debug -verbosity:quiet 2>&1)",
+      "Bash(\"/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe\" \"C:/Users/pc/source/repos/baker__id02/baker__id02.csproj\" -t:Rebuild -p:Configuration=Debug -verbosity:minimal 2>&1)"
     ]
   }
 }

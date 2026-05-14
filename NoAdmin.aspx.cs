@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace baker_ido
+namespace baker__id02
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class NoAdmin : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

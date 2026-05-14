@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeFile="Videos.aspx.cs" Inherits="Videos" %>
+<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeBehind="Videos.aspx.cs" Inherits="Videos" %>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     סרטונים – Ido Bakery & Pastry

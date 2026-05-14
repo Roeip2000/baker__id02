@@ -1,4 +1,4 @@
-<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeFile="CourseArea.aspx.cs" Inherits="CourseArea" %>
+<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeBehind="CourseArea.aspx.cs" Inherits="CourseArea" %>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     אזור הקורס – Ido Bakery & Pastry

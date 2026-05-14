@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeFile="all.Master.cs" Inherits="baker_ido.all" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="all.Master.cs" Inherits="baker_ido.all" %>
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head runat="server">
@@ -11,7 +11,8 @@
     <link href="~/CourseArea.css" rel="stylesheet" runat="server" />
     <style>
         .top-header {
-            background: linear-gradient(135deg, #4a90d9 0%, #87ceeb 100%);
+            /* שימוש בשמות צבעים במקום מספרים */
+            background: linear-gradient(135deg, DodgerBlue 0%, SkyBlue 100%);
             padding: 18px 20px 14px;
             text-align: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.15);
@@ -22,6 +23,7 @@
             font-size: 30px;
             letter-spacing: 1px;
             text-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            color: White;
         }
 
         .top-header h2 {
@@ -29,6 +31,7 @@
             font-size: 16px;
             font-weight: normal;
             opacity: 0.9;
+            color: White;
         }
 
         .nav-main {
@@ -44,8 +47,8 @@
             margin-bottom: 8px;
         }
 
-        .nav-main a {
-            color: white;
+        .nav-main a, .nav-main span, .nav-main input {
+            color: White;
             text-decoration: none;
             font-size: 14px;
             font-weight: 500;
@@ -56,98 +59,51 @@
 
         .nav-main a:hover {
             background: rgba(255,255,255,0.25);
-            text-decoration: none;
         }
 
         .nav-divider {
-            color: rgba(255,255,255,0.4);
+            color: White;
+            opacity: 0.4;
             font-size: 12px;
+            padding: 0 5px;
         }
 
-        .nav-recipes {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2px;
-            margin-top: 4px;
-        }
-
-        .nav-recipes a {
-            color: rgba(255,255,255,0.9);
-            text-decoration: none;
-            font-size: 13px;
-            padding: 3px 9px;
-            border-radius: 15px;
-            transition: background 0.2s;
-        }
-
-        .nav-recipes a:hover {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            text-decoration: none;
-        }
-
-        .nav-recipes-label {
-            color: rgba(255,255,255,0.7);
-            font-size: 12px;
-            font-weight: bold;
-            padding: 3px 8px;
-            border-left: 1px solid rgba(255,255,255,0.3);
-            margin-left: 4px;
-        }
-
-        .nav-dot {
-            color: rgba(255,255,255,0.35);
-            font-size: 10px;
-            margin: 0 1px;
-        }
-
-        .top-header a { color: white; text-decoration: none; }
+        .container { padding: 20px; }
+        .footer-text { text-align: center; color: Gray; }
     </style>
 </head>
 <body style="background-image: url('/picture/book.jpg'); background-size: cover;">
 
-<form runat="server">
+<form id="form1" runat="server">
 
     <div class="top-header">
         <h1>Ido Bakery & Pastry</h1>
 
         <div class="nav-main">
-            <a href="/main.aspx">🏠 דף ראשי</a>
+            <a href="/Default.aspx">🏠 דף ראשי</a>
             <span class="nav-divider">|</span>
             <a href="/About.aspx">אודות</a>
             <span class="nav-divider">|</span>
-            <a href="/products.aspx">ספר המתכונים</a>
+            <a href="/products.aspx"> קטלוג מתכונים</a> 
             <span class="nav-divider">|</span>
-            <a href="/Course/CourseSignup.aspx">הרשמה לקורס</a>
+            
+           
+            
+            <a href="/Course/CourseSignup.aspx">הרשמה</a>
+            
+            <%-- התחברות - מוצג כשלא מחוברים --%>
+            <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Course/Login.aspx"> | התחברות</asp:HyperLink>
+            
+            <%-- אזור הקורס - מוצג למחוברים --%>
+            <asp:HyperLink ID="lnkCourseArea" runat="server" NavigateUrl="~/Course/CourseArea.aspx" Visible="false"> | אזור הקורס</asp:HyperLink>
+            
             <span class="nav-divider">|</span>
-            <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Course/Login.aspx" Visible="true">התחברות</asp:HyperLink>
-            <asp:HyperLink ID="lnkCourseArea" runat="server" NavigateUrl="~/Course/CourseArea.aspx" Visible="false">אזור הקורס</asp:HyperLink>
-            <span class="nav-divider">|</span>
-            <a href="/Admin/Users.aspx">נרשמים</a>
+            <a href="/Admin/Users.aspx">Admin</a>
+
+            <%-- כפתור התנתקות מעוצב --%>
             <asp:Button ID="btnLogout" runat="server" Text="התנתק" OnClick="btnLogout_Click"
                 Visible="false" CausesValidation="false"
-                style="margin-right:6px; background:rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.6); color:white; cursor:pointer; font-size:13px; padding:4px 12px; border-radius:20px;" />
-        </div>
-
-        <div class="nav-recipes">
-            <span class="nav-recipes-label">מתכונים</span>
-            <a href="/Recipes/SimpleMixCakes.aspx">עוגות בחושות</a>
-            <span class="nav-dot">●</span>
-            <a href="/Recipes/CreamCakes.aspx">עוגות מוס וקרם</a>
-            <span class="nav-dot">●</span>
-            <a href="/Recipes/Cookies.aspx">עוגיות</a>
-            <span class="nav-dot">●</span>
-            <a href="/Recipes/Pralines.aspx">פרלינים</a>
-            <span class="nav-dot">●</span>
-            <a href="/Recipes/Macarons.aspx">מקרונים</a>
-            <span class="nav-dot">●</span>
-            <a href="/Recipes/EclairsAndChoux.aspx">אקלרים ופחזניות</a>
-            <span class="nav-dot">●</span>
-            <a href="/Recipes/SweetYeastPastries.aspx">מאפי שמרים</a>
-            <span class="nav-dot">●</span>
-            <a href="/Recipes/PersonalDesserts.aspx">קינוחים אישיים</a>
+                style="margin-right:6px; background: rgba(255,255,255,0.2); border: 1px solid White; color: White; cursor: pointer; font-size: 13px; padding: 4px 12px; border-radius: 20px;" />
         </div>
 
         <h2>
@@ -157,7 +113,8 @@
 
     <div class="container">
         <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-        <div class="topic-box">
+        
+        <div style="margin-top: 50px;">
             <p class="footer-text">© 2026 Ido Bakery & Pastry</p>
         </div>
     </div>
