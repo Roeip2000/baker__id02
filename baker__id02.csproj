@@ -100,12 +100,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="main.aspx" />
     <Content Include="About.aspx" />
     <Content Include="App_Data\Database1.mdf" />
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <Content Include="CmingSoon.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -127,65 +127,32 @@
     <Content Include="Course\CourseArea.aspx" />
     <Content Include="Course\CourseSignup.aspx" />
     <Content Include="Course\Login.aspx" />
-    <Content Include="Course\Presentations.aspx" />
     <Content Include="Course\Videos.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="NoAdmin.aspx" />
-    <Content Include="picture\03732f2c-49c6-42f9-87cb-4b9e735da620_500 %281%29.jpg" />
-    <Content Include="picture\03732f2c-49c6-42f9-87cb-4b9e735da620_500.jpg" />
-    <Content Include="picture\21pralines_espresso.png" />
-    <Content Include="picture\about us.jpeg" />
-    <Content Include="picture\about us.jpg" />
     <Content Include="picture\amsterdam_cookies.jpg" />
-    <Content Include="picture\bake picture %281%29.jpg" />
-    <Content Include="picture\bake picture.jpg" />
-    <Content Include="picture\begin1.jpg" />
+    <Content Include="picture\bake picture (1).jpg" />
     <Content Include="picture\book.jpg" />
     <Content Include="picture\bubblegum_popsicle.jpeg" />
     <Content Include="picture\carot.jpeg" />
-    <Content Include="picture\ChatGPT Image Nov 24, 2025, 10_41_25 PM.png" />
-    <Content Include="picture\chocolate_amarena_pralines.jpg" />
     <Content Include="picture\chocolet.jpeg" />
     <Content Include="picture\choco_mousse.jpg" />
     <Content Include="picture\choc_chip_cookies.jpg" />
-    <Content Include="picture\cinnabon_cloud.jpg" />
-    <Content Include="picture\coffee_pralines.jpg" />
     <Content Include="picture\course.jpeg" />
-    <Content Include="picture\courses22.jpg" />
     <Content Include="picture\cupcake_carambo.jpg" />
-    <Content Include="picture\DESERT.jpg" />
-    <Content Include="picture\DESERT1.jpg" />
-    <Content Include="picture\FF.jpg" />
-    <Content Include="picture\kurto_hungarian.jpg" />
-    <Content Include="picture\lamon.jpg" />
-    <Content Include="picture\lemon_cream_macarons.jpg" />
-    <Content Include="picture\lemon_mint_eclair.jpg" />
     <Content Include="picture\lotus_cream.jpg" />
-    <Content Include="picture\m690007.01.0500_d2-1726946473808764.jpg" />
-    <Content Include="picture\mako_macarons.jpg" />
     <Content Include="picture\mm_roll.jpeg" />
-    <Content Include="picture\pralines_marzipan_cherries.jpg" />
-    <Content Include="picture\prodect.jpeg" />
     <Content Include="picture\recpies.jpeg" />
-    <Content Include="picture\rogelach_homemade.jpg" />
-    <Content Include="picture\saint_honore_puffs.jpg" />
     <Content Include="picture\tahini_cookies.jpg" />
-    <Content Include="picture\tea_party_macarons..jpg" />
     <Content Include="picture\tiramisu.jpg" />
-    <Content Include="picture\us.jpeg" />
     <Content Include="picture\vanil.jpg" />
     <Content Include="picture\WhatsApp Image 2025-11-24 at 21.58.35.jpeg" />
-    <Content Include="picture\whipped_puffs_mold.jpg" />
     <Content Include="products.aspx" />
     <Content Include="Recipes\Cookies.aspx" />
     <Content Include="Recipes\CreamCakes.aspx" />
-    <Content Include="Recipes\EclairsAndChoux.aspx" />
-    <Content Include="Recipes\Macarons.aspx" />
     <Content Include="Recipes\PersonalDesserts.aspx" />
-    <Content Include="Recipes\Pralines.aspx" />
     <Content Include="Recipes\SimpleMixCakes.aspx" />
-    <Content Include="Recipes\SweetYeastPastries.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -244,17 +211,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="CourseArea.css" />
     <Content Include="StyleSheet1.css" />
-    <Content Include="course_presentations\The_Baker_s_Blueprint.pdf" />
-    <Content Include="course_presentations\Cream_Cake_Masterclass.pdf" />
-    <Content Include="course_presentations\Mousse_Blueprint.pdf" />
-    <Content Include="course_presentations\The_Cookie_Blueprint.pdf" />
-    <Content Include="course_presentations\Gourmet_Chocolate_Masterclass.pdf" />
-    <Content Include="course_presentations\The_Macaron_Blueprint.pdf" />
-    <Content Include="course_presentations\The_Choux_Blueprint.pdf" />
-    <Content Include="course_presentations\The_Yeast_Blueprint.pdf" />
-    <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
-    <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
@@ -274,23 +231,8 @@
     <Compile Include="Admin\Users.aspx.designer.cs">
       <DependentUpon>Users.aspx</DependentUpon>
     </Compile>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="About.aspx.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="About.aspx.designer.cs">
-      <DependentUpon>About.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\Helper.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CmingSoon.aspx.cs">
-      <DependentUpon>CmingSoon.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CmingSoon.aspx.designer.cs">
-      <DependentUpon>CmingSoon.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Course\CourseArea.aspx.cs">
       <DependentUpon>CourseArea.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -312,13 +254,6 @@
     <Compile Include="Course\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Course\Presentations.aspx.cs">
-      <DependentUpon>Presentations.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Course\Presentations.aspx.designer.cs">
-      <DependentUpon>Presentations.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Course\Videos.aspx.cs">
       <DependentUpon>Videos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -326,91 +261,7 @@
     <Compile Include="Course\Videos.aspx.designer.cs">
       <DependentUpon>Videos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Default.aspx.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.cs">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="NoAdmin.aspx.cs">
-      <DependentUpon>NoAdmin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="NoAdmin.aspx.designer.cs">
-      <DependentUpon>NoAdmin.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="products.aspx.cs">
-      <DependentUpon>products.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="products.aspx.designer.cs">
-      <DependentUpon>products.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recipes\Cookies.aspx.cs">
-      <DependentUpon>Cookies.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Recipes\Cookies.aspx.designer.cs">
-      <DependentUpon>Cookies.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Recipes\CreamCakes.aspx.cs">
-      <DependentUpon>CreamCakes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Recipes\CreamCakes.aspx.designer.cs">
-      <DependentUpon>CreamCakes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Recipes\EclairsAndChoux.aspx.cs">
-      <DependentUpon>EclairsAndChoux.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Recipes\EclairsAndChoux.aspx.designer.cs">
-      <DependentUpon>EclairsAndChoux.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Recipes\Macarons.aspx.cs">
-      <DependentUpon>Macarons.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Recipes\Macarons.aspx.designer.cs">
-      <DependentUpon>Macarons.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Recipes\PersonalDesserts.aspx.cs">
-      <DependentUpon>PersonalDesserts.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Recipes\PersonalDesserts.aspx.designer.cs">
-      <DependentUpon>PersonalDesserts.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Recipes\Pralines.aspx.cs">
-      <DependentUpon>Pralines.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Recipes\Pralines.aspx.designer.cs">
-      <DependentUpon>Pralines.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Recipes\SimpleMixCakes.aspx.cs">
-      <DependentUpon>SimpleMixCakes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Recipes\SimpleMixCakes.aspx.designer.cs">
-      <DependentUpon>SimpleMixCakes.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Recipes\SweetYeastPastries.aspx.cs">
-      <DependentUpon>SweetYeastPastries.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Recipes\SweetYeastPastries.aspx.designer.cs">
-      <DependentUpon>SweetYeastPastries.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ViewSwitcher.ascx.designer.cs">
-      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

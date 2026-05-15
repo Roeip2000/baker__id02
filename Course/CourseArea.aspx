@@ -1,23 +1,44 @@
-<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeBehind="CourseArea.aspx.cs" Inherits="CourseArea" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseArea.aspx.cs" Inherits="CourseArea" %>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>אזור הקורס - Ido Bakery & Pastry</title>
+    <link href="/StyleSheet1.css" rel="stylesheet" />
+    <link href="/CourseArea.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="members-master">
 
-<asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
-    אזור הקורס – Ido Bakery & Pastry
-</asp:Content>
+            <div class="top-header">
+                <h1>Ido Bakery & Pastry</h1>
+                <h2>אזור הקורס</h2>
+            </div>
 
-<asp:Content ID="c2" ContentPlaceHolderID="PageHeader" runat="server">
-    אזור הקורס
-</asp:Content>
+            <div class="members-menu">
+                <a href="/main.aspx">דף ראשי</a>
+                <span>|</span>
+                <a href="/Course/CourseArea.aspx">אזור הקורס</a>
+                <span>|</span>
+                <a href="/Course/Videos.aspx">סרטונים</a>
+            </div>
 
-<asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
+            <div class="container members-home">
+                <div class="intro-box">
+                    <h2>שלום, <asp:Label ID="lblName" runat="server" CssClass="user-name" /></h2>
+                    <p>ברוך הבא לאזור המנויים. כאן תוכל לצפות בסרטונים של הקורס.</p>
 
-    <div class="form-box">
-        <h2>שלום, <asp:Label ID="lblName" runat="server" /></h2>
-        <p>ברוך הבא לאזור המנויים. כאן תוכל לצפות בסרטונים ובמצגות של הקורס.</p>
+                    <div class="course-links">
+                        <a href="/Course/Videos.aspx" class="course-link">מעבר לסרטוני הקורס</a>
+                    </div>
+                </div>
 
-        <div style="text-align:center; margin-top:20px;">
-            <a href="/Course/Videos.aspx" class="main-button" style="text-decoration:none; margin:10px; display:inline-block;">סרטונים</a>
-            <a href="/Course/Presentations.aspx" class="main-button" style="text-decoration:none; margin:10px; display:inline-block;">מצגות</a>
+                <p class="footer-text">© 2026 Ido Bakery & Pastry</p>
+            </div>
+
         </div>
-    </div>
-
-</asp:Content>
+    </form>
+</body>
+</html>

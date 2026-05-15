@@ -1,57 +1,75 @@
-<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeBehind="Videos.aspx.cs" Inherits="Videos" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Videos.aspx.cs" Inherits="Videos" %>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>סרטונים - Ido Bakery & Pastry</title>
+    <link href="/StyleSheet1.css" rel="stylesheet" />
+    <link href="/CourseArea.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="members-master">
 
-<asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
-    סרטונים – Ido Bakery & Pastry
-</asp:Content>
-
-<asp:Content ID="c2" ContentPlaceHolderID="PageHeader" runat="server">
-    סרטוני הקורס
-</asp:Content>
-
-<asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
-
-    <div class="members-master">
-
-        <div class="members-menu">
-            <a href="/Course/CourseArea.aspx">אזור הקורס</a>
-            <span>|</span>
-            <a href="/Course/Videos.aspx">סרטונים</a>
-            <span>|</span>
-            <a href="/Course/Presentations.aspx">מצגות</a>
-        </div>
-
-        <div class="video-frame-box">
-            <h3>סרטוני הקורס</h3>
-            <p>בחר סרטון מהרשימה לצפייה בתוך הדף.</p>
-        </div>
-
-        <div class="video-frame-box">
-            <h3>רשימת הסרטונים</h3>
-
-            <div class="presentation-links">
-                <a href="https://www.youtube.com/embed/YO1EHTfIo3E" target="videoFrame" class="presentation-link">סרטון 1 – עוגות בחושות</a>
-                <a href="https://www.youtube.com/embed/BW5qRBlAhCE" target="videoFrame" class="presentation-link">סרטון 2 – עוגות קרם</a>
-                <a href="https://www.youtube.com/embed/4GuJmIeqs_w" target="videoFrame" class="presentation-link">סרטון 3 – עוגות מוס</a>
-                <a href="https://www.youtube.com/embed/CqsRGwPsJJw" target="videoFrame" class="presentation-link">סרטון 4 – עוגיות</a>
-                <a href="https://www.youtube.com/embed/Aib3pzEbx0A" target="videoFrame" class="presentation-link">סרטון 5 – פרלינים</a>
-                <a href="https://www.youtube.com/embed/molXDy4E304" target="videoFrame" class="presentation-link">סרטון 6 – מקרונים</a>
-                <a href="https://www.youtube.com/embed/EauC8tKbem0" target="videoFrame" class="presentation-link">סרטון 7 – אקלרים ופחזניות</a>
-                <a href="https://www.youtube.com/embed/5Omk9TzMPtE" target="videoFrame" class="presentation-link">סרטון 8 – מאפי שמרים</a>
+            <div class="top-header">
+                <h1>Ido Bakery & Pastry</h1>
+                <h2>סרטוני הקורס</h2>
             </div>
+
+            <div class="members-menu">
+                <a href="/main.aspx">דף ראשי</a>
+                <span>|</span>
+                <a href="/Course/CourseArea.aspx">אזור הקורס</a>
+                <span>|</span>
+                <a href="/Course/Videos.aspx">סרטונים</a>
+            </div>
+
+            <div class="container">
+                <div class="video-frame-box">
+                    <h3>סרטוני הקורס</h3>
+                    <p>בחר סרטון מהרשימה לצפייה בתוך הדף.</p>
+                </div>
+
+                <div class="video-frame-box">
+                    <h3>בחירת סרטון</h3>
+
+                    <div class="video-links">
+                        <a href="https://www.youtube.com/embed/YO1EHTfIo3E" target="videoFrame" class="video-link">
+                            <span class="video-number">סרטון 1</span>
+                            <span class="video-title">עוגות בחושות</span>
+                        </a>
+                        <a href="https://www.youtube.com/embed/BW5qRBlAhCE" target="videoFrame" class="video-link">
+                            <span class="video-number">סרטון 2</span>
+                            <span class="video-title">עוגות קרם</span>
+                        </a>
+                        <a href="https://www.youtube.com/embed/4GuJmIeqs_w" target="videoFrame" class="video-link">
+                            <span class="video-number">סרטון 3</span>
+                            <span class="video-title">עוגות מוס</span>
+                        </a>
+                        <a href="https://www.youtube.com/embed/CqsRGwPsJJw" target="videoFrame" class="video-link">
+                            <span class="video-number">סרטון 4</span>
+                            <span class="video-title">עוגיות</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="video-frame-box">
+                    <h3>תצוגת הסרטון</h3>
+                    <iframe
+                        name="videoFrame"
+                        src="https://www.youtube.com/embed/YO1EHTfIo3E"
+                        title="סרטון הקורס"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+
+                <p class="footer-text">© 2026 Ido Bakery & Pastry</p>
+            </div>
+
         </div>
-
-        <div class="video-frame-box">
-            <h3>תצוגת הסרטון</h3>
-            <iframe
-                name="videoFrame"
-                src="https://www.youtube.com/embed/YO1EHTfIo3E"
-                title="סרטון הקורס"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
-
-    </div>
-
-</asp:Content>
+    </form>
+</body>
+</html>

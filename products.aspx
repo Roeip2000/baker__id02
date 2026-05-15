@@ -20,7 +20,6 @@
 
     <div class="topics-grid">
 
-        <%-- מתכון פעיל 1 --%>
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
                 <a href="/Recipes/SimpleMixCakes.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
@@ -29,60 +28,26 @@
             </div>
         </div>
 
-        <%-- מתכון פעיל 2 --%>
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/Macarons.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
-                    מקרונים 🍭
-                </a>
-            </div>
-        </div>
-
-        <%-- כל שאר המתכונים נשלחים לדף בקרוב --%>
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
-                    עוגות מוס וקרם
+                <a href="/Recipes/Cookies.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
+                    עוגיות 🍪
                 </a>
             </div>
         </div>
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
-                    מאפי שמרים
+                <a href="/Recipes/CreamCakes.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
+                    עוגות קרם 🎂
                 </a>
             </div>
         </div>
 
         <div class="topic-box">
             <div style="text-align: center; margin: 20px 0;">
-                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
-                    קינוחים אישיים
-                </a>
-            </div>
-        </div>
-
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
-                    עוגיות
-                </a>
-            </div>
-        </div>
-
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
-                    אקלרים ופחזניות
-                </a>
-            </div>
-        </div>
-
-        <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="/CmingSoon.aspx" style="color: Gray; text-decoration: none; font-size: 22px;">
-                    פרלינים
+                <a href="/Recipes/PersonalDesserts.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
+                    קינוחים אישיים 🍮
                 </a>
             </div>
         </div>
@@ -91,7 +56,7 @@
 
     <div class="intro-box">
         <p>
-            בקרוב נעדכן את שאר הקטגוריות עם מתכונים חדשים ומפתיעים. 
+            כל המתכונים כוללים רשימת מרכיבים מדויקת והוראות הכנה שלב אחר שלב.
             המטרה היא לתת לכם גישה לעולם רחב של טעמים שתוכלו ליישם בקלות במטבח הביתי.
         </p>
     </div>

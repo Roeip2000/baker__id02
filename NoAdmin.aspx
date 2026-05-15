@@ -16,7 +16,7 @@
         
         <br />
         
-        <a href="/Default.aspx" style="display: inline-block; background-color: DodgerBlue; color: White; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: background 0.3s;">
+        <a href="/main.aspx" style="display: inline-block; background-color: DodgerBlue; color: White; padding: 12px 25px; text-decoration: none; border-radius: 25px; font-weight: bold; transition: background 0.3s;">
             חזרה לדף הבית
         </a>
     </div>

@@ -80,7 +80,7 @@
         <h1>Ido Bakery & Pastry</h1>
 
         <div class="nav-main">
-            <a href="/Default.aspx">🏠 דף ראשי</a>
+            <a href="/main.aspx">🏠 דף ראשי</a>
             <span class="nav-divider">|</span>
             <a href="/About.aspx">אודות</a>
             <span class="nav-divider">|</span>

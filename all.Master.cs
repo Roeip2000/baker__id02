@@ -31,7 +31,7 @@ namespace baker_ido
             // ����� �-Session ������ ��� ����
             Session.Abandon();
             Session.Clear();
-            Response.Redirect("~/Default.aspx");
+            Response.Redirect("~/main.aspx");
         }
     }
 }
