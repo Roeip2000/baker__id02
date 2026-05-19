@@ -125,7 +125,7 @@
         </tr>
 
         <tr>
-            <td colspan="2" style="text-align:center;">
+            <td colspan="2" class="form-actions">
                 <asp:Button ID="btnSubmit" runat="server"
                     Text="שלח הרשמה"
                     CssClass="main-button"

@@ -21,32 +21,32 @@
     <div class="topics-grid">
 
         <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/SimpleMixCakes.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
+            <div class="recipe-topic-content">
+                <a href="/Recipes/SimpleMixCakes.aspx" class="recipe-topic-link">
                     עוגות בחושות 🍰
                 </a>
             </div>
         </div>
 
         <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/Cookies.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
+            <div class="recipe-topic-content">
+                <a href="/Recipes/Cookies.aspx" class="recipe-topic-link">
                     עוגיות 🍪
                 </a>
             </div>
         </div>
 
         <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/CreamCakes.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
+            <div class="recipe-topic-content">
+                <a href="/Recipes/CreamCakes.aspx" class="recipe-topic-link">
                     עוגות קרם 🎂
                 </a>
             </div>
         </div>
 
         <div class="topic-box">
-            <div style="text-align: center; margin: 20px 0;">
-                <a href="/Recipes/PersonalDesserts.aspx" style="color: black; text-decoration: none; font-size: 24px; font-weight: bold;">
+            <div class="recipe-topic-content">
+                <a href="/Recipes/PersonalDesserts.aspx" class="recipe-topic-link">
                     קינוחים אישיים 🍮
                 </a>
             </div>

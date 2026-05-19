@@ -511,6 +511,98 @@ body .container {
     background-color: #5f3822;
 }
 
+.form-box input.main-button,
+.form-box input[type="submit"] {
+    width: auto; /* כפתורי שליחה נשארים בגודל טבעי ולא נמתחים כמו שדות טופס */
+}
+
+.logout-button {
+    margin-right: 6px; /* רווח קטן בין כפתור התנתקות לשאר התפריט */
+}
+
+.site-footer-space {
+    margin-top: 50px; /* מרחיק את הפוטר מהתוכן */
+}
+
+.recipe-topic-content {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.recipe-topic-link {
+    color: #2f2a26;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.recipe-topic-link:hover {
+    color: #7a4a2b;
+}
+
+.form-actions {
+    padding-top: 15px;
+    text-align: center;
+}
+
+.permission-box {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    text-align: center;
+}
+
+.permission-title {
+    color: #b42318;
+    margin-bottom: 20px;
+}
+
+.permission-text {
+    color: #2f2a26;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.main-link-button {
+    display: inline-block;
+    background-color: #7a4a2b;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    padding: 12px 25px;
+    text-decoration: none;
+}
+
+.main-link-button:hover {
+    background-color: #5f3822;
+    color: white;
+}
+
+.admin-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.table-wrapper {
+    overflow-x: auto; /* מאפשר גלילה לצדדים אם הטבלה רחבה מדי */
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.users-grid {
+    width: 100%;
+    border-collapse: collapse;
+    color: #2f2a26;
+    text-align: center;
+}
+
+.admin-count {
+    color: #2f2a26;
+    font-size: 16px;
+}
+
 .footer-text {
     color: #7a6a5f;
 }

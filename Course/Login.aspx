@@ -33,7 +33,7 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2" style="text-align:center; padding-top:15px;">
+                <td colspan="2" class="form-actions">
                     <asp:Button ID="btnLogin" runat="server" Text="התחבר" CssClass="main-button" OnClick="btnLogin_Click" />
                 </td>
             </tr>
