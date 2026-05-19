@@ -14,7 +14,7 @@
 
         
         <div class="recipe-box">
-            <img src="/picture/lotus_cream.jpg" class="recipe-img" />
+            <img src="/picture/lotus_cream.jpg" class="recipe-img" alt="עוגת לוטוס וקרם וניל" />
 
             <div class="recipe-text">
                 <h3>עוגת קסם לוטוס וקרם וניל</h3>
@@ -41,7 +41,7 @@
 
         
         <div class="recipe-box">
-            <img src="/picture/tiramisu.jpg" class="recipe-img" />
+            <img src="/picture/tiramisu.jpg" class="recipe-img" alt="פס טירמיסו" />
 
             <div class="recipe-text">
                 <h3>פס טירמיסו מהיר</h3>
@@ -68,7 +68,7 @@
 
       
         <div class="recipe-box">
-            <img src="/picture/choco_mousse.jpg" class="recipe-img" />
+            <img src="/picture/choco_mousse.jpg" class="recipe-img" alt="עוגת מוס שוקולד" />
 
             <div class="recipe-text">
                 <h3>עוגת מוס שוקולד</h3>

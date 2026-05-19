@@ -1,257 +1,9 @@
-﻿.members-master {
-    min-height: 100vh; /* מגדיר גובה מינימלי של כל המסך (100% מגובה חלון התצוגה) */
-    direction: rtl; /* מגדיר כיוון טקסט מימין לשמאל (מותאם לעברית) */
-    text-align: center; /* מיישר את כל הטקסט למרכז */
-    font-family: Arial, sans-serif; /* קובע את סוג הגופן (פונט) של הדף */
-    background-image: url('picture/book.jpg'); /* מגדיר תמונת רקע */
-    background-size: cover; /* מוודא שתמונת הרקע תכסה את כל שטח המסך במלואו */
-    background-position: center; /* ממקם את תמונת הרקע בדיוק באמצע */
-    background-repeat: no-repeat; /* מונע מהתמונה לחזור על עצמה (לא משוכפלת) */
-    background-attachment: fixed; /* מקבע את תמונת הרקע כך שהיא לא תזוז כשגוללים למטה */
-}
-
-    .members-master .top-header {
-        background: linear-gradient(to left, deepskyblue, cornflowerblue); /* רקע מעבר צבעים (גרדיאנט) מתכלת לכחול קורנפלור */
-        color: white; /* צבע טקסט לבן */
-        padding: 30px 20px; /* ריווח פנימי: 30 פיקסלים למעלה ולמטה, 20 בצדדים */
-        text-align: center; /* יישור טקסט למרכז */
-        box-shadow: 0 4px 12px lightgray; /* הוספת צל קליל בצבע אפור בהיר בתחתית הדר (Header) */
-    }
-
-        .members-master .top-header h1 {
-            margin: 0; /* ביטול שוליים חיצוניים (רווחים) כדי למנוע רווחים מיותרים */
-            font-size: 40px; /* גודל גופן גדול במיוחד לכותרת הראשית */
-        }
-
-        .members-master .top-header h2 {
-            margin: 8px 0 0 0; /* שוליים חיצוניים: רק 8 פיקסלים רווח מלמעלה בלבד */
-            font-size: 18px; /* גודל גופן קטן יותר לכותרת המשנית */
-            font-weight: normal; /* הופך את הטקסט לרגיל ולא מודגש (מבטל את ה-Bold הרגיל של כותרות) */
-        }
-
-    .members-master .members-menu {
-        display: flex; /* תצוגה גמישה - מאפשר לסדר את הפריטים (כפתורי תפריט) נוח אחד ליד השני */
-        justify-content: center; /* ממרכז את הכפתורים אופקית (אמצע השורה) */
-        align-items: center; /* ממרכז את הכפתורים אנכית (באותו הגובה) */
-        flex-wrap: wrap; /* מאפשר לכפתורים לרדת שורה למטה אם המסך צר מדי */
-        gap: 12px; /* קובע רווח מדויק ואחיד של 12 פיקסלים בין כל כפתור בתפריט */
-        text-align: center; /* יישור הטקסט בתוך התפריט */
-        background-color: rgba(255,255,255,0.95); /* רקע לבן עם 95% אטימות (שקוף מעט) */
-        padding: 14px; /* ריווח פנימי של התפריט מכל הכיוונים */
-        font-size: 20px; /* גודל הגופן של הקישורים בתפריט */
-        box-shadow: 0 4px 10px lightgray; /* הוספת צל עדין לתפריט ליצירת תחושת הפרדה */
-    }
-
-        .members-master .members-menu a {
-            min-width: 130px; /* רוחב מינימלי לכל כפתור כדי שתהיה אחידות בגדלים */
-            margin: 0; /* ללא מרווח חיצוני */
-            padding: 10px 18px; /* ריווח פנימי בתוך הכפתור (ריווח טקסט מהמסגרת) */
-            border-radius: 12px; /* עיגול פינות הכפתורים */
-            background: linear-gradient(180deg, white 0%, aliceblue 100%); /* רקע מעבר צבעים מלמעלה למטה, מלבן לתכלת מאוד בהיר */
-            border: 1px solid lightskyblue; /* מסגרת דקה סביב הכפתור בצבע תכלת */
-            color: midnightblue; /* צבע טקסט כחול-כהה */
-            text-decoration: none; /* ביטול הקו התחתון (הרגיל) של קישורים */
-            font-weight: bold; /* טקסט מודגש (עבה) */
-            box-shadow: 0 4px 10px rgba(0,0,0,0.10); /* הצללה קלה מאוד לכפתור עצמו */
-            transition: 0.2s ease; /* הגדרת מהירות אנימציה (מעבר חלק של 0.2 שניות) כשמעבירים עליו עכבר */
-        }
-
-            .members-master .members-menu a:hover {
-                color: dodgerblue; /* משנה את צבע הטקסט לתכלת חזק כשמעבירים את העכבר (ריחוף) */
-                border-color: dodgerblue; /* משנה את צבע המסגרת בעת ריחוף */
-                transform: translateY(-2px); /* דוחף את הכפתור 2 פיקסלים למעלה ליצירת אפקט לחיצה/ריחוף */
-            }
-
-        .members-master .members-menu span {
-            display: none; /* מסתיר אלמנט מסוג span (שימש כנראה כמפריד טקסט או סימן שלא צריך להופיע) */
-        }
-
-    .members-master .container {
-        max-width: 1350px; /* חוסם את הרוחב המקסימלי של התוכן המרכזי כדי שלא יימרח מדי במסכים גדולים */
-        margin: 35px auto; /* מרווח של 35 פיקסלים מלמעלה ומלמטה, וה-'auto' ממרכז את הקופסה אופקית */
-        padding: 20px; /* ריווח פנימי של אזור התוכן */
-    }
-
-    .members-master .members-home .intro-box,
-    .members-master .members-home .text-box,
-    .members-master .video-frame-box {
-        background-color: rgba(255, 255, 255, 0.93); /* רקע לבן שקוף (93% אטימות) לקופסאות התוכן השונות */
-        border-radius: 16px; /* עיגול הפינות של הקופסאות הגדולות (מראה מודרני) */
-        padding: 28px; /* ריווח פנימי גדול, נותן "אוויר" לטקסט בפנים */
-        border: 1px solid lightsteelblue; /* מסגרת כחולה-אפורה בהירה ועדינה */
-        margin-bottom: 25px; /* מרווח חיצוני תחתון שמרחיק את הקופסה מהקופסה שתבוא אחריה */
-        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12); /* הצללה רחבה שנותנת תחושה שהקופסה "מרחפת" מעל הרקע */
-    }
-
-        .members-master .members-home .intro-box h2 {
-            margin-top: 0; /* הסרת מרווח עליון עודף מעל הכותרת */
-            font-size: 30px; /* כותרת גדולה וקריאה בקופסת ההקדמה */
-            color: midnightblue; /* כותרת בצבע כחול חצות (כהה) */
-        }
-
-        .members-master .members-home .intro-box p,
-        .members-master .members-home .text-box p,
-        .members-master .video-frame-box p {
-            font-size: 18px; /* גודל טקסט לקריאה נוחה בקופסאות */
-            line-height: 1.8; /* מרווח שורות אוורירי (1.8) לקריאה נוחה של פסקאות */
-            color: dimgray; /* צבע טקסט אפור כהה שפחות מעייף את העיניים משחור */
-        }
-
-        .members-master .members-home .text-box h3,
-        .members-master .video-frame-box h3 {
-            margin-top: 0; /* ביטול מרווח עליון */
-            margin-bottom: 18px; /* הרחקת תת-הכותרת ב-18 פיקסלים מהטקסט שמתחתיה */
-            font-size: 28px; /* גודל תת-כותרת */
-            color: steelblue; /* כותרת בצבע כחול-פלדה */
-        }
-
-    .members-master .user-name {
-        color: dodgerblue; /* הבלטת השם של המשתמש (או המורה) בצבע תכלת מודגש */
-        font-weight: bold; /* הדגשת הטקסט (Bold) */
-    }
-
-    .members-master .members-home .course-links {
-        display: grid; /* שימוש בגריד (רשת) לסידור של כרטיסיות הקורסים והמתכונים */
-        grid-template-columns: minmax(240px, 360px); /* מגדיר שהעמודות יכולות לגדול בין 240 ל-360 פיקסלים ברוחב */
-        justify-content: center; /* ממרכז את כל מבנה הרשת לאמצע המסך */
-        gap: 14px; /* רווח של 14 פיקסלים בין הכרטיסיות (ימינה ושמאלה/למעלה למטה) */
-        margin: 20px auto 0; /* מרווח של 20 מעל, מרכוז אופקי (auto), ו-0 מרווח למטה */
-    }
-
-    .members-master .members-home .course-link,
-    .members-master .video-link {
-        display: flex; /* שימוש ב-Flexbox בתוך הכרטיסייה / לינק הגדול */
-        flex-direction: column; /* מסדר את התוכן בתוך הכרטיסייה מלמעלה למטה (ולא ימינה שמאלה) */
-        justify-content: center; /* ממרכז אופקית ואנכית */
-        align-items: center; /* ממרכז את התוכן לאמצע הכרטיסייה */
-        min-height: 130px; /* גובה מינימלי (כרטיסייה שהיא כפתור גדול) */
-        background: linear-gradient(180deg, white 0%, aliceblue 100%); /* רקע מעבר צבעים עדין מאוד מלבן לתכלת */
-        padding: 22px 18px; /* ריווח פנימי נוח */
-        border-radius: 12px; /* עיגול הפינות */
-        border: 1px solid lightskyblue; /* מסגרת בצבע תכלת בהיר */
-        border-bottom: 4px solid deepskyblue; /* פס תחתון עבה שיוצר מראה של "כפתור תלת ממדי" */
-        text-decoration: none; /* ביטול קו תחתון של קישור */
-        color: midnightblue; /* צבע טקסט */
-        font-size: 20px; /* גודל הגופן שבתוך הכפתור הגדול */
-        font-weight: bold; /* הדגשת הטקסט */
-        text-align: center; /* מרכוז הטקסט */
-        box-shadow: 0 8px 18px rgba(0,0,0,0.12); /* יצירת הצללה */
-        transition: 0.2s ease; /* הגדרת מעבר חלק (אנימציה) לריחוף של העכבר */
-    }
-
-        .members-master .members-home .course-link:hover,
-        .members-master .video-link:hover {
-            background: linear-gradient(180deg, white 0%, #eaf7ff 100%); /* כשמרחפים עם העכבר - התכלת נהיה טיפה כהה יותר */
-            border-color: dodgerblue; /* מסגרת מודגשת במעבר עכבר */
-            transform: translateY(-4px); /* מרים את הכרטיסייה ב-4 פיקסלים למעלה ויוצר "אפקט לחיצה" או ריחוף */
-            box-shadow: 0 12px 24px rgba(0,0,0,0.18); /* מגדיל את ההצללה כשהכפתור "מורם" */
-        }
-
-    .members-master .video-links {
-        display: grid; /* רשת לסידור כרטיסיות הסרטונים */
-        grid-template-columns: repeat(2, minmax(240px, 360px)); /* חלוקה ל-2 עמודות (2 סרטונים בשורה), בגדלים גמישים */
-        justify-content: center; /* מרכוז הרשת */
-        gap: 18px; /* רווח של 18 פיקסלים בין הסרטונים */
-        max-width: 900px; /* רוחב מקסימלי לרשת הסרטונים כדי שלא יתפרסו יותר מדי */
-        margin: 0 auto; /* מרכוז */
-    }
-
-    .members-master .video-number {
-        background-color: steelblue; /* קופסת מספר הסרטון: רקע כחול כהה (בתוך הכרטיסייה) */
-        color: white; /* טקסט לבן למספר */
-        font-size: 15px; /* גודל גופן למספר הסרטון */
-        padding: 5px 14px; /* ריווח פנימי לבועה של המספר */
-        border-radius: 20px; /* מעגל מאוד את הפינות כך שזה נראה כמו אליפסה (כדור) קטן */
-        margin-bottom: 12px; /* רווח בין המספר לבין שם הסרטון שתחתיו */
-    }
-
-    .members-master .video-title {
-        color: midnightblue; /* צבע טקסט לשם הסרטון */
-        font-size: 24px; /* גודל כותרת שם הסרטון */
-        line-height: 1.3; /* ריווח שורות מתאים כדי שטקסט בשתי שורות לא ייראה צפוף */
-    }
-
-    .members-master .footer-text {
-        margin-top: 30px; /* דחיפת הטקסט התחתון מטה (מרחיק משאר התוכן) */
-        margin-bottom: 10px; /* רווח תחתון קטן */
-        text-align: center; /* מרכוז אזור הפוטר (Footer) */
-    }
-
-    .members-master .main-button {
-        padding: 14px 34px; /* עיצוב כפתור עגול ראשי - ריווח פנימי גדול (לחיץ ונוח) */
-        border: none; /* מחיקת מסגרת ברירת מחדל של כפתורים */
-        border-radius: 14px; /* פינות עגולות */
-        background: linear-gradient(to left, royalblue, dodgerblue); /* רקע מדורג לכפתור בצבעי כחול יפים למראה לחיץ ובוהק */
-        color: white; /* טקסט לבן */
-        font-size: 18px; /* גודל הטקסט שבכפתור */
-        font-weight: bold; /* הדגשת טקסט בכפתור */
-        cursor: pointer; /* הפיכת החץ של העכבר לאייקון של "יד מצביעה" (רמז שלחיץ) */
-        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15); /* צל יפה שמבליט את הכפתור החוצה */
-        transition: 0.2s ease; /* אנימציה של 0.2 שניות במעבר עכבר */
-    }
-
-        .members-master .main-button:hover {
-            background: linear-gradient(to left, mediumblue, royalblue); /* שינוי הגרדיאנט לצבע כחול מעט כהה יותר בזמן ריחוף */
-            transform: scale(1.05); /* מגדיל את הכפתור ב-5% בזמן שהעכבר עליו */
-        }
-
-    /* הגדרות לעיצוב ה-iframe (סרטוני וידאו / נגן) */
-    .members-master .video-frame-box iframe {
-        width: 100%; /* הנגן תופס 100% מהרוחב של הקופסה שלו */
-        max-width: 950px; /* לא מאפשר לנגן להיות רחב יותר מ-950 פיקסלים (כדי שלא יהיה מרוח במסך גדול) */
-        height: 700px; /* קובע גובה קבוע של 700 פיקסלים לנגן הסרטון */
-        display: block; /* מגדיר אותו כבלוק (תופס שורה שלמה), עוזר במרכוז */
-        margin: 0 auto; /* ממרכז את נגן הווידאו למרכז העמוד */
-        border: none; /* מעלים את המסגרת המכוערת שקיימת בדרך כלל מסביב לאייפרם (IFrame) */
-        border-radius: 12px; /* מעגל את הפינות של הסרטון (של המסגרת של יוטיוב/הנגן) */
-        background-color: white; /* רקע לבן למקרה של עיכוב בטעינת הסרטון */
-        box-shadow: 0 6px 16px rgba(0,0,0,0.12); /* הוספת צל למסגרת הנגן */
-    }
-
-/* === התאמות למסכים ניידים (רספונסיביות - Media Queries) === */
-
-/* התאמה למסכים קטנים וטאבלטים מ-900 פיקסלים ומטה */
-@media (max-width: 900px) {
-    .members-master .container {
-        max-width: 95%; /* אזור התוכן המרכזי תופס פחות שטח צדדי (95% מהמסך במקום 1350 פיקסלים) */
-        padding: 15px; /* מוריד קצת את המרווח הפנימי לחסכון במקום במסך קטן */
-    }
-
-    .members-master .video-links,
-    .members-master .members-home .course-links {
-        grid-template-columns: 1fr; /* משנה את הרשת לטור 1 בלבד (הכרטיסיות של הסרטונים והמתכונים יופיעו אחת מתחת לשנייה ולא בשורה אחת) */
-    }
-
-    .members-master .video-frame-box iframe {
-        height: 500px; /* מקטין את גובה הסרטון במסך בינוני כדי שיכנס טוב לתוך התצוגה */
-    }
-}
-
-/* התאמה לסמארטפונים (טלפונים ניידים) מ-700 פיקסלים ומטה */
-@media (max-width: 700px) {
-    .members-master .top-header h1 {
-        font-size: 30px; /* מקטין את הכותרת הראשית בהדר (Header) כדי שלא תישבר לפעמיים */
-    }
-
-    .members-master .top-header h2 {
-        font-size: 16px; /* מקטין את תת-הכותרת במובייל */
-    }
-
-    .members-master .members-menu {
-        font-size: 16px; /* מקטין את הטקסט של הקישורים בתפריט במובייל */
-        line-height: 2; /* מגדיל את המרחק בין השורות בתפריט כדי שיהיה למשתמש נוח ללחוץ עם האצבע בטלפון */
-    }
-
-    .members-master .video-frame-box iframe {
-        height: 360px; /* מקטין משמעותית את גובה נגן הווידאו כך שיראה פרופורציונלי בסמארטפון */
-    }
-}
-
-/* ===== עיצוב פשוט לאזור הקורס ===== */
+﻿/* ===== עיצוב פשוט לאזור הקורס ===== */
 
 .members-master {
+    min-height: 100vh;
+    direction: rtl;
     background-color: #fff8ef;
-    background-image: linear-gradient(180deg, #fff8ef 0%, #f1f7f4 100%);
     color: #26312b;
     font-family: Arial, "Segoe UI", sans-serif;
 }
@@ -276,11 +28,19 @@
 }
 
 .members-master .members-menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 8px;
     background-color: #ffffff;
     border-bottom: 1px solid #d8e6dc;
     box-shadow: none;
     padding: 10px;
+}
+
+.members-master .members-menu span {
+    display: none;
 }
 
 .members-master .members-menu a {
@@ -342,15 +102,38 @@
     gap: 14px;
 }
 
+.members-master .members-home .course-links {
+    display: grid;
+    grid-template-columns: minmax(240px, 360px);
+    justify-content: center;
+    margin: 20px auto 0;
+}
+
+.members-master .video-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(240px, 360px));
+    justify-content: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 .members-master .members-home .course-link,
 .members-master .video-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 110px;
+    padding: 22px 18px;
     background: #ffffff;
     border: 1px solid #cddfd4;
     border-bottom: 3px solid #90b59f;
     border-radius: 8px;
     color: #274c3a;
     box-shadow: 0 3px 10px rgba(45, 70, 50, 0.08);
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
     transition: background-color 0.2s, border-color 0.2s;
 }
 
@@ -364,6 +147,11 @@
 
 .members-master .video-number {
     background-color: #3f6652;
+    color: white;
+    font-size: 15px;
+    margin-bottom: 12px;
+    padding: 5px 14px;
+    border-radius: 20px;
 }
 
 .members-master .video-title {
@@ -386,6 +174,9 @@
     width: 100%;
     max-width: 900px;
     height: 500px;
+    display: block;
+    margin: 0 auto;
+    border: none;
     border-radius: 8px;
     box-shadow: none;
 }

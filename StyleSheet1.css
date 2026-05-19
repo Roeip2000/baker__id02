@@ -1,260 +1,13 @@
-﻿body {
-    font-family: Arial; /* קובע את סוג הגופן הראשי של האתר */
-    margin: 0; /* מאפס רווחים מיותרים בקצוות המסך */
-    text-align: center; /* ממרכז את כל הטקסט כברירת מחדל */
+﻿/* ===== עיצוב פשוט ונקי לכל האתר ===== */
+
+* {
+    box-sizing: border-box; /* גורם לרוחב אלמנטים להיות צפוי ופשוט */
 }
-
-.top-header {
-    background-color: skyblue; /* רקע תכלת-שמיים לחלק העליון (ההדר) */
-    color: white; /* צבע טקסט לבן שייבלט על התכלת */
-    padding: 25px; /* ריווח פנימי שנותן גובה ונפח לפס העליון */
-    text-align: center; /* מוודא שהתוכן בהדר ממוקם בדיוק באמצע */
-}
-
-    .top-header h1 {
-        margin: 0; /* מבטל רווחים מיותרים כדי שהכותרת לא תדחוף אלמנטים למטה */
-        font-size: 34px; /* גודל כותרת גדולה לשם המאפייה */
-        text-align: center; /* מרכוז */
-    }
-
-    .top-header h2 {
-        margin: 5px 0 0 0; /* רווח קל רק מלמעלה (5 פיקסלים) להפרדה מהכותרת הראשית */
-        font-size: 18px; /* גודל כותרת משנית (כמו סלוגן) */
-        text-align: center; /* מרכוז */
-    }
-
-    .top-header a {
-        color: white; /* קובע שהקישורים למעלה יהיו בצבע לבן */
-        text-decoration: none; /* מסיר את הקו התחתון שיש לקישורים בדרך כלל */
-    }
-
-        .top-header a:hover {
-            text-decoration: underline; /* מוסיף קו תחתון רק כשמעבירים את העכבר על הקישור (אינדיקציה ללחיצה) */
-        }
-
-.container {
-    padding: 20px; /* ריווח פנימי מכל הצדדים */
-    max-width: 900px; /* חוסם את התוכן שלא יתפרס יותר מ-900 פיקסלים (לשמירה על פרופורציה במסך גדול) */
-    margin: 0 auto; /* ממרכז את התיבה לאמצע המסך */
-}
-
-.intro-box {
-    background-color: white; /* רקע לבן לקופסת ההקדמה */
-    border-radius: 8px; /* מעגל קלות את הפינות */
-    padding: 15px; /* ריווח פנימי לטקסט */
-    border: 1px solid lightsteelblue; /* מסגרת כחולה-אפורה עדינה */
-    margin-bottom: 20px; /* מרווח מלמטה כדי להפריד מהאלמנט הבא */
-}
-
-.topics-grid {
-    margin-top: 20px; /* רווח מלמעלה */
-    display: flex; /* תצוגה גמישה המאפשרת לסדר כרטיסיות מתכונים אחת ליד השנייה */
-    flex-wrap: wrap; /* מאפשר לאלמנטים לרדת שורה אם אין מספיק מקום במסך */
-    justify-content: space-between; /* מפזר את הכרטיסיות עם רווח שווה ביניהן */
-}
-
-.topic-box {
-    width: 48%; /* כל כרטיסייה תופסת קצת פחות מחצי מסך (כדי שיכנסו 2 בשורה) */
-    background-color: white; /* רקע לבן לכרטיסייה */
-    border: 1px solid lightskyblue; /* מסגרת תכלת בהירה */
-    border-radius: 10px; /* פינות עגולות */
-    overflow: hidden; /* חותך את מה שחורג מהפינות העגולות (שומר שהתמונה לא תבלוט) */
-    margin-bottom: 15px; /* מרווח תחתון מכרטיסיות בשורה הבאה */
-    cursor: pointer; /* משנה את סמן העכבר ל"יד לוחצת" */
-    text-decoration: none; /* מסיר קו תחתון אם הכרטיסייה היא קישור */
-    color: black; /* צבע טקסט שחור */
-    transition: 0.3s; /* מגדיר אנימציה חלקה של 0.3 שניות לאפקט הריחוף */
-}
-
-    .topic-box:hover {
-        transform: scale(1.03); /* מגדיל את הכרטיסייה ב-3% (אפקט זום יפה) בעת ריחוף עכבר */
-        background-color: aliceblue; /* משנה את הרקע לתכלת-קרח בהיר מאוד כשעוברים עם העכבר */
-    }
-
-    .topic-box img {
-        width: 100%; /* התמונה תתפוס את כל רוחב הכרטיסייה */
-        height: 250px; /* גובה קבוע לכל התמונות כדי שיעמדו באותו גובה בדיוק */
-        object-fit: cover; /* חותך ומתאים את התמונה כך שתמלא את השטח בלי להימעך */
-    }
-
-.topic-title {
-    text-align: center; /* ממרכז את כותרת הכרטיסייה */
-    padding: 10px; /* ריווח פנימי מסביב לטקסט */
-    font-size: 18px; /* גודל גופן סביר לכותרת מתכון */
-    font-weight: bold; /* הופך את הכותרת לעבה (מודגשת) */
-    background-color: white; /* רקע לבן לאזור הכותרת */
-}
-
-.footer-text {
-    text-align: center; /* ממרכז את הטקסט למטה (זכויות יוצרים וכו') */
-    font-size: 13px; /* גופן קטן יחסית */
-    color: dimgray; /* צבע אפור כהה - קריא אבל לא צועק לעין */
-    margin-top: 30px; /* דוחף אותו הרחק מהתוכן שמעליו */
-    margin-bottom: 10px; /* מרווח קל מהתחתית של הדפדפן */
-}
-
-.body {
-    padding: 20px; /* עוטף אזורי תוכן ונותן להם שוליים פנימיים */
-}
-
-.form-table {
-    width: 100%; /* הטבלה של הטפסים (הרשמה/התחברות) תתפוס את כל הרוחב האפשרי */
-    border-collapse: collapse; /* מבטל את הרווחים הכפולים בין התאים בטבלה */
-}
-
-    .form-table td {
-        padding: 10px; /* ריווח פנימי של 10 פיקסלים בתוך כל תא */
-        vertical-align: top; /* מיישר את התוכן של התא לחלק העליון שלו */
-    }
-
-.msg-text {
-    display: block; /* הופך את טקסט ההודעה לבלוק נפרד שתופס שורה משלו */
-    text-align: center; /* ממרכז את הודעת המערכת */
-    color: green; /* צבע ירוק המעיד על הצלחה (למשל: "נרשמת בהצלחה") */
-    font-size: 16px; /* גודל טקסט להודעה */
-    margin-bottom: 10px; /* רווח קל למטה */
-}
-
-.text-box {
-    background: rgba(255, 255, 255, 0.85); /* רקע לבן עם טיפה שקיפות (85%) */
-    padding: 15px; /* ריווח פנימי לטקסט */
-    border-radius: 8px; /* פינות מעט עגולות */
-    max-width: 600px; /* מגביל את הרוחב כדי שהטקסט לא יהיה ארוך וקשה לקריאה */
-    margin: 20px auto; /* ממרכז את התיבה באמצע המסך */
-    font-size: 17px; /* גודל גופן לקריאה נוחה */
-    line-height: 1.45; /* מרווח שורות המאפשר קריאה קלה יותר */
-}
-
-.recipes-wrapper {
-    max-width: 1200px; /* מגביל את האזור של המתכונים לרוחב גדול אבל נשלט */
-    margin: 0 auto; /* ממרכז את העטיפה כולה */
-    padding: 0 40px 40px; /* שוליים פנימיים גדולים בצדדים ובתחתית */
-}
-
-.recipe-box {
-    display: flex; /* מאפשר לסדר אלמנטים (תמונה וטקסט) אחד ליד השני בשורה */
-    gap: 60px; /* יוצר רווח גדול מאוד ויפה בין התמונה לטקסט המתכון */
-    align-items: flex-start; /* מיישר אותם יחד לחלק העליון */
-    flex-direction: row-reverse; /* חשוב לעברית! הופך את הסדר כך שהתמונה בשמאל והטקסט בימין */
-    margin-bottom: 70px; /* רווח תחתון עצום להפרדה ברורה בין מתכונים */
-    padding: 35px; /* ריווח פנימי שנותן אוויר ויוקרה */
-    background: rgba(255, 255, 255, 0.85); /* רקע שקוף למחצה */
-    border-radius: 22px; /* פינות עגולות במיוחד למראה רך ומודרני */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* צל רחב ועמוק מתחת למתכון לתחושת תלת-ממד */
-}
-
-.recipe-img {
-    width: 280px; /* קובע רוחב קבוע לתמונת המתכון */
-    border-radius: 18px; /* מעגל את פינות התמונה כדי שתשתלב יפה עם קופסת המתכון */
-    box-shadow: 0 6px 14px rgba(0,0,0,0.25); /* מוסיף צל לתמונה עצמה כדי להבליט אותה */
-}
-
-.recipe-text {
-    flex: 1; /* אומר לאזור הטקסט "לקחת את כל המקום שנשאר" בשורה לצד התמונה */
-    line-height: 2; /* ריווח כפול בין השורות (מושלם לקריאת מצרכים תוך כדי אפייה) */
-    font-size: 17px; /* גודל גופן נוח */
-}
-
-    .recipe-text h3 {
-        margin-top: 0; /* מוחק רווח עליון מיותר */
-        font-size: 26px; /* גודל כותרת שם המתכון */
-    }
-
-    .recipe-text ul,
-    .recipe-text ol {
-        margin-bottom: 22px; /* נותן רווח גדול אחרי רשימות (כמו מצרכים / שלבי הכנה) */
-    }
-
-    .recipe-text p {
-        margin-top: 20px; /* מרווח מעל פסקאות רגילות */
-        margin-bottom: 10px; /* מרווח קל מתחת לפסקאות */
-    }
-
-.input-box {
-    width: 100%; /* שדה ההזנה בטופס יתפוס את כל רוחב התא שבו הוא נמצא */
-    padding: 10px; /* הופך את שדה ההזנה למרווח ונוח להקלדה */
-    border-radius: 8px; /* מעגל את הפינות של התיבה */
-    border: 1px solid lightgray; /* מסגרת אפורה בהירה */
-    font-size: 16px; /* גודל הטקסט שיוקלד פנימה */
-}
-
-.main-button {
-    padding: 12px 25px; /* כפתור ראשי גדול ולחיץ */
-    border: none; /* ללא מסגרת ברירת מחדל */
-    border-radius: 20px; /* צורה אליפטית עדינה של כפתור */
-    background-color: saddlebrown; /* צבע חום-שוקולד קלאסי שמתאים למאפייה */
-    color: white; /* טקסט לבן שייראה על רקע חום */
-    font-size: 16px; /* גודל גופן */
-    cursor: pointer; /* הופך את העכבר ל"יד" ברגע שמרחפים מעל הכפתור */
-}
-
-    .main-button:hover {
-        background-color: sienna; /* כמעבירים עכבר, החום נהיה אדמדם ובהיר יותר (פידבק שהכפתור לחיץ) */
-    }
-
-.form-box {
-    max-width: 650px; /* שומר על תיבת הטופס שלא תימתח מדי גם במסך רחב */
-    margin: 40px auto; /* ממרכז אותה ונותן ריווח של 40 פיקסלים מלמעלה ולמטה */
-    padding: 30px; /* ריווח פנימי נדיב */
-    background: rgba(255,255,255,0.9); /* רקע כמעט אטום לגמרי כדי להבליט את הטופס מהרקע */
-    border-radius: 12px; /* פינות עגולות */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* צל בולט שמפריד את הטופס מדף האתר */
-    font-family: Arial; /* גופן (פונט) */
-    font-size: 18px; /* גודל טקסט לתוויות של הטופס (כמו "שם משתמש:") */
-    line-height: 1.8; /* מרווח שורות בין השדות */
-}
-
-    .form-box h2 {
-        text-align: center; /* ממרכז את כותרת הטופס (למשל "התחברות") */
-        margin-bottom: 20px; /* מרווח מהכותרת לשדה הראשון */
-    }
-
-    .form-box table {
-        width: 100%; /* טבלת הטופס מתפרסת על כל תיבת הטופס */
-    }
-
-    .form-box td {
-        padding: 10px; /* מרווח סביב כל תא (מפריד בין השורות) */
-        vertical-align: top; /* יישור לחלק העליון של התא */
-    }
-
-    .form-box input,
-    .form-box select,
-    .form-box textarea {
-        width: 100%; /* כל סוגי השדות יתפסו 100% רוחב באזור שלהם (מראה מודרני ואחיד) */
-        padding: 8px; /* ריווח פנימי להקלדה נוחה */
-        font-size: 16px; /* גודל הכתב בפנים */
-        border-radius: 6px; /* פינות קצת עגולות */
-        border: 1px solid darkgray; /* מסגרת אפורה מודגשת לתיבות ההזנה בטופס */
-    }
-
-.btn-row {
-    text-align: center; /* ממרכז את כל הכפתורים שבשורה (כמו "שלח" ו"נקה") */
-    margin-top: 15px; /* מרווח למעלה */
-}
-
-    .btn-row input {
-        width: auto; /* מאפשר לכפתור להיות ברוחב הדרוש לטקסט שלו ולא למתוח אותו ל-100% */
-        padding: 10px 25px; /* ריווח לכפתור השליחה */
-        font-size: 18px; /* טקסט לחיץ גדול */
-        border-radius: 8px; /* פינות עגולות */
-        border: none; /* ביטול מסגרת דיפולטיבית (רגילה) */
-        background: saddlebrown; /* רקע חום עמוק לכפתורי השליחה בטופס */
-        color: white; /* טקסט לבן */
-        cursor: pointer; /* סמן של "יד מצביעה" */
-    }
-
-        .btn-row input:hover {
-            background: sienna; /* צבע חום בהיר יותר בעת ריחוף עכבר על כפתור השליחה */
-        }
-
-/* ===== עיצוב פשוט ונקי לכל האתר ===== */
 
 body {
     direction: rtl; /* מתאים את האתר לעברית */
-    background-color: #fff8ef !important; /* רקע בהיר ונעים במקום תמונת רקע עמוסה */
-    background-image: linear-gradient(180deg, #fff8ef 0%, #f7efe4 100%) !important;
-    background-size: auto !important;
+    background-color: #fff8ef; /* רקע בהיר ונעים */
+    background-size: auto;
     color: #2f2a26;
     font-family: Arial, "Segoe UI", sans-serif;
     font-size: 16px;
@@ -270,7 +23,7 @@ a:hover {
 }
 
 body .top-header {
-    background: #fff1df !important; /* צבע אחיד ופשוט לכותרת העליונה */
+    background: #fff1df; /* צבע אחיד ופשוט לכותרת העליונה */
     color: #4b3325;
     padding: 24px 16px 18px;
     border-bottom: 1px solid #ead8c6;
@@ -278,7 +31,7 @@ body .top-header {
 }
 
 body .top-header h1 {
-    color: #5b3522 !important;
+    color: #5b3522;
     margin: 0 0 10px 0;
     font-size: 32px;
     letter-spacing: 0;
@@ -286,7 +39,7 @@ body .top-header h1 {
 }
 
 body .top-header h2 {
-    color: #6d4b36 !important;
+    color: #6d4b36;
     margin: 10px 0 0 0;
     font-size: 18px;
     font-weight: normal;
@@ -297,7 +50,7 @@ body .nav-main {
     flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
-    background: #ffffff !important;
+    background: #ffffff;
     border: 1px solid #ead8c6;
     border-radius: 8px;
     padding: 8px;
@@ -307,7 +60,7 @@ body .nav-main {
 body .nav-main a,
 body .nav-main span,
 body .nav-main input {
-    color: #4b3325 !important;
+    color: #4b3325;
     border-radius: 6px;
     font-size: 15px;
     padding: 7px 12px;
@@ -316,7 +69,7 @@ body .nav-main input {
 
 body .nav-main a:hover,
 body .nav-main input:hover {
-    background-color: #f7e3cd !important;
+    background-color: #f7e3cd;
 }
 
 body .nav-divider {
@@ -324,9 +77,9 @@ body .nav-divider {
 }
 
 body .nav-main input[type="submit"] {
-    background-color: #7a4a2b !important;
-    border: 1px solid #7a4a2b !important;
-    color: white !important;
+    background-color: #7a4a2b;
+    border: 1px solid #7a4a2b;
+    color: white;
     cursor: pointer;
 }
 
@@ -396,6 +149,10 @@ body .container {
     border-radius: 8px;
 }
 
+.main-image {
+    width: 350px;
+}
+
 .text-box > ul {
     display: flex; /* מסדר את קישורי התמונות בשורה פשוטה */
     flex-wrap: wrap;
@@ -419,6 +176,7 @@ body .container {
 }
 
 .topic-box {
+    display: block;
     width: 260px;
     max-width: 100%;
     min-height: 110px;
@@ -426,7 +184,9 @@ body .container {
     border: 1px solid #ead8c6;
     border-radius: 8px;
     color: #2f2a26;
+    overflow: hidden;
     box-shadow: 0 3px 10px rgba(70, 45, 20, 0.08);
+    text-decoration: none;
     transition: background-color 0.2s, border-color 0.2s;
 }
 
@@ -445,10 +205,14 @@ body .container {
 
 .recipes-wrapper {
     max-width: 1000px;
+    margin: 0 auto;
     padding: 0 0 30px;
 }
 
 .recipe-box {
+    display: flex;
+    flex-direction: row-reverse; /* בעברית נוח שהתמונה תהיה בצד שמאל והטקסט בימין */
+    align-items: flex-start;
     gap: 26px;
     margin-bottom: 26px;
     padding: 24px;
@@ -459,6 +223,7 @@ body .container {
 }
 
 .recipe-img {
+    flex-shrink: 0;
     width: 260px;
     height: 190px;
     object-fit: cover;
@@ -467,6 +232,7 @@ body .container {
 }
 
 .recipe-text {
+    flex: 1;
     color: #2f2a26;
     font-size: 16px;
     line-height: 1.7;
@@ -478,10 +244,30 @@ body .container {
     font-size: 24px;
 }
 
+.form-table,
+.form-box table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td,
+.form-box td {
+    padding: 10px;
+    vertical-align: top;
+}
+
+.msg-text {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .input-box,
 .form-box input,
 .form-box select,
 .form-box textarea {
+    width: 100%;
+    padding: 8px;
     border: 1px solid #d8c4b2;
     border-radius: 6px;
     color: #2f2a26;
@@ -605,6 +391,9 @@ body .container {
 
 .footer-text {
     color: #7a6a5f;
+    font-size: 13px;
+    margin: 30px 0 10px;
+    text-align: center;
 }
 
 @media (max-width: 700px) {

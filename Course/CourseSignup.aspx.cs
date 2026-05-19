@@ -18,7 +18,7 @@ public partial class CourseSignup : System.Web.UI.Page
             {
                 conn.Open();
 
-                // Check if username already exists
+                // בדיקה אם שם המשתמש כבר קיים
                 string checkSql = "SELECT COUNT(*) FROM Users WHERE uName=@uName";
                 SqlCommand checkCmd = new SqlCommand(checkSql, conn);
                 checkCmd.Parameters.AddWithValue("@uName", txtUserName.Text.Trim());

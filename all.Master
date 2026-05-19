@@ -18,25 +18,22 @@
         <h1>Ido Bakery & Pastry</h1>
 
         <div class="nav-main">
-            <a href="/main.aspx">🏠 דף ראשי</a>
+            <a href="/main.aspx">דף ראשי</a>
             <span class="nav-divider">|</span>
             <a href="/About.aspx">אודות</a>
             <span class="nav-divider">|</span>
-            <a href="/products.aspx"> קטלוג מתכונים</a> 
+            <a href="/products.aspx">קטלוג מתכונים</a>
             <span class="nav-divider">|</span>
-            
-           
-            
             <a href="/Course/CourseSignup.aspx">הרשמה</a>
-            
+
             <%-- התחברות - מוצג כשלא מחוברים --%>
-            <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Course/Login.aspx"> | התחברות</asp:HyperLink>
-            
+            <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Course/Login.aspx">התחברות</asp:HyperLink>
+
             <%-- אזור הקורס - מוצג למחוברים --%>
-            <asp:HyperLink ID="lnkCourseArea" runat="server" NavigateUrl="~/Course/CourseArea.aspx" Visible="false"> | אזור הקורס</asp:HyperLink>
-            
+            <asp:HyperLink ID="lnkCourseArea" runat="server" NavigateUrl="~/Course/CourseArea.aspx" Visible="false">אזור הקורס</asp:HyperLink>
+
             <span class="nav-divider">|</span>
-            <a href="/Admin/Users.aspx">Admin</a>
+            <a href="/Admin/Users.aspx">ניהול</a>
 
             <%-- כפתור התנתקות מעוצב --%>
             <asp:Button ID="btnLogout" runat="server" Text="התנתק" OnClick="btnLogout_Click"

@@ -10,14 +10,14 @@ namespace baker_ido
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // 1. אבטחה: מוודא שהמשתמש מחובר
+            // רק משתמש מחובר יכול להיכנס לדף הניהול
             if (Session["uName"] == null)
             {
                 Response.Redirect("~/Course/Login.aspx");
                 return;
             }
 
-            // 2. הרשאות: מוודא שרק מנהל (isAdmin=1) נכנס לדף
+            // רק מנהל יכול לראות את רשימת המשתמשים
             if (Session["isAdmin"] == null || (bool)Session["isAdmin"] == false)
             {
                 Response.Redirect("~/NoAdmin.aspx");
@@ -32,22 +32,18 @@ namespace baker_ido
 
         private void BindUsers()
         {
-            // שם קובץ ה-Database בתיקיית App_Data
             string fileName = "Database1.mdf";
 
-            // שאילתה עם שמות העמודות המדויקים מה-SQL שלך
-            string sql = "SELECT uName, fName, lName, email, city, pw, isAdmin FROM Users";
+            // לא מציגים סיסמאות בדף הניהול
+            string sql = "SELECT uName, fName, lName, email, city, isAdmin FROM Users";
 
-            // קריאה ל-Helper (שם הפעולה חייב להיות ExecuteDataTable)
             DataTable dt = Helper.ExecuteDataTable(fileName, sql);
 
             if (dt != null)
             {
-                // קישור הנתונים לטבלה gvUsers
                 gvUsers.DataSource = dt;
                 gvUsers.DataBind();
 
-                // עדכון המונה lblCount
                 if (lblCount != null)
                 {
                     lblCount.Text = "סה\"כ נרשמים באתר: " + dt.Rows.Count.ToString();

@@ -9,17 +9,15 @@ namespace baker_ido
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // ������ �-uName ��� ������ ����� ��� �-Login ���
+            // אם המשתמש מחובר, מציגים קישור לאזור הקורס וכפתור התנתקות
             if (Session["uName"] != null)
             {
-                // ��� �����
                 lnkLogin.Visible = false;
                 lnkCourseArea.Visible = true;
                 btnLogout.Visible = true;
             }
             else
             {
-                // ��� ����
                 lnkLogin.Visible = true;
                 lnkCourseArea.Visible = false;
                 btnLogout.Visible = false;
@@ -28,7 +26,7 @@ namespace baker_ido
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            // ����� �-Session ������ ��� ����
+            // ניקוי פרטי ההתחברות וחזרה לדף הראשי
             Session.Abandon();
             Session.Clear();
             Response.Redirect("~/main.aspx");
