@@ -246,3 +246,167 @@
         height: 360px; /* מקטין משמעותית את גובה נגן הווידאו כך שיראה פרופורציונלי בסמארטפון */
     }
 }
+
+/* ===== עיצוב פשוט לאזור הקורס ===== */
+
+.members-master {
+    background-color: #fff8ef;
+    background-image: linear-gradient(180deg, #fff8ef 0%, #f1f7f4 100%);
+    color: #26312b;
+    font-family: Arial, "Segoe UI", sans-serif;
+}
+
+.members-master .top-header {
+    background: #eaf4ee;
+    color: #26312b;
+    padding: 24px 16px 18px;
+    border-bottom: 1px solid #cddfd4;
+    box-shadow: 0 2px 10px rgba(45, 70, 50, 0.08);
+}
+
+.members-master .top-header h1 {
+    color: #274c3a;
+    font-size: 32px;
+    letter-spacing: 0;
+}
+
+.members-master .top-header h2 {
+    color: #3f6652;
+    font-size: 18px;
+}
+
+.members-master .members-menu {
+    gap: 8px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #d8e6dc;
+    box-shadow: none;
+    padding: 10px;
+}
+
+.members-master .members-menu a {
+    min-width: 120px;
+    background: #ffffff;
+    border: 1px solid #cddfd4;
+    border-radius: 6px;
+    color: #274c3a;
+    font-size: 16px;
+    padding: 9px 14px;
+    box-shadow: none;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.members-master .members-menu a:hover {
+    background-color: #eaf4ee;
+    border-color: #90b59f;
+    color: #274c3a;
+    transform: none;
+}
+
+.members-master .container {
+    max-width: 1000px;
+    margin: 28px auto;
+    padding: 0 16px;
+}
+
+.members-master .members-home .intro-box,
+.members-master .members-home .text-box,
+.members-master .video-frame-box {
+    background-color: #ffffff;
+    border: 1px solid #d8e6dc;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px rgba(45, 70, 50, 0.08);
+    padding: 24px;
+}
+
+.members-master .members-home .intro-box h2,
+.members-master .members-home .text-box h3,
+.members-master .video-frame-box h3 {
+    color: #274c3a;
+    font-size: 24px;
+}
+
+.members-master .members-home .intro-box p,
+.members-master .members-home .text-box p,
+.members-master .video-frame-box p {
+    color: #38433d;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.members-master .user-name {
+    color: #2f7a51;
+}
+
+.members-master .members-home .course-links,
+.members-master .video-links {
+    gap: 14px;
+}
+
+.members-master .members-home .course-link,
+.members-master .video-link {
+    min-height: 110px;
+    background: #ffffff;
+    border: 1px solid #cddfd4;
+    border-bottom: 3px solid #90b59f;
+    border-radius: 8px;
+    color: #274c3a;
+    box-shadow: 0 3px 10px rgba(45, 70, 50, 0.08);
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.members-master .members-home .course-link:hover,
+.members-master .video-link:hover {
+    background: #eaf4ee;
+    border-color: #90b59f;
+    transform: none;
+    box-shadow: 0 3px 10px rgba(45, 70, 50, 0.08);
+}
+
+.members-master .video-number {
+    background-color: #3f6652;
+}
+
+.members-master .video-title {
+    color: #274c3a;
+    font-size: 21px;
+}
+
+.members-master .main-button {
+    background: #3f6652;
+    border-radius: 6px;
+    box-shadow: none;
+}
+
+.members-master .main-button:hover {
+    background: #274c3a;
+    transform: none;
+}
+
+.members-master .video-frame-box iframe {
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+@media (max-width: 700px) {
+    .members-master .top-header h1 {
+        font-size: 26px;
+    }
+
+    .members-master .container {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .members-master .members-home .intro-box,
+    .members-master .members-home .text-box,
+    .members-master .video-frame-box {
+        padding: 18px;
+    }
+
+    .members-master .video-frame-box iframe {
+        height: 260px;
+    }
+}
