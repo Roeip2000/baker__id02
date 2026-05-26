@@ -17,7 +17,7 @@
             <img src="/picture/lotus_cream.jpg" class="recipe-img" alt="עוגת לוטוס וקרם וניל" />
 
             <div class="recipe-text">
-                <h3>עוגת קסם לוטוס וקרם וניל</h3>
+                <h3>עוגת לוטוס וקרם וניל</h3>
 
                 <p><b>מרכיבים:</b></p>
                 <ul>

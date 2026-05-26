@@ -1,20 +1,20 @@
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Web.UI;
 
 public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        // אם המשתמש כבר מחובר, נעביר אותו לאזור הקורס
         if (Session["uName"] != null)
+        {
             Response.Redirect("~/Course/CourseArea.aspx");
+            return;
+        }
     }
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        // בדיקה שכל שדות החובה מולאו
         if (!Page.IsValid) return;
 
         string uName = txtUserName.Text.Trim();
@@ -25,7 +25,6 @@ public partial class Login : System.Web.UI.Page
         {
             using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
             {
-                // שימוש בפרמטרים מגן על השאילתה מקלט לא תקין
                 string sql = "SELECT uName, fName, isAdmin FROM Users WHERE uName=@uName AND pw=@pw";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@uName", uName);
@@ -59,20 +58,21 @@ public partial class Login : System.Web.UI.Page
                 }
                 else
                 {
-                    lblError.Text = "שם משתמש או סיסמה שגויים";
+                    lblError.Text = "שם משתמש או סיסמה לא נכונים";
                     lblError.Visible = true;
                 }
             }
         }
         catch (Exception)
         {
-            lblError.Text = "שגיאה בחיבור למסד הנתונים";
+            lblError.Text = "הייתה שגיאה. נסה שוב";
             lblError.Visible = true;
         }
 
         if (nextPage != "")
         {
             Response.Redirect(nextPage);
+            return;
         }
     }
 }

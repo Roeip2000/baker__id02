@@ -1,7 +1,4 @@
 using System;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace baker_ido
 {
@@ -9,7 +6,6 @@ namespace baker_ido
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // אם המשתמש מחובר, מציגים קישור לאזור הקורס וכפתור התנתקות
             if (Session["uName"] != null)
             {
                 lnkLogin.Visible = false;
@@ -26,10 +22,10 @@ namespace baker_ido
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            // ניקוי פרטי ההתחברות וחזרה לדף הראשי
             Session.Abandon();
             Session.Clear();
             Response.Redirect("~/main.aspx");
+            return;
         }
     }
 }

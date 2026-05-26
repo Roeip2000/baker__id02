@@ -5,14 +5,13 @@
 </asp:Content>
 
 <asp:Content ID="c2" ContentPlaceHolderID="PageHeader" runat="server">
-    ניהול מערכת
+    ניהול
 </asp:Content>
 
 <asp:Content ID="Body1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-box admin-box">
         <h2>רשימת נרשמים לקורסים</h2>
         
-        <%-- שימוש ב-GridView במקום Literal כדי למנוע בלאגן --%>
         <div class="table-wrapper">
             <asp:GridView ID="gvUsers" runat="server" AutoGenerateColumns="true"
                 CssClass="users-grid"
@@ -26,7 +25,7 @@
 
         <br />
         <div class="admin-count">
-            מספר נרשמים במערכת: <strong><asp:Label ID="lblCount" runat="server" /></strong>
+            מספר נרשמים: <strong><asp:Label ID="lblCount" runat="server" /></strong>
         </div>
     </div>
 </asp:Content>

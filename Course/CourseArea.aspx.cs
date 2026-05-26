@@ -1,5 +1,4 @@
 using System;
-using System.Web.UI;
 
 public partial class CourseArea : System.Web.UI.Page
 {
@@ -13,9 +12,14 @@ public partial class CourseArea : System.Web.UI.Page
 
         if (!IsPostBack)
         {
-            lblName.Text = Session["fName"] != null
-                ? Session["fName"].ToString()
-                : Session["uName"].ToString();
+            if (Session["fName"] != null)
+            {
+                lblName.Text = Session["fName"].ToString();
+            }
+            else
+            {
+                lblName.Text = Session["uName"].ToString();
+            }
         }
     }
 }

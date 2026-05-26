@@ -17,7 +17,7 @@
             <img src="/picture/cupcake_carambo.jpg" class="recipe-img" alt="קאפקייק קרמבו" />
 
             <div class="recipe-text">
-                <h3>קאפקייק קרמבו – קאפקייקס עם מרנג וקרמבו (גרסה ביתית)</h3>
+                <h3>קאפקייק קרמבו</h3>
 
                 <p><b>מרכיבים (לקאפקייקס):</b></p>
                 <ul>
@@ -59,7 +59,7 @@
             <img src="/picture/mm_roll.jpeg" class="recipe-img" alt="רולדת M&M" />
 
             <div class="recipe-text">
-                <h3>רולדת M&M – רולדה לשיתוף (גרסה ביתית)</h3>
+                <h3>רולדת M&M</h3>
 
                 <p><b>מרכיבים (לביסקוויט):</b></p>
                 <ul>
@@ -96,7 +96,7 @@
             <img src="/picture/bubblegum_popsicle.jpeg" class="recipe-img" alt="ארטיק מסטיק ביתי" />
 
             <div class="recipe-text">
-                <h3>ארטיק מסטיק נוסטלגי (גרסה ביתית)</h3>
+                <h3>ארטיק מסטיק ביתי</h3>
 
                 <p><b>מרכיבים:</b></p>
                 <ul>

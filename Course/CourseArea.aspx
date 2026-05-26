@@ -28,7 +28,7 @@
             <div class="container members-home">
                 <div class="intro-box">
                     <h2>שלום, <asp:Label ID="lblName" runat="server" CssClass="user-name" /></h2>
-                    <p>ברוך הבא לאזור המנויים. כאן תוכל לצפות בסרטונים של הקורס.</p>
+                    <p>ברוך הבא לאזור הקורס. כאן אפשר לצפות בסרטונים.</p>
 
                     <div class="course-links">
                         <a href="/Course/Videos.aspx" class="course-link">מעבר לסרטוני הקורס</a>

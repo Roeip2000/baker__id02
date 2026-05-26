@@ -1,17 +1,21 @@
 ﻿<%@ Page Title="גישה נחסמה" Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" %>
 
+<asp:Content ID="ContentTitle" ContentPlaceHolderID="TitleContent" runat="server">
+    אין הרשאת גישה
+</asp:Content>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="PageHeader" runat="server">
-    שגיאת הרשאה
+    אין הרשאת גישה
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-box permission-box">
         
-        <h2 class="permission-title">עצור! ✋</h2>
+        <h2 class="permission-title">אין לך הרשאה</h2>
         <p class="permission-text">
-            הדף אליו ניסית להיכנס מיועד ל<strong>מנהלי מערכת</strong> בלבד.
-            <br />
-            נראה שאין לך את ההרשאות המתאימות.
+            הדף הזה מיועד למנהל האתר בלבד.
+            <br />°
+            אפשר לחזור לדף הראשי ולהמשיך לגלוש באתר.
         </p>
         
         <br />

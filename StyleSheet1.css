@@ -1,13 +1,13 @@
 ﻿/* ===== עיצוב פשוט ונקי לכל האתר ===== */
 
 * {
-    box-sizing: border-box; /* גורם לרוחב אלמנטים להיות צפוי ופשוט */
+    box-sizing: border-box;
 }
 
 body {
-    direction: rtl; /* מתאים את האתר לעברית */
-    background-color: #f5f5f5; /* רקע בהיר ופשוט */
-    background-size: auto;
+    direction: rtl;
+    margin: 0;
+    background-color: #f5f5f5;
     color: #222222;
     font-family: Arial, "Segoe UI", sans-serif;
     font-size: 16px;
@@ -23,11 +23,11 @@ a:hover {
 }
 
 body .top-header {
-    background: #ffffff; /* צבע אחיד ופשוט לכותרת העליונה */
+    background: #ffffff;
     color: #222222;
     padding: 18px 16px 14px;
     border-bottom: 1px solid #dddddd;
-    box-shadow: none;
+    text-align: center;
 }
 
 body .top-header h1 {
@@ -35,7 +35,6 @@ body .top-header h1 {
     margin: 0 0 10px 0;
     font-size: 28px;
     letter-spacing: 0;
-    text-shadow: none;
 }
 
 body .top-header h2 {
@@ -73,7 +72,7 @@ body .nav-main input:hover {
 }
 
 body .nav-divider {
-    display: none; /* אין צורך במפרידים כשהקישורים נראים כמו כפתורים */
+    display: none;
 }
 
 body .nav-main input[type="submit"] {
@@ -99,21 +98,24 @@ body .container {
     background-color: #ffffff;
     border: 1px solid #dddddd;
     border-radius: 6px;
-    box-shadow: none;
     color: #222222;
     text-align: right;
 }
 
 .text-box {
     max-width: 900px;
+    margin: 0 auto;
     padding: 28px;
 }
 
 .intro-box {
+    margin-bottom: 18px;
     padding: 22px;
 }
 
 .form-box {
+    max-width: 700px;
+    margin: 0 auto;
     padding: 28px;
 }
 
@@ -154,7 +156,7 @@ body .container {
 }
 
 .text-box > ul {
-    display: flex; /* מסדר את קישורי התמונות בשורה פשוטה */
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 16px;
@@ -185,15 +187,12 @@ body .container {
     border-radius: 6px;
     color: #222222;
     overflow: hidden;
-    box-shadow: none;
     text-decoration: none;
-    transition: none;
 }
 
 .topic-box:hover {
     background-color: #f0f0f0;
     border-color: #bbbbbb;
-    transform: none;
 }
 
 .topic-box img {
@@ -211,7 +210,7 @@ body .container {
 
 .recipe-box {
     display: flex;
-    flex-direction: row-reverse; /* בעברית נוח שהתמונה תהיה בצד שמאל והטקסט בימין */
+    flex-direction: row-reverse;
     align-items: flex-start;
     gap: 18px;
     margin-bottom: 20px;
@@ -219,7 +218,6 @@ body .container {
     background-color: #ffffff;
     border: 1px solid #dddddd;
     border-radius: 6px;
-    box-shadow: none;
 }
 
 .recipe-img {
@@ -228,7 +226,6 @@ body .container {
     height: 160px;
     object-fit: cover;
     border-radius: 6px;
-    box-shadow: none;
 }
 
 .recipe-text {
@@ -299,15 +296,15 @@ body .container {
 
 .form-box input.main-button,
 .form-box input[type="submit"] {
-    width: auto; /* כפתורי שליחה נשארים בגודל טבעי ולא נמתחים כמו שדות טופס */
+    width: auto;
 }
 
 .logout-button {
-    margin-right: 6px; /* רווח קטן בין כפתור התנתקות לשאר התפריט */
+    margin-right: 6px;
 }
 
 .site-footer-space {
-    margin-top: 50px; /* מרחיק את הפוטר מהתוכן */
+    margin-top: 50px;
 }
 
 .recipe-topic-content {
@@ -371,7 +368,7 @@ body .container {
 }
 
 .table-wrapper {
-    overflow-x: auto; /* מאפשר גלילה לצדדים אם הטבלה רחבה מדי */
+    overflow-x: auto;
     background-color: white;
     border-radius: 8px;
     padding: 10px;

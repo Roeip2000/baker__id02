@@ -1,6 +1,5 @@
 using System;
 using System.Data.SqlClient;
-using System.Web.UI;
 
 public partial class CourseSignup : System.Web.UI.Page
 {
@@ -20,13 +19,19 @@ public partial class CourseSignup : System.Web.UI.Page
             return;
         }
 
+        if (yearBorn < 1900 || yearBorn > DateTime.Now.Year)
+        {
+            lblMsg.ForeColor = System.Drawing.Color.Red;
+            lblMsg.Text = "יש להכניס שנת לידה תקינה";
+            return;
+        }
+
         try
         {
             using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
             {
                 conn.Open();
 
-                // בדיקה אם שם המשתמש כבר קיים
                 string checkSql = "SELECT COUNT(*) FROM Users WHERE uName=@uName";
                 SqlCommand checkCmd = new SqlCommand(checkSql, conn);
                 checkCmd.Parameters.AddWithValue("@uName", txtUserName.Text.Trim());
