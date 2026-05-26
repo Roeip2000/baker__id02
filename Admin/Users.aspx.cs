@@ -18,7 +18,20 @@ namespace baker_ido
             }
 
             // רק מנהל יכול לראות את רשימת המשתמשים
-            if (Session["isAdmin"] == null || (bool)Session["isAdmin"] == false)
+            bool isAdmin = false;
+            if (Session["isAdmin"] != null)
+            {
+                try
+                {
+                    isAdmin = Convert.ToBoolean(Session["isAdmin"]);
+                }
+                catch (Exception)
+                {
+                    isAdmin = false;
+                }
+            }
+
+            if (isAdmin == false)
             {
                 Response.Redirect("~/NoAdmin.aspx");
                 return;
@@ -32,21 +45,31 @@ namespace baker_ido
 
         private void BindUsers()
         {
-            string fileName = "Database1.mdf";
-
-            // לא מציגים סיסמאות בדף הניהול
-            string sql = "SELECT uName, fName, lName, email, city, isAdmin FROM Users";
-
-            DataTable dt = Helper.ExecuteDataTable(fileName, sql);
-
-            if (dt != null)
+            try
             {
-                gvUsers.DataSource = dt;
-                gvUsers.DataBind();
+                string fileName = "Database1.mdf";
 
+                // לא מציגים סיסמאות בדף הניהול
+                string sql = "SELECT uName, fName, lName, email, city, isAdmin FROM Users";
+
+                DataTable dt = Helper.ExecuteDataTable(fileName, sql);
+
+                if (dt != null)
+                {
+                    gvUsers.DataSource = dt;
+                    gvUsers.DataBind();
+
+                    if (lblCount != null)
+                    {
+                        lblCount.Text = "סה\"כ נרשמים באתר: " + dt.Rows.Count.ToString();
+                    }
+                }
+            }
+            catch (Exception)
+            {
                 if (lblCount != null)
                 {
-                    lblCount.Text = "סה\"כ נרשמים באתר: " + dt.Rows.Count.ToString();
+                    lblCount.Text = "שגיאה בטעינת רשימת המשתמשים";
                 }
             }
         }

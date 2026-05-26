@@ -19,40 +19,60 @@ public partial class Login : System.Web.UI.Page
 
         string uName = txtUserName.Text.Trim();
         string pw = txtPassword.Text.Trim();
+        string nextPage = "";
 
-        using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
+        try
         {
-            // שימוש בפרמטרים מגן על השאילתה מקלט לא תקין
-            string sql = "SELECT uName, fName, isAdmin FROM Users WHERE uName=@uName AND pw=@pw";
-            SqlCommand cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.AddWithValue("@uName", uName);
-            cmd.Parameters.AddWithValue("@pw", pw);
-
-            conn.Open();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-
-            if (dt.Rows.Count > 0)
+            using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
             {
-                Session["uName"] = dt.Rows[0]["uName"].ToString();
-                Session["fName"] = dt.Rows[0]["fName"].ToString();
-                Session["isAdmin"] = (bool)dt.Rows[0]["isAdmin"];
+                // שימוש בפרמטרים מגן על השאילתה מקלט לא תקין
+                string sql = "SELECT uName, fName, isAdmin FROM Users WHERE uName=@uName AND pw=@pw";
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@uName", uName);
+                cmd.Parameters.AddWithValue("@pw", pw);
 
-                if ((bool)Session["isAdmin"] == true)
+                conn.Open();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
                 {
-                    Response.Redirect("~/Admin/Users.aspx");
+                    Session["uName"] = dt.Rows[0]["uName"].ToString();
+                    Session["fName"] = dt.Rows[0]["fName"].ToString();
+                    bool isAdmin = false;
+                    if (dt.Rows[0]["isAdmin"] != DBNull.Value)
+                    {
+                        isAdmin = Convert.ToBoolean(dt.Rows[0]["isAdmin"]);
+                    }
+
+                    Session["isAdmin"] = isAdmin;
+
+                    if (isAdmin)
+                    {
+                        nextPage = "~/Admin/Users.aspx";
+                    }
+                    else
+                    {
+                        nextPage = "~/Course/CourseArea.aspx";
+                    }
                 }
                 else
                 {
-                    Response.Redirect("~/Course/CourseArea.aspx");
+                    lblError.Text = "שם משתמש או סיסמה שגויים";
+                    lblError.Visible = true;
                 }
             }
-            else
-            {
-                lblError.Text = "שם משתמש או סיסמה שגויים";
-                lblError.Visible = true;
-            }
+        }
+        catch (Exception)
+        {
+            lblError.Text = "שגיאה בחיבור למסד הנתונים";
+            lblError.Visible = true;
+        }
+
+        if (nextPage != "")
+        {
+            Response.Redirect(nextPage);
         }
     }
 }

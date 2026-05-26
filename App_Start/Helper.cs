@@ -27,9 +27,11 @@ public class Helper
 		{
 			conn.Open();
 			SqlCommand com = new SqlCommand(sql, conn);
-			SqlDataReader data = com.ExecuteReader();
-			bool found = data.Read();
-			return found;
+			using (SqlDataReader data = com.ExecuteReader())
+			{
+				bool found = data.Read();
+				return found;
+			}
 		}
 	}
 

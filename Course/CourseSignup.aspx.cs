@@ -12,6 +12,14 @@ public partial class CourseSignup : System.Web.UI.Page
     {
         if (!Page.IsValid) return;
 
+        int yearBorn;
+        if (!int.TryParse(txtYearBorn.Text.Trim(), out yearBorn))
+        {
+            lblMsg.ForeColor = System.Drawing.Color.Red;
+            lblMsg.Text = "שנת לידה חייבת להיות מספר";
+            return;
+        }
+
         try
         {
             using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
@@ -39,7 +47,7 @@ public partial class CourseSignup : System.Web.UI.Page
                 cmd.Parameters.AddWithValue("@fName", txtFirstName.Text.Trim());
                 cmd.Parameters.AddWithValue("@lName", txtLastName.Text.Trim());
                 cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
-                cmd.Parameters.AddWithValue("@yearBorn", int.Parse(txtYearBorn.Text));
+                cmd.Parameters.AddWithValue("@yearBorn", yearBorn);
                 cmd.Parameters.AddWithValue("@gender", ddlGender.SelectedValue);
                 cmd.Parameters.AddWithValue("@prefix", ddlPrefix.SelectedValue);
                 cmd.Parameters.AddWithValue("@phone", txtPhone.Text.Trim());
