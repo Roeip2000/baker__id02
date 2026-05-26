@@ -5,16 +5,15 @@
 </asp:Content>
 
 <asp:Content ID="c2" ContentPlaceHolderID="PageHeader" runat="server">
-    ספר המתכונים שלי
+    שני מתכונים פשוטים
 </asp:Content>
 
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="intro-box">
         <p>
-            עמוד המתכונים נועד לאפשר לכם להיחשף למתכונים קלים, ברורים וטעימים
-            שתוכלו להכין בבית. כל מתכון כולל רשימת מרכיבים ברורה, שלבי הכנה
-            מסודרים וטיפים חשובים להצלחה.
+            בעמוד זה מופיעים שני מתכונים קלים וברורים שאפשר להסביר בקלות:
+            עוגת שוקולד בחושה ועוגיות שוקולד צ'יפס.
         </p>
     </div>
 
@@ -23,7 +22,7 @@
         <div class="topic-box">
             <div class="recipe-topic-content">
                 <a href="/Recipes/SimpleMixCakes.aspx" class="recipe-topic-link">
-                    עוגות בחושות 🍰
+                    עוגת שוקולד בחושה
                 </a>
             </div>
         </div>
@@ -31,23 +30,7 @@
         <div class="topic-box">
             <div class="recipe-topic-content">
                 <a href="/Recipes/Cookies.aspx" class="recipe-topic-link">
-                    עוגיות 🍪
-                </a>
-            </div>
-        </div>
-
-        <div class="topic-box">
-            <div class="recipe-topic-content">
-                <a href="/Recipes/CreamCakes.aspx" class="recipe-topic-link">
-                    עוגות קרם 🎂
-                </a>
-            </div>
-        </div>
-
-        <div class="topic-box">
-            <div class="recipe-topic-content">
-                <a href="/Recipes/PersonalDesserts.aspx" class="recipe-topic-link">
-                    קינוחים אישיים 🍮
+                    עוגיות שוקולד צ'יפס
                 </a>
             </div>
         </div>
@@ -56,8 +39,7 @@
 
     <div class="intro-box">
         <p>
-            כל המתכונים כוללים רשימת מרכיבים מדויקת והוראות הכנה שלב אחר שלב.
-            המטרה היא לתת לכם גישה לעולם רחב של טעמים שתוכלו ליישם בקלות במטבח הביתי.
+            כל מתכון כולל רשימת מרכיבים קצרה ושלבי הכנה לפי הסדר.
         </p>
     </div>
 
