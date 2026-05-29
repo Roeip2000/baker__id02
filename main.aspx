@@ -32,16 +32,19 @@
                 <li>
                     <a href="/About.aspx" class="topic-box">
                         <img src="/picture/WhatsApp Image 2025-11-24 at 21.58.35.jpeg" alt="דף אודות עידו" />
+                        <div class="recipe-topic-content"><span class="recipe-topic-link">אודות</span></div>
                     </a>
                 </li>
                 <li>
                     <a href="/Course/CourseSignup.aspx" class="topic-box">
                         <img src="/picture/course.jpeg" alt="הרשמה לקורס אפייה" />
+                        <div class="recipe-topic-content"><span class="recipe-topic-link">הרשמה לקורס</span></div>
                     </a>
                 </li>
                 <li>
                     <a href="/products.aspx" class="topic-box">
                         <img src="/picture/recpies.jpeg" alt="קטלוג מתכונים" />
+                        <div class="recipe-topic-content"><span class="recipe-topic-link">מתכונים</span></div>
                     </a>
                 </li>
             </ul>

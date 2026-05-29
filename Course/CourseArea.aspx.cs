@@ -8,7 +8,6 @@ public partial class CourseArea : System.Web.UI.Page
         if (Session["uName"] == null)
         {
             Response.Redirect("~/Course/Login.aspx");
-            return;
         }
 
         if (!IsPostBack)

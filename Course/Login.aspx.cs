@@ -10,75 +10,56 @@ public partial class Login : System.Web.UI.Page
         if (Session["uName"] != null)
         {
             Response.Redirect("~/Course/CourseArea.aspx");
-            return;
         }
     }
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-        // עוצר את קוד ההתחברות אם שדות החובה ריקים
+        // עוצר את ההתחברות אם שדות החובה ריקים
         if (!Page.IsValid) return;
 
         string uName = txtUserName.Text.Trim();
         string pw = txtPassword.Text.Trim();
-        string nextPage = "";
+        bool isAdmin = false;
 
-        try
+        // פותח את מסד הנתונים ובודק אם שם המשתמש והסיסמה תואמים למשתמש
+        using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
         {
-            using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
+            string sql = "SELECT uName, fName, isAdmin FROM Users WHERE uName=@uName AND pw=@pw";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@uName", uName);
+            cmd.Parameters.AddWithValue("@pw", pw);
+
+            conn.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+
+            // אם לא נמצאה שורה - שם המשתמש או הסיסמה שגויים
+            if (dt.Rows.Count == 0)
             {
-                // בודק אם שם המשתמש והסיסמה תואמים למשתמש במסד הנתונים
-                string sql = "SELECT uName, fName, isAdmin FROM Users WHERE uName=@uName AND pw=@pw";
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@uName", uName);
-                cmd.Parameters.AddWithValue("@pw", pw);
-
-                conn.Open();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
-
-                if (dt.Rows.Count > 0)
-                {
-                    // ה-Session זוכר את המשתמש המחובר בזמן שהוא עובר בין דפים
-                    Session["uName"] = dt.Rows[0]["uName"].ToString();
-                    Session["fName"] = dt.Rows[0]["fName"].ToString();
-                    bool isAdmin = false;
-                    if (dt.Rows[0]["isAdmin"] != DBNull.Value)
-                    {
-                        isAdmin = Convert.ToBoolean(dt.Rows[0]["isAdmin"]);
-                    }
-
-                    Session["isAdmin"] = isAdmin;
-
-                    // isAdmin קובע אם המשתמש יעבור לדף הניהול או לדף הקורס
-                    if (isAdmin)
-                    {
-                        nextPage = "~/Admin/Users.aspx";
-                    }
-                    else
-                    {
-                        nextPage = "~/Course/CourseArea.aspx";
-                    }
-                }
-                else
-                {
-                    lblError.Text = "שם משתמש או סיסמה לא נכונים";
-                    lblError.Visible = true;
-                }
+                lblError.Text = "שם משתמש או סיסמה לא נכונים";
+                lblError.Visible = true;
+                return;
             }
-        }
-        catch (Exception)
-        {
-            lblError.Text = "הייתה שגיאה. נסה שוב";
-            lblError.Visible = true;
+
+            // ה-Session זוכר את המשתמש המחובר בזמן שהוא עובר בין דפים
+            Session["uName"] = dt.Rows[0]["uName"].ToString();
+            Session["fName"] = dt.Rows[0]["fName"].ToString();
+
+            // בודק אם המשתמש מנהל (אם השדה ריק במסד נחשב כלא מנהל)
+            isAdmin = dt.Rows[0]["isAdmin"] != DBNull.Value && Convert.ToBoolean(dt.Rows[0]["isAdmin"]);
+            Session["isAdmin"] = isAdmin;
         }
 
-        if (nextPage != "")
+        // מנהל עובר לדף הניהול, ומשתמש רגיל עובר לאזור הקורס
+        if (isAdmin)
         {
-            // שולח את המשתמש לדף הנכון אחרי ההתחברות
-            Response.Redirect(nextPage);
-            return;
+            Response.Redirect("~/Admin/Users.aspx");
+        }
+        else
+        {
+            Response.Redirect("~/Course/CourseArea.aspx");
         }
     }
 }

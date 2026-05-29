@@ -20,9 +20,9 @@
                 CssClass="users-grid"
                 GridLines="Both" BorderColor="Gray">
                 
-                <HeaderStyle BackColor="#a9745b" ForeColor="White" Font-Bold="true" Height="40px" />
+                <HeaderStyle BackColor="Brown" ForeColor="White" Font-Bold="true" Height="40px" />
                 <RowStyle BackColor="White" Height="35px" />
-                <AlternatingRowStyle BackColor="#f5f1ea" />
+                <AlternatingRowStyle BackColor="Beige" />
             </asp:GridView>
         </div>
 

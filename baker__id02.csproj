@@ -107,12 +107,10 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
-    <Content Include="Content\Site.css" />
     <Content Include="Admin\Users.aspx" />
     <Content Include="Course\CourseArea.aspx" />
     <Content Include="Course\CourseSignup.aspx" />
     <Content Include="Course\Login.aspx" />
-    <Content Include="Course\Videos.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="NoAdmin.aspx" />
@@ -203,13 +201,6 @@
     </Compile>
     <Compile Include="Course\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Course\Videos.aspx.cs">
-      <DependentUpon>Videos.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Course\Videos.aspx.designer.cs">
-      <DependentUpon>Videos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

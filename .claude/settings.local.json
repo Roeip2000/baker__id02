@@ -61,7 +61,14 @@
       "PowerShell(git status; \"---TOP LEVEL---\"; Get-ChildItem -Force | Select-Object Name)",
       "PowerShell(\"MainStyle.css: \" + \\(Get-Content MainStyle.css | Measure-Object -Line\\).Lines + \" lines\"; \"CourseArea.css: \" + \\(Get-Content CourseArea.css | Measure-Object -Line\\).Lines + \" lines\"; \"Content/Site.css: \" + \\(Get-Content Content/Site.css | Measure-Object -Line\\).Lines + \" lines\")",
       "PowerShell(msbuild *)",
-      "PowerShell(git status --short; \"--- root file count ---\"; \\(Get-ChildItem -File\\).Count; \"--- Scripts left ---\"; \\(Get-ChildItem Scripts -Recurse -File | Measure-Object\\).Count; \"--- Content left ---\"; Get-ChildItem Content | Select-Object Name)"
+      "PowerShell(git status --short; \"--- root file count ---\"; \\(Get-ChildItem -File\\).Count; \"--- Scripts left ---\"; \\(Get-ChildItem Scripts -Recurse -File | Measure-Object\\).Count; \"--- Content left ---\"; Get-ChildItem Content | Select-Object Name)",
+      "Bash(ls App_Data)",
+      "Bash(ls docs *)",
+      "Bash(cat run-site.bat)",
+      "Bash(ls -1 picture/)",
+      "Bash([ -f \"picture/$f\" ])",
+      "Bash(rm -f Videos.aspx Videos.aspx.cs Videos.aspx.designer.cs)",
+      "Bash(ls Videos*)"
     ]
   }
 }

@@ -11,7 +11,6 @@ namespace baker_ido
             if (Session["uName"] == null)
             {
                 Response.Redirect("~/Course/Login.aspx");
-                return;
             }
 
             // בודק אם המשתמש המחובר הוא מנהל
@@ -21,7 +20,6 @@ namespace baker_ido
             if (!isAdmin)
             {
                 Response.Redirect("~/NoAdmin.aspx");
-                return;
             }
 
             if (!IsPostBack)
@@ -32,22 +30,13 @@ namespace baker_ido
 
         private void BindUsers()
         {
-            try
-            {
-                // שאילתת SELECT זו מביאה את העמודות שמוצגות בטבלת הניהול
-                string fileName = "Database1.mdf";
-                string sql = "SELECT uName, fName, lName, email, city, isAdmin FROM Users";
+            // שאילתת SELECT זו מביאה את העמודות שמוצגות בטבלת הניהול
+            string sql = "SELECT uName, fName, gender, isAdmin FROM Users";
+            DataTable dt = Helper.ExecuteDataTable("Database1.mdf", sql);
 
-                DataTable dt = Helper.ExecuteDataTable(fileName, sql);
-
-                gvUsers.DataSource = dt;
-                gvUsers.DataBind();
-                lblCount.Text = dt.Rows.Count.ToString();
-            }
-            catch (Exception)
-            {
-                lblCount.Text = "בעיה בטעינת הנרשמים";
-            }
+            gvUsers.DataSource = dt;
+            gvUsers.DataBind();
+            lblCount.Text = dt.Rows.Count.ToString();
         }
     }
 }
