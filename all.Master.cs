@@ -9,13 +9,11 @@ namespace baker_ido
             // משנה את התפריט בהתאם לשאלה אם המשתמש מחובר
             if (Session["uName"] != null)
             {
-                lnkLogin.Visible = false;
                 lnkCourseArea.Visible = true;
                 btnLogout.Visible = true;
             }
             else
             {
-                lnkLogin.Visible = true;
                 lnkCourseArea.Visible = false;
                 btnLogout.Visible = false;
             }
@@ -26,7 +24,7 @@ namespace baker_ido
             // מנקה את ה-Session כדי לנתק את המשתמש
             Session.Abandon();
             Session.Clear();
-            Response.Redirect("~/main.aspx");
+            Response.Redirect("~/Pages/main.aspx");
         }
     }
 }

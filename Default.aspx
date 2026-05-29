@@ -3,6 +3,6 @@
     protected void Page_Load(object sender, EventArgs e)
     {
         // הפניה אוטומטית לדף הבית
-        Response.Redirect("~/main.aspx");
+        Response.Redirect("~/Pages/main.aspx");
     }
 </script>

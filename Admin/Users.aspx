@@ -5,11 +5,6 @@
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     רשימת נרשמים – Ido Bakery & Pastry
 </asp:Content>
-
-<asp:Content ID="c2" ContentPlaceHolderID="PageHeader" runat="server">
-    ניהול
-</asp:Content>
-
 <asp:Content ID="Body1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-box admin-box">
         <h2>רשימת נרשמים לקורסים</h2>

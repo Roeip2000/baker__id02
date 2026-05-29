@@ -5,11 +5,6 @@
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     דף ראשי – Ido Bakery & Pastry
 </asp:Content>
-
-<asp:Content ID="c2" ContentPlaceHolderID="PageHeader" runat="server">
-    דף ראשי
-</asp:Content>
-
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
 
     <div class="body">
@@ -20,34 +15,21 @@
             <h2>ברוכים הבאים לעידו – אפייה וקונדיטוריה</h2>
 
             <p>
-                זהו אתר בית ספרי בנושא אפייה וקונדיטוריה.
-                באתר יש מידע על עידו, דף אודות, מתכונים פשוטים והרשמה לקורס.
-                המטרה היא להציג אתר ברור ונוח לשימוש.
+                זהו אתר בית ספרי בנושא אפייה וקונדיטוריה, שבו אני משתף את המתכונים והטיפים שאני הכי אוהב.
+                המטרה היא אתר ברור ונוח, שגם מי שלא אפה אף פעם יוכל להיכנס, לעקוב אחרי השלבים ולהצליח.
             </p>
 
-            <h3>דפי תוכן באתר:</h3>
+            <p>
+                הרשומים לקורס מקבלים גישה לאזור אישי עם מתכונים מלאים – רשימת מרכיבים מסודרת,
+                שלבי הכנה לפי הסדר, וסרטון הדגמה קצר לכל מתכון.
+                כדי להתחיל אפשר להירשם בלחיצה אחת, או להתחבר אם כבר יש לך משתמש.
+            </p>
 
-            <%-- כרטיסי תמונה אלו מקשרים לדפי הנושא הראשיים --%>
-            <ul>
-                <li>
-                    <a href="/About.aspx" class="topic-box">
-                        <img src="/picture/WhatsApp Image 2025-11-24 at 21.58.35.jpeg" alt="דף אודות עידו" />
-                        <div class="recipe-topic-content"><span class="recipe-topic-link">אודות</span></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/Course/CourseSignup.aspx" class="topic-box">
-                        <img src="/picture/course.jpeg" alt="הרשמה לקורס אפייה" />
-                        <div class="recipe-topic-content"><span class="recipe-topic-link">הרשמה לקורס</span></div>
-                    </a>
-                </li>
-                <li>
-                    <a href="/products.aspx" class="topic-box">
-                        <img src="/picture/recpies.jpeg" alt="קטלוג מתכונים" />
-                        <div class="recipe-topic-content"><span class="recipe-topic-link">מתכונים</span></div>
-                    </a>
-                </li>
-            </ul>
+            <%-- קריאה לפעולה: הרשמה או התחברות, מובילות לדפים המתאימים --%>
+            <div class="home-actions">
+                <a href="/Course/CourseSignup.aspx" class="main-link-button">להרשמה לחץ כאן</a>
+                <a href="/Course/Login.aspx" class="main-link-button">להתחברות לחץ כאן</a>
+            </div>
 
         </div>
     </div>

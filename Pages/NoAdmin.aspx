@@ -3,11 +3,6 @@
 <asp:Content ID="ContentTitle" ContentPlaceHolderID="TitleContent" runat="server">
     אין הרשאת גישה
 </asp:Content>
-
-<asp:Content ID="Content1" ContentPlaceHolderID="PageHeader" runat="server">
-    אין הרשאת גישה
-</asp:Content>
-
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-box permission-box">
         
@@ -20,7 +15,7 @@
         
         <br />
         
-        <a href="/main.aspx" class="main-link-button">
+        <a href="/Pages/main.aspx" class="main-link-button">
             חזרה לדף הבית
         </a>
     </div>

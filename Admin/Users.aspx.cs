@@ -19,7 +19,7 @@ namespace baker_ido
             // משתמשים רגילים נשלחים לדף "אין הרשאה"
             if (!isAdmin)
             {
-                Response.Redirect("~/NoAdmin.aspx");
+                Response.Redirect("~/Pages/NoAdmin.aspx");
             }
 
             if (!IsPostBack)

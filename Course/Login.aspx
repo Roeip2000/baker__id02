@@ -5,11 +5,6 @@
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     התחברות – Ido Bakery & Pastry
 </asp:Content>
-
-<asp:Content ID="c2" ContentPlaceHolderID="PageHeader" runat="server">
-    התחברות לאזור הקורס
-</asp:Content>
-
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
 
     <%-- טופס זה שולח את שם המשתמש והסיסמה אל Login.aspx.cs --%>

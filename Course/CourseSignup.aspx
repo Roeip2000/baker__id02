@@ -5,11 +5,6 @@
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     טופס הרשמה לקורס – Ido Bakery & Pastry
 </asp:Content>
-
-<asp:Content ID="c2" ContentPlaceHolderID="PageHeader" runat="server">
-    טופס הרשמה לקורס
-</asp:Content>
-
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
 
 <%-- טופס זה אוסף את פרטי המשתמש ושולח אותם לקוד ההרשמה ב-C# --%>

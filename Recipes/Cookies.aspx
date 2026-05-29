@@ -1,27 +1,37 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/all.Master" %>
+<%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" %>
+<%-- גישה למתכונים רק למשתמשים מחוברים --%>
+<script runat="server">
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (Session["uName"] == null)
+        {
+            Response.Redirect("~/Course/Login.aspx");
+        }
+    }
+</script>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     עוגיות שוקולד צ'יפס – Ido Bakery & Pastry
 </asp:Content>
-
-<asp:Content ID="c2" ContentPlaceHolderID="PageHeader" runat="server">
-    עוגיות שוקולד צ'יפס
-</asp:Content>
-
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
-
 
     <div class="recipes-wrapper">
 
         <div class="recipe-box">
+
+            <%-- התמונה למעלה כבאנר, לפני המרכיבים --%>
             <img src="/picture/choc_chip_cookies.jpg" class="recipe-img" alt="עוגיות שוקולד צ'יפס" />
 
             <div class="recipe-text">
+
                 <h3>עוגיות שוקולד צ'יפס קלאסיות</h3>
+                <p class="recipe-intro">
+                    עוגיות קלאסיות עם שוליים פריכים ומרכז רך ומלא שוקולד – מתכון פשוט וזריז שמתאים גם למתחילים,
+                    ויוצא ממנו כ־20 עוגיות.
+                </p>
 
                 <p><b>מרכיבים:</b></p>
-                <%-- טבלת מרכיבים פשוטה --%>
-                <table class="users-grid" style="max-width:420px; margin:0 auto;">
+                <table class="recipe-ingredients">
                     <tr><th>מרכיב</th><th>כמות</th></tr>
                     <tr><td>קמח</td><td>2 כוסות</td></tr>
                     <tr><td>סוכר חום</td><td>1 כוס</td></tr>
@@ -44,6 +54,15 @@
                     <li>יוצרים כדורים ומניחים על נייר אפייה.</li>
                     <li>אופים 10–12 דקות עד זהוב קל.</li>
                 </ol>
+
+                <%-- סרטון הדגמה בסוף המתכון --%>
+                <div class="recipe-video">
+                    <h3>סרטון הכנה</h3>
+                    <iframe src="https://www.youtube.com/embed/CqsRGwPsJJw"
+                            title="סרטון הכנה – עוגיות שוקולד צ'יפס"
+                            allowfullscreen></iframe>
+                </div>
+
             </div>
         </div>
 
