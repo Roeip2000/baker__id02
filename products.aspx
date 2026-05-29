@@ -10,7 +10,13 @@
 
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="intro-box">
+    <style>
+        .products-note {
+            text-align: center;
+        }
+    </style>
+
+    <div class="intro-box products-note">
         <p>
             בעמוד זה מופיעים שני מתכונים קלים וברורים:
             עוגת שוקולד בחושה ועוגיות שוקולד צ'יפס.
@@ -20,6 +26,7 @@
     <div class="topics-grid">
 
         <div class="topic-box">
+            <img src="/picture/chocolet.jpeg" alt="עוגת שוקולד בחושה" />
             <div class="recipe-topic-content">
                 <a href="/Recipes/SimpleMixCakes.aspx" class="recipe-topic-link">
                     עוגת שוקולד בחושה
@@ -28,6 +35,7 @@
         </div>
 
         <div class="topic-box">
+            <img src="/picture/choc_chip_cookies.jpg" alt="עוגיות שוקולד צ'יפס" />
             <div class="recipe-topic-content">
                 <a href="/Recipes/Cookies.aspx" class="recipe-topic-link">
                     עוגיות שוקולד צ'יפס
@@ -37,7 +45,7 @@
 
     </div>
 
-    <div class="intro-box">
+    <div class="intro-box products-note">
         <p>
             כל מתכון כולל רשימת מרכיבים קצרה ושלבי הכנה לפי הסדר.
         </p>

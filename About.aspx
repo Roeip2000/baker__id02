@@ -14,6 +14,8 @@
 
         <h1>דף היכרות – עידו</h1>
 
+        <img src="/picture/WhatsApp Image 2025-11-24 at 21.58.35.jpeg" alt="תמונה של עידו" class="main-image" />
+
         <h2>אודות</h2>
         <p>
             שמי עידו ואני אוהב לאפות.
