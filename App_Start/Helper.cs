@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 
 public class Helper
 {
+	// This creates the database connection for the local MDF database file
 	public static SqlConnection ConnectToDb(string fileName)
 	{
 		string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\" + fileName + ";Integrated Security=True;Connect Timeout=30";
@@ -11,6 +12,7 @@ public class Helper
 		return conn;
 	}
 
+	// This runs an INSERT or other SQL command that does not return a table
 	public static void DoQuery(string fileName, string sql)
 	{
 		using (SqlConnection conn = ConnectToDb(fileName))
@@ -21,6 +23,7 @@ public class Helper
 		}
 	}
 
+	// This checks if a SELECT query found at least one row
 	public static bool IsExist(string fileName, string sql)
 	{
 		using (SqlConnection conn = ConnectToDb(fileName))
@@ -35,6 +38,7 @@ public class Helper
 		}
 	}
 
+	// This returns a table of data so pages like Admin can display it
 	public static DataTable ExecuteDataTable(string fileName, string sql)
 	{
 		using (SqlConnection conn = ConnectToDb(fileName))

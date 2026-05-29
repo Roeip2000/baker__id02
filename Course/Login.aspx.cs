@@ -6,6 +6,7 @@ public partial class Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        // If the user is already logged in, send them to the course area
         if (Session["uName"] != null)
         {
             Response.Redirect("~/Course/CourseArea.aspx");
@@ -15,6 +16,7 @@ public partial class Login : System.Web.UI.Page
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
+        // This stops the login code if required fields are empty
         if (!Page.IsValid) return;
 
         string uName = txtUserName.Text.Trim();
@@ -25,6 +27,7 @@ public partial class Login : System.Web.UI.Page
         {
             using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
             {
+                // This checks if the username and password match a user in the database
                 string sql = "SELECT uName, fName, isAdmin FROM Users WHERE uName=@uName AND pw=@pw";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@uName", uName);
@@ -37,6 +40,7 @@ public partial class Login : System.Web.UI.Page
 
                 if (dt.Rows.Count > 0)
                 {
+                    // Session remembers the logged-in user while they move between pages
                     Session["uName"] = dt.Rows[0]["uName"].ToString();
                     Session["fName"] = dt.Rows[0]["fName"].ToString();
                     bool isAdmin = false;
@@ -47,6 +51,7 @@ public partial class Login : System.Web.UI.Page
 
                     Session["isAdmin"] = isAdmin;
 
+                    // isAdmin decides if the user should go to the admin page or course page
                     if (isAdmin)
                     {
                         nextPage = "~/Admin/Users.aspx";
@@ -71,6 +76,7 @@ public partial class Login : System.Web.UI.Page
 
         if (nextPage != "")
         {
+            // This sends the user to the correct page after login
             Response.Redirect(nextPage);
             return;
         }

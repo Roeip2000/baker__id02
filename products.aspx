@@ -1,5 +1,6 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/all.Master" %>
+<%@ Page Language="C#" MasterPageFile="~/all.Master" %>
 
+<%-- This page links to the recipe topic pages --%>
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     מתכונים – Ido Bakery & Pastry
 </asp:Content>
@@ -11,6 +12,7 @@
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
 
     <style>
+        /* Small page-level style used only on this page */
         .products-note {
             text-align: center;
         }
@@ -23,6 +25,7 @@
         </p>
     </div>
 
+    <%-- These cards link to the two recipe pages --%>
     <div class="topics-grid">
 
         <div class="topic-box">

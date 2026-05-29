@@ -1,4 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Videos.aspx.cs" Inherits="Videos" %>
+<%-- This page shows course videos only after the user logs in --%>
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -17,6 +18,7 @@
                 <h2>סרטוני הקורס</h2>
             </div>
 
+            <%-- Menu for moving between the private course pages --%>
             <div class="members-menu">
                 <a href="/main.aspx">דף ראשי</a>
                 <span>|</span>
@@ -34,6 +36,7 @@
                 <div class="video-frame-box">
                     <h3>בחירת סרטון</h3>
 
+                    <%-- These links change the video inside the iframe below --%>
                     <div class="video-links">
                         <a href="https://www.youtube.com/embed/YO1EHTfIo3E" target="videoFrame" class="video-link">
                             <span class="video-number">סרטון 1</span>
@@ -56,6 +59,7 @@
               
                 <div class="video-frame-box">
                     <h3>תצוגת הסרטון</h3>
+                    <%-- The iframe displays the selected YouTube course video --%>
                     <iframe
                         name="videoFrame"
                         src="https://www.youtube.com/embed/YO1EHTfIo3E"

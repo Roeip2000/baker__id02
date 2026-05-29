@@ -1,5 +1,7 @@
 <%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeBehind="CourseSignup.aspx.cs" Inherits="CourseSignup" %>
 
+<%-- This page lets a new user register for a baking course --%>
+
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     טופס הרשמה לקורס – Ido Bakery & Pastry
 </asp:Content>
@@ -10,6 +12,7 @@
 
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
 
+<%-- This form collects the user's details and sends them to the C# register code --%>
 <div class="form-box">
 
     <h2>הרשמה לקורסים</h2>
@@ -18,10 +21,13 @@
 
     <table class="form-table">
 
+        <%-- These TextBox controls collect the main user details --%>
+
         <tr>
             <td>שם משתמש:</td>
             <td>
                 <asp:TextBox ID="txtUserName" runat="server" />
+                <%-- Validators make sure required fields are filled before the form is saved --%>
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUserName"
                     ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
             </td>
@@ -75,6 +81,7 @@
         <tr>
             <td>מגדר:</td>
             <td>
+                <%-- DropDownList gives the user fixed choices instead of free text --%>
                 <asp:DropDownList ID="ddlGender" runat="server">
                     <asp:ListItem Value="male">זכר</asp:ListItem>
                     <asp:ListItem Value="female">נקבה</asp:ListItem>
@@ -109,6 +116,7 @@
         <tr>
             <td>בחר קורס:</td>
             <td>
+                <%-- This DropDownList lets the user choose which course to join --%>
                 <asp:DropDownList ID="ddlCourse" runat="server">
                     <asp:ListItem Value="">בחר קורס</asp:ListItem>
                     <asp:ListItem Value="קורס קינוחים אישיים">קורס קינוחים אישיים</asp:ListItem>
@@ -126,6 +134,7 @@
 
         <tr>
             <td colspan="2" class="form-actions">
+                <%-- This Button runs btnSubmit_Click in CourseSignup.aspx.cs --%>
                 <asp:Button ID="btnSubmit" runat="server"
                     Text="שלח הרשמה"
                     CssClass="main-button"
