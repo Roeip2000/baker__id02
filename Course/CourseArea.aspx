@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>אזור הקורס - Ido Bakery & Pastry</title>
-    <link href="/StyleSheet1.css" rel="stylesheet" />
+    <link href="/MainStyle.css" rel="stylesheet" />
     <link href="/CourseArea.css" rel="stylesheet" />
 </head>
 <body>
