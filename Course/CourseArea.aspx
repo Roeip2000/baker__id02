@@ -1,5 +1,5 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CourseArea.aspx.cs" Inherits="CourseArea" %>
-<%-- This page is the private course area for logged-in users --%>
+<%-- דף זה הוא אזור הקורס הפרטי למשתמשים מחוברים --%>
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
@@ -18,7 +18,7 @@
                 <h2>אזור הקורס</h2>
             </div>
 
-            <%-- Menu for the logged-in course pages --%>
+            <%-- תפריט לדפי הקורס של המשתמשים המחוברים --%>
             <div class="members-menu">
                 <a href="/main.aspx">דף ראשי</a>
                 <span>|</span>
@@ -29,7 +29,7 @@
 
             <div class="container members-home">
                 <div class="intro-box">
-                    <%-- The label is filled from Session in CourseArea.aspx.cs --%>
+                    <%-- התווית מתמלאת מתוך ה-Session בקובץ CourseArea.aspx.cs --%>
                     <h2>שלום, <asp:Label ID="lblName" runat="server" CssClass="user-name" /></h2>
                     <p>ברוך הבא לאזור הקורס. כאן אפשר לצפות בסרטונים.</p>
 

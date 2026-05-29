@@ -6,7 +6,7 @@ namespace baker_ido
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // This changes the menu according to whether the user is logged in
+            // משנה את התפריט בהתאם לשאלה אם המשתמש מחובר
             if (Session["uName"] != null)
             {
                 lnkLogin.Visible = false;
@@ -23,7 +23,7 @@ namespace baker_ido
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
-            // This clears Session so the user is logged out
+            // מנקה את ה-Session כדי לנתק את המשתמש
             Session.Abandon();
             Session.Clear();
             Response.Redirect("~/main.aspx");

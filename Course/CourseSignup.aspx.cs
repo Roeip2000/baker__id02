@@ -9,10 +9,10 @@ public partial class CourseSignup : System.Web.UI.Page
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        // This stops the register code if the ASP.NET validators failed
+        // עוצר את קוד ההרשמה אם הוולידטורים של ASP.NET נכשלו
         if (!Page.IsValid) return;
 
-        // This checks that the birth year is a real number and a normal year
+        // בודק ששנת הלידה היא מספר אמיתי ושנה הגיונית
         int yearBorn;
         if (!int.TryParse(txtYearBorn.Text.Trim(), out yearBorn))
         {
@@ -30,12 +30,12 @@ public partial class CourseSignup : System.Web.UI.Page
 
         try
         {
-            // This opens the local database file used by the project
+            // פותח את קובץ מסד הנתונים המקומי של הפרויקט
             using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
             {
                 conn.Open();
 
-                // This checks that the username is not already taken
+                // בודק ששם המשתמש לא תפוס כבר
                 string checkSql = "SELECT COUNT(*) FROM Users WHERE uName=@uName";
                 SqlCommand checkCmd = new SqlCommand(checkSql, conn);
                 checkCmd.Parameters.AddWithValue("@uName", txtUserName.Text.Trim());
@@ -48,7 +48,7 @@ public partial class CourseSignup : System.Web.UI.Page
                     return;
                 }
 
-                // This SQL command adds the new user to the Users table
+                // פקודת SQL זו מוסיפה את המשתמש החדש לטבלת Users
                 string sql = @"INSERT INTO Users (uName, fName, lName, email, yearBorn, gender, prefix, phone, city, pw, course, notes)
                                VALUES (@uName, @fName, @lName, @email, @yearBorn, @gender, @prefix, @phone, @city, @pw, @course, @notes)";
 

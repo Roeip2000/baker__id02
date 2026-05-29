@@ -1,6 +1,6 @@
 <%@ Page Language="C#" MasterPageFile="~/all.Master" %>
 
-<%-- This is the home page of the website --%>
+<%-- זהו דף הבית של האתר --%>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     דף ראשי – Ido Bakery & Pastry
@@ -27,7 +27,7 @@
 
             <h3>דפי תוכן באתר:</h3>
 
-            <%-- These image cards link to the main topic pages --%>
+            <%-- כרטיסי תמונה אלו מקשרים לדפי הנושא הראשיים --%>
             <ul>
                 <li>
                     <a href="/About.aspx" class="topic-box">

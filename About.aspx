@@ -1,6 +1,6 @@
 <%@ Page Language="C#" MasterPageFile="~/all.Master" %>
 
-<%-- This content page explains who made the website and what it includes --%>
+<%-- דף תוכן זה מסביר מי בנה את האתר ומה הוא כולל --%>
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     אודות עידו – קונדיטוריה
 </asp:Content>
@@ -15,7 +15,7 @@
 
         <h1>דף היכרות – עידו</h1>
 
-        <%-- This image makes the About page look like a real topic page --%>
+        <%-- תמונה זו גורמת לדף "אודות" להיראות כמו דף נושא אמיתי --%>
         <img src="/picture/WhatsApp Image 2025-11-24 at 21.58.35.jpeg" alt="תמונה של עידו" class="main-image" />
 
         <h2>אודות</h2>

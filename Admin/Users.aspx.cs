@@ -7,17 +7,17 @@ namespace baker_ido
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // This blocks users who are not logged in
+            // חוסם משתמשים שאינם מחוברים
             if (Session["uName"] == null)
             {
                 Response.Redirect("~/Course/Login.aspx");
                 return;
             }
 
-            // This checks if the logged-in user is an admin
+            // בודק אם המשתמש המחובר הוא מנהל
             bool isAdmin = Session["isAdmin"] != null && (bool)Session["isAdmin"];
 
-            // Regular users are sent to the no-permission page
+            // משתמשים רגילים נשלחים לדף "אין הרשאה"
             if (!isAdmin)
             {
                 Response.Redirect("~/NoAdmin.aspx");
@@ -34,7 +34,7 @@ namespace baker_ido
         {
             try
             {
-                // This SELECT query gets the columns shown in the admin GridView
+                // שאילתת SELECT זו מביאה את העמודות שמוצגות בטבלת הניהול
                 string fileName = "Database1.mdf";
                 string sql = "SELECT uName, fName, lName, email, city, isAdmin FROM Users";
 

@@ -1,6 +1,6 @@
 <%@ Page Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeBehind="CourseSignup.aspx.cs" Inherits="CourseSignup" %>
 
-<%-- This page lets a new user register for a baking course --%>
+<%-- דף זה מאפשר למשתמש חדש להירשם לקורס אפייה --%>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     טופס הרשמה לקורס – Ido Bakery & Pastry
@@ -12,7 +12,7 @@
 
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
 
-<%-- This form collects the user's details and sends them to the C# register code --%>
+<%-- טופס זה אוסף את פרטי המשתמש ושולח אותם לקוד ההרשמה ב-C# --%>
 <div class="form-box">
 
     <h2>הרשמה לקורסים</h2>
@@ -21,13 +21,14 @@
 
     <table class="form-table">
 
-        <%-- These TextBox controls collect the main user details --%>
+        <%-- פקדי תיבת הטקסט אוספים את פרטי המשתמש העיקריים --%>
 
         <tr>
             <td>שם משתמש:</td>
             <td>
-                <asp:TextBox ID="txtUserName" runat="server" />
-                <%-- Validators make sure required fields are filled before the form is saved --%>
+                <%-- ClientIDMode="Static" שומר על ה-id פשוט כדי שה-JavaScript ימצא את השדה --%>
+                <asp:TextBox ID="txtUserName" runat="server" ClientIDMode="Static" />
+                <%-- הוולידטורים מוודאים ששדות החובה מולאו לפני שהטופס נשמר --%>
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtUserName"
                     ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
             </td>
@@ -36,7 +37,7 @@
         <tr>
             <td>סיסמה:</td>
             <td>
-                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" ClientIDMode="Static" />
                 <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword"
                     ErrorMessage="שדה חובה" ForeColor="Red" Display="Dynamic" />
             </td>
@@ -81,7 +82,7 @@
         <tr>
             <td>מגדר:</td>
             <td>
-                <%-- DropDownList gives the user fixed choices instead of free text --%>
+                <%-- רשימה נפתחת נותנת למשתמש אפשרויות קבועות במקום טקסט חופשי --%>
                 <asp:DropDownList ID="ddlGender" runat="server">
                     <asp:ListItem Value="male">זכר</asp:ListItem>
                     <asp:ListItem Value="female">נקבה</asp:ListItem>
@@ -116,7 +117,7 @@
         <tr>
             <td>בחר קורס:</td>
             <td>
-                <%-- This DropDownList lets the user choose which course to join --%>
+                <%-- רשימה נפתחת זו מאפשרת למשתמש לבחור לאיזה קורס להירשם --%>
                 <asp:DropDownList ID="ddlCourse" runat="server">
                     <asp:ListItem Value="">בחר קורס</asp:ListItem>
                     <asp:ListItem Value="קורס קינוחים אישיים">קורס קינוחים אישיים</asp:ListItem>
@@ -134,10 +135,12 @@
 
         <tr>
             <td colspan="2" class="form-actions">
-                <%-- This Button runs btnSubmit_Click in CourseSignup.aspx.cs --%>
+                <%-- כפתור זה מריץ את btnSubmit_Click בקובץ CourseSignup.aspx.cs --%>
+                <%-- OnClientClick מריץ את בדיקת ה-JavaScript לפני השליחה; אם תחזיר false הטופס לא יישלח --%>
                 <asp:Button ID="btnSubmit" runat="server"
                     Text="שלח הרשמה"
                     CssClass="main-button"
+                    OnClientClick="return validateSignup();"
                     OnClick="btnSubmit_Click" />
             </td>
         </tr>
@@ -145,5 +148,29 @@
     </table>
 
 </div>
+
+<%-- בדיקת טופס בצד הלקוח: בודקת ששם המשתמש והסיסמה אינם ריקים לפני השליחה --%>
+<script type="text/javascript">
+    function validateSignup() {
+        // קוראים את הערכים מהשדות לפי ה-id הפשוט
+        var userName = document.getElementById("txtUserName").value;
+        var password = document.getElementById("txtPassword").value;
+
+        // אם שם המשתמש ריק - מציגים הודעה ועוצרים את השליחה
+        if (userName == "") {
+            alert("יש להזין שם משתמש");
+            return false;
+        }
+
+        // אם הסיסמה ריקה - מציגים הודעה ועוצרים את השליחה
+        if (password == "") {
+            alert("יש להזין סיסמה");
+            return false;
+        }
+
+        // הכל תקין - מאפשרים את שליחת הטופס
+        return true;
+    }
+</script>
 
 </asp:Content>

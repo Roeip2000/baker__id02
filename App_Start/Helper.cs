@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 
 public class Helper
 {
-	// This creates the database connection for the local MDF database file
+	// יוצר את החיבור למסד הנתונים המקומי מסוג MDF
 	public static SqlConnection ConnectToDb(string fileName)
 	{
 		string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\" + fileName + ";Integrated Security=True;Connect Timeout=30";
@@ -12,7 +12,7 @@ public class Helper
 		return conn;
 	}
 
-	// This runs an INSERT or other SQL command that does not return a table
+	// מריץ פקודת INSERT או פקודת SQL אחרת שלא מחזירה טבלה
 	public static void DoQuery(string fileName, string sql)
 	{
 		using (SqlConnection conn = ConnectToDb(fileName))
@@ -23,7 +23,7 @@ public class Helper
 		}
 	}
 
-	// This checks if a SELECT query found at least one row
+	// בודק אם שאילתת SELECT מצאה לפחות שורה אחת
 	public static bool IsExist(string fileName, string sql)
 	{
 		using (SqlConnection conn = ConnectToDb(fileName))
@@ -38,7 +38,7 @@ public class Helper
 		}
 	}
 
-	// This returns a table of data so pages like Admin can display it
+	// מחזיר טבלת נתונים כדי שדפים כמו אזור הניהול יוכלו להציג אותה
 	public static DataTable ExecuteDataTable(string fileName, string sql)
 	{
 		using (SqlConnection conn = ConnectToDb(fileName))

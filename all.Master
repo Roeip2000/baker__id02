@@ -1,5 +1,5 @@
 <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="all.Master.cs" Inherits="baker_ido.all" %>
-<%-- This master page gives the website the same header and menu on many pages --%>
+<%-- דף Master זה נותן לאתר אותה כותרת ותפריט בדפים רבים --%>
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head runat="server">
@@ -18,7 +18,7 @@
     <div class="top-header">
         <h1>Ido Bakery & Pastry</h1>
 
-        <%-- Main navigation links for moving between the important pages --%>
+        <%-- קישורי ניווט ראשיים למעבר בין הדפים החשובים --%>
         <div class="nav-main">
             <a href="/main.aspx">דף ראשי</a>
             <span class="nav-divider">|</span>
@@ -28,7 +28,7 @@
             <span class="nav-divider">|</span>
             <a href="/Course/CourseSignup.aspx">הרשמה</a>
 
-            <%-- These controls are shown or hidden in all.Master.cs according to Session --%>
+            <%-- פקדים אלו מוצגים או מוסתרים בקובץ all.Master.cs בהתאם ל-Session --%>
             <asp:HyperLink ID="lnkLogin" runat="server" NavigateUrl="~/Course/Login.aspx">התחברות</asp:HyperLink>
 
             <asp:HyperLink ID="lnkCourseArea" runat="server" NavigateUrl="~/Course/CourseArea.aspx" Visible="false">אזור הקורס</asp:HyperLink>

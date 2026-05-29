@@ -1,22 +1,22 @@
 /* Main settings for the whole website */
 * { box-sizing: border-box; }
 body {
-    direction: rtl; margin: 0; background-color: beige; color: black;
+    direction: rtl; margin: 0; background-color: #f5f1ea; color: black;
     font-family: Arial, "Segoe UI", sans-serif; font-size: 16px; line-height: 1.6;
 }
-a { color: brown; text-decoration: none; }
+a { color: #a9745b; text-decoration: none; }
 a:hover { color: black; text-decoration: underline; }
 
 /* Header and menu used on most pages */
 .top-header {
-    background-color: white; border-bottom: 3px solid brown;
+    background-color: white; border-bottom: 3px solid #a9745b;
     padding: 18px 16px; text-align: center;
 }
 .top-header h1 { color: black; font-size: 30px; margin: 0 0 10px; }
 .top-header h2 { color: darkgray; font-size: 18px; font-weight: normal; margin: 8px 0 0; }
 .nav-main {
     display: inline-flex; flex-wrap: wrap; gap: 8px; justify-content: center;
-    background-color: beige; border: 1px solid lightgray; border-radius: 8px; padding: 8px;
+    background-color: #f5f1ea; border: 1px solid lightgray; border-radius: 8px; padding: 8px;
 }
 .nav-main a, .nav-main span, .nav-main input {
     border-radius: 5px; color: black; font-size: 15px; padding: 7px 12px; text-decoration: none;
@@ -27,7 +27,7 @@ a:hover { color: black; text-decoration: underline; }
 /* Reusable buttons */
 .nav-main input[type="submit"], .main-button, .btn-row input,
 .form-box input[type="submit"], .form-box input[type="button"] {
-    width: auto; background-color: brown; border: 1px solid brown;
+    width: auto; background-color: #a9745b; border: 1px solid #a9745b;
     border-radius: 5px; color: white; cursor: pointer; font-size: 16px; padding: 10px 24px;
 }
 .main-button:hover, .btn-row input:hover,
@@ -66,7 +66,7 @@ h1, h2, h3 { color: black; line-height: 1.3; }
     background-color: white; border: 1px solid lightgray; border-radius: 8px;
     color: black; overflow: hidden; text-align: center; text-decoration: none;
 }
-.topic-box:hover { background-color: beige; border-color: brown; text-decoration: none; }
+.topic-box:hover { background-color: #f5f1ea; border-color: #a9745b; text-decoration: none; }
 .topic-box img { display: block; width: 100%; height: 175px; object-fit: cover; }
 .recipe-topic-content { padding: 28px 16px; text-align: center; }
 .recipe-topic-link { color: black; font-size: 20px; font-weight: bold; }
@@ -90,12 +90,12 @@ h1, h2, h3 { color: black; line-height: 1.3; }
     color: black; font-size: 16px; padding: 9px;
 }
 .form-box textarea { min-height: 95px; resize: vertical; }
-.form-box input:focus, .form-box select:focus, .form-box textarea:focus { border-color: brown; outline: none; }
+.form-box input:focus, .form-box select:focus, .form-box textarea:focus { border-color: #a9745b; outline: none; }
 .form-box input[type="checkbox"], .form-box input[type="radio"] { width: auto; }
 .form-actions { padding-top: 14px; text-align: center; }
 .msg-text { display: block; margin-bottom: 10px; text-align: center; }
 .main-link-button {
-    display: inline-block; background-color: brown; border-radius: 5px;
+    display: inline-block; background-color: #a9745b; border-radius: 5px;
     color: white; font-weight: bold; padding: 11px 24px;
 }
 .main-link-button:hover { background-color: black; color: white; text-decoration: none; }
@@ -108,8 +108,8 @@ h1, h2, h3 { color: black; line-height: 1.3; }
 .table-wrapper { overflow-x: auto; background-color: white; border: 1px solid lightgray; border-radius: 8px; padding: 8px; }
 .users-grid, .text-box table { width: 100%; border-collapse: collapse; text-align: center; }
 .users-grid th, .users-grid td, .text-box th, .text-box td { border: 1px solid lightgray; padding: 10px; }
-.users-grid th, .text-box th { background-color: brown; color: white; font-weight: bold; }
-.users-grid tr:nth-child(even), .text-box tr:nth-child(even) { background-color: beige; }
+.users-grid th, .text-box th { background-color: #a9745b; color: white; font-weight: bold; }
+.users-grid tr:nth-child(even), .text-box tr:nth-child(even) { background-color: #f5f1ea; }
 .admin-count { color: black; font-size: 16px; margin-top: 14px; }
 .footer-text { color: darkgray; font-size: 13px; margin: 30px 0 10px; text-align: center; }
 .site-footer-space { margin-top: 45px; }

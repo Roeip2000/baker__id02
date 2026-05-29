@@ -1,6 +1,6 @@
 <%@ Page Title="רשימת נרשמים" Language="C#" MasterPageFile="~/all.Master" AutoEventWireup="true" CodeBehind="Users.aspx.cs" Inherits="baker_ido.Users" %>
 
-<%-- This admin page shows the registered users from the database --%>
+<%-- דף ניהול זה מציג את המשתמשים הרשומים מתוך מסד הנתונים --%>
 
 <asp:Content ID="c1" ContentPlaceHolderID="TitleContent" runat="server">
     רשימת נרשמים – Ido Bakery & Pastry
@@ -14,15 +14,15 @@
     <div class="form-box admin-box">
         <h2>רשימת נרשמים לקורסים</h2>
         
-        <%-- GridView displays the users table after the C# code loads the data --%>
+        <%-- ה-GridView מציג את טבלת המשתמשים אחרי שקוד ה-C# טוען את הנתונים --%>
         <div class="table-wrapper">
             <asp:GridView ID="gvUsers" runat="server" AutoGenerateColumns="true"
                 CssClass="users-grid"
                 GridLines="Both" BorderColor="Gray">
                 
-                <HeaderStyle BackColor="Brown" ForeColor="White" Font-Bold="true" Height="40px" />
+                <HeaderStyle BackColor="#a9745b" ForeColor="White" Font-Bold="true" Height="40px" />
                 <RowStyle BackColor="White" Height="35px" />
-                <AlternatingRowStyle BackColor="Beige" />
+                <AlternatingRowStyle BackColor="#f5f1ea" />
             </asp:GridView>
         </div>
 
