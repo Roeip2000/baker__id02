@@ -14,11 +14,11 @@ if not exist "%IIS%" (
     exit /b 1
 )
 
-powershell -NoProfile -ExecutionPolicy Bypass -Command "try { Invoke-WebRequest -UseBasicParsing -Uri 'http://localhost:50153/main.aspx' -TimeoutSec 3 | Out-Null; exit 0 } catch { exit 1 }"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "try { Invoke-WebRequest -UseBasicParsing -Uri 'http://localhost:45000/main.aspx' -TimeoutSec 3 | Out-Null; exit 0 } catch { exit 1 }"
 if "%errorlevel%"=="0" (
     echo The site is already running.
     echo Opening the browser...
-    start "" "http://localhost:50153/main.aspx"
+    start "" "http://localhost:45000/main.aspx"
     echo.
     pause
     exit /b 0
@@ -38,17 +38,17 @@ if not "%errorlevel%"=="0" (
 
 echo Starting Ido Bakery site...
 echo The browser will open at:
-echo http://localhost:50153/main.aspx
+echo http://localhost:45000/main.aspx
 echo.
 
-start "IIS Express - Ido Bakery" "%IIS%" /path:"%SITE_DIR%" /port:50153 /clr:v4.0 /systray:false /trace:error
+start "IIS Express - Ido Bakery" "%IIS%" /path:"%SITE_DIR%" /port:45000 /clr:v4.0 /systray:false /trace:error
 
 echo Waiting for the site to start...
-powershell -NoProfile -ExecutionPolicy Bypass -Command "$ok = $false; for ($i = 0; $i -lt 20; $i++) { try { Invoke-WebRequest -UseBasicParsing -Uri 'http://localhost:50153/main.aspx' -TimeoutSec 2 | Out-Null; $ok = $true; break } catch { Start-Sleep -Seconds 1 } }; if ($ok) { exit 0 } else { exit 1 }"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "$ok = $false; for ($i = 0; $i -lt 20; $i++) { try { Invoke-WebRequest -UseBasicParsing -Uri 'http://localhost:45000/main.aspx' -TimeoutSec 2 | Out-Null; $ok = $true; break } catch { Start-Sleep -Seconds 1 } }; if ($ok) { exit 0 } else { exit 1 }"
 
 if "%errorlevel%"=="0" (
     echo Site is running. Opening browser...
-    start "" "http://localhost:50153/main.aspx"
+    start "" "http://localhost:45000/main.aspx"
 ) else (
     echo The site did not start.
     echo Check the IIS Express window for the error message.

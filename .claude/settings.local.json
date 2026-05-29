@@ -36,7 +36,32 @@
       "Bash(\"/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe\" \"C:/Users/pc/source/repos/baker__id02/baker__id02.csproj\" -t:Build -p:Configuration=Debug -verbosity:quiet 2>&1 | head -80)",
       "Bash(\"/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe\" \"C:/Users/pc/source/repos/baker__id02/baker__id02.csproj\" -t:Rebuild -p:Configuration=Debug -verbosity:quiet 2>&1)",
       "Bash(\"/c/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/MSBuild.exe\" \"C:/Users/pc/source/repos/baker__id02/baker__id02.csproj\" -t:Rebuild -p:Configuration=Debug -verbosity:minimal 2>&1)",
-      "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\18\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\" \"C:\\\\Users\\\\pc\\\\source\\\\repos\\\\Roeip2000\\\\baker__id02\\\\baker__id02.sln\" /t:Build /v:minimal /nologo)"
+      "PowerShell(Test-Path *)",
+      "PowerShell(git branch *)",
+      "PowerShell(git stash *)",
+      "PowerShell($msb = \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\18\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\"; & $msb \"baker__id02.sln\" /t:Rebuild /p:Configuration=Debug /v:minimal /nologo 2>&1 | Select-Object -Last 40)",
+      "PowerShell(Out-File *)",
+      "PowerShell(Get-NetTCPConnection *)",
+      "PowerShell(netsh *)",
+      "PowerShell(git status; \"=== branch ===\"; git branch --show-current; \"=== log ===\"; git log --oneline --decorate -20; \"=== remote ===\"; git remote -v)",
+      "PowerShell(git --version; \"=== dotnet ===\"; dotnet --info 2>&1 | Select-Object -First 30)",
+      "PowerShell(\"=== csproj diff ===\"; git diff baker__id02.csproj; \"=== settings diff ===\"; git diff .claude/settings.local.json)",
+      "PowerShell(Get-Process *)",
+      "PowerShell(\"=== origin/master log ===\"; git log --oneline origin/master -3; \"=== what origin has that we don't ===\"; git log --oneline HEAD..origin/master; \"=== applicationhost bindings ===\"; Select-String -Path \".vs\\\\baker__id02\\\\config\\\\applicationhost.config\" -Pattern \"binding|baker__id02|50153|45000\" | Select-Object -First 20)",
+      "PowerShell(git check-ignore *)",
+      "PowerShell(\"=== stash list ===\"; git stash list; \"=== status ===\"; git status --short; \"=== csproj port now ===\"; Select-String -Path \"baker__id02.csproj\" -Pattern \"DevelopmentServerPort|IISUrl\")",
+      "PowerShell(\"=== stash@{0} contents ===\"; git stash show --include-untracked stash@{0} --stat; \"=== does stash have the 45000 change? ===\"; git stash show -p stash@{0} -- baker__id02.csproj | Select-String \"45000|50153\")",
+      "PowerShell(git *)",
+      "PowerShell(\"=== csproj port ===\"; Select-String -Path \"baker__id02.csproj\" -Pattern \"DevelopmentServerPort|IISUrl|StartArguments|CurrentPage\"; \"=== run-site.bat port ===\"; Select-String -Path \"run-site.bat\" -Pattern \"50153|45000\" | Select-Object -First 3; \"=== csproj.user ===\"; Get-Content baker__id02.csproj.user -ErrorAction SilentlyContinue)",
+      "PowerShell(\"=== packages dir ===\"; Test-Path packages; Get-ChildItem packages -Directory -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name; \"=== bin dlls ===\"; Get-ChildItem bin -Filter *.dll -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name)",
+      "PowerShell($msb = \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\18\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\"; & $msb \"baker__id02.csproj\" /t:Build /p:Configuration=Debug /v:minimal /nologo 2>&1 | Select-Object -Last 30)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\18\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\amd64\\\\MSBuild.exe\" baker__id02.sln /t:Build /p:Configuration=Debug /v:minimal /nologo /clp:Summary 2>&1 | Select-Object -Last 40)",
+      "PowerShell(pwd; \"---SLN---\"; Get-ChildItem -Filter *.sln -Recurse | Select-Object FullName; \"---CSPROJ---\"; Get-ChildItem -Recurse -Filter *.csproj | Select-Object FullName)",
+      "PowerShell(\"---ASPX---\"; Get-ChildItem -Recurse -Filter *.aspx | Select-Object FullName; \"---CSS---\"; Get-ChildItem -Recurse -Filter *.css | Select-Object FullName)",
+      "PowerShell(git status; \"---TOP LEVEL---\"; Get-ChildItem -Force | Select-Object Name)",
+      "PowerShell(\"MainStyle.css: \" + \\(Get-Content MainStyle.css | Measure-Object -Line\\).Lines + \" lines\"; \"CourseArea.css: \" + \\(Get-Content CourseArea.css | Measure-Object -Line\\).Lines + \" lines\"; \"Content/Site.css: \" + \\(Get-Content Content/Site.css | Measure-Object -Line\\).Lines + \" lines\")",
+      "PowerShell(msbuild *)",
+      "PowerShell(git status --short; \"--- root file count ---\"; \\(Get-ChildItem -File\\).Count; \"--- Scripts left ---\"; \\(Get-ChildItem Scripts -Recurse -File | Measure-Object\\).Count; \"--- Content left ---\"; Get-ChildItem Content | Select-Object Name)"
     ]
   }
 }

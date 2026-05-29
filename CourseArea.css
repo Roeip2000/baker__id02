@@ -1,13 +1,12 @@
-/* Design for pages that only logged-in users can open */
+/* עיצוב לדפים שרק משתמש מחובר יכול לפתוח */
 .members-master {
     min-height: 100vh; direction: rtl; background-color: #f5f1ea; color: black;
     font-family: Arial, "Segoe UI", sans-serif;
 }
 
-/* Course area header and menu */
+/* כותרת ותפריט של אזור הקורס */
 .members-master .top-header {
     background-color: white; border-bottom: 3px solid #a9745b;
-
     padding: 18px 16px; text-align: center;
 }
 .members-master .top-header h1 { color: black; font-size: 30px; margin: 0 0 10px; }
@@ -23,7 +22,7 @@
 }
 .members-master .members-menu a:hover { background-color: #f5f1ea; border-color: #a9745b; color: black; }
 
-/* Main boxes inside the course area */
+/* התיבות המרכזיות בתוך אזור הקורס */
 .members-master .container { max-width: 1000px; margin: 28px auto; padding: 0 16px; }
 .members-master .intro-box, .members-master .text-box, .members-master .video-frame-box {
     background-color: white; border: 1px solid lightgray; border-radius: 8px;
@@ -33,7 +32,7 @@
 .members-master p { color: black; font-size: 17px; line-height: 1.7; }
 .members-master .user-name { color: #a9745b; }
 
-/* Course and video links */
+/* קישורי הקורסים והסרטונים */
 .members-master .course-links, .members-master .video-links {
     display: grid; gap: 14px; justify-content: center; margin: 18px auto 0;
 }
@@ -48,7 +47,7 @@
     background-color: #f5f1ea; border-color: #a9745b; color: black;
 }
 
-/* Video player area */
+/* אזור נגן הסרטונים */
 .members-master .video-number {
     align-self: center; background-color: #a9745b; border-radius: 5px; color: white;
     font-size: 15px; margin-bottom: 10px; padding: 5px 14px;
@@ -59,7 +58,7 @@
     margin: 0 auto; border: 0; border-radius: 8px;
 }
 
-/* Smaller screens */
+/* התאמה למסכים קטנים (טלפון) */
 @media (max-width: 700px) {
     .members-master .top-header h1 { font-size: 26px; }
     .members-master .container { margin: 20px auto; padding: 0 12px; }
