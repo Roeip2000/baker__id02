@@ -7,14 +7,7 @@ namespace baker_ido
         protected void Page_Load(object sender, EventArgs e)
         {
             // משנה את התפריט בהתאם לשאלה אם המשתמש מחובר
-            if (Session["uName"] != null)
-            {
-                lnkCourseArea.Visible = true;
-            }
-            else
-            {
-                lnkCourseArea.Visible = false;
-            }
+            lnkCourseArea.Visible = Session["uName"] != null;
         }
     }
 }

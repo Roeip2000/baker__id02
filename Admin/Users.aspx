@@ -8,7 +8,7 @@
 <asp:Content ID="Body1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-box admin-box">
         <h2>רשימת נרשמים לקורסים</h2>
-
+        
         <br />
         <div class="admin-count">
             מספר נרשמים: <strong><asp:Label ID="lblCount" runat="server" /></strong>
