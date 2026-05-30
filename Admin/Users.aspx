@@ -8,18 +8,6 @@
 <asp:Content ID="Body1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="form-box admin-box">
         <h2>רשימת נרשמים לקורסים</h2>
-        
-        <%-- ה-GridView מציג את טבלת המשתמשים אחרי שקוד ה-C# טוען את הנתונים --%>
-        <div class="table-wrapper">
-            <asp:GridView ID="gvUsers" runat="server" AutoGenerateColumns="true"
-                CssClass="users-grid"
-                GridLines="Both" BorderColor="Gray">
-                
-                <HeaderStyle BackColor="Brown" ForeColor="White" Font-Bold="true" Height="40px" />
-                <RowStyle BackColor="White" Height="35px" />
-                <AlternatingRowStyle BackColor="Beige" />
-            </asp:GridView>
-        </div>
 
         <br />
         <div class="admin-count">

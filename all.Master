@@ -31,9 +31,6 @@
             <asp:HyperLink ID="lnkCourseArea" runat="server" NavigateUrl="~/Course/CourseArea.aspx" Visible="false">אזור הקורס</asp:HyperLink>
 
             <a href="/Admin/Users.aspx">ניהול</a>
-
-            <asp:Button ID="btnLogout" runat="server" Text="התנתק" OnClick="btnLogout_Click"
-                Visible="false" CausesValidation="false" CssClass="logout-button" />
         </div>
     </div>
 

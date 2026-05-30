@@ -10,21 +10,11 @@ namespace baker_ido
             if (Session["uName"] != null)
             {
                 lnkCourseArea.Visible = true;
-                btnLogout.Visible = true;
             }
             else
             {
                 lnkCourseArea.Visible = false;
-                btnLogout.Visible = false;
             }
-        }
-
-        protected void btnLogout_Click(object sender, EventArgs e)
-        {
-            // מנקה את ה-Session כדי לנתק את המשתמש
-            Session.Abandon();
-            Session.Clear();
-            Response.Redirect("~/Pages/main.aspx");
         }
     }
 }
