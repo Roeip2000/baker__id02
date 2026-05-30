@@ -4,3 +4,50 @@
 .user-name {
     color: brown;
 }
+
+/* תיבת הסרטון */
+.video-frame-box {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* קישורי בחירת הסרטונים (באמצע) */
+.video-links {
+    text-align: center;
+}
+.video-link {
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    color: brown;
+    font-weight: bold;
+    padding: 15px;
+}
+.video-number {
+    display: block;
+    background-color: brown;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+.video-title {
+    display: block;
+    font-size: 18px;
+}
+
+/* נגן הסרטון */
+.video-frame-box iframe {
+    display: block;
+    width: 800px;
+    height: 450px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+}
