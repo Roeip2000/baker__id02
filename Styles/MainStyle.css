@@ -1,9 +1,10 @@
 /* ===== עיצוב כללי לכל האתר ===== */
 body {
     direction: rtl;
-    background-color: beige;
-    color: black;
-    font-family: Arial;
+    background-color: #faf7f2;
+    color: #333;
+    font-family: 'Heebo', Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
 }
 a {
@@ -35,7 +36,7 @@ input[type="password"]::-ms-reveal {
     padding: 10px;
 }
 .nav-main a {
-    padding: 5px 10px;
+    padding: 6px 12px;
     color: brown;
     text-decoration: none;
 }
@@ -45,8 +46,7 @@ input[type="password"]::-ms-reveal {
     background-color: brown;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    padding: 11px 22px;
     font-size: 16px;
     cursor: pointer;
 }
@@ -63,15 +63,13 @@ input[type="password"]::-ms-reveal {
 
 /* ===== התיבה המרכזית והתיבות הלבנות ===== */
 .container {
-    width: 900px;
-    margin: 20px auto;
+    margin: 20px 0;
+    padding: 0 20px;
 }
 .text-box, .intro-box, .form-box {
     background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
+    padding: 24px;
+    margin-bottom: 22px;
 }
 
 /* ===== תמונה ראשית ===== */
@@ -80,7 +78,6 @@ input[type="password"]::-ms-reveal {
     width: 350px;
     max-width: 100%;
     margin: 15px auto;
-    border-radius: 10px;
 }
 
 /* ===== כרטיסי נושא (אזור הקורס) ===== */
@@ -96,10 +93,8 @@ input[type="password"]::-ms-reveal {
     display: inline-block;
     width: 280px;
     max-width: 100%;
-    margin: 10px;
+    margin: 12px;
     background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 10px;
     text-align: center;
     vertical-align: top;
     text-decoration: none;
@@ -107,7 +102,6 @@ input[type="password"]::-ms-reveal {
 .topic-box img {
     width: 100%;
     height: 175px;
-    border-radius: 10px 10px 0 0;
     object-fit: cover;
     display: block;
 }
@@ -123,19 +117,15 @@ input[type="password"]::-ms-reveal {
 /* ===== דפי המתכונים ===== */
 .recipe-box {
     background-color: white;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
+    margin: 0 0 20px;
+    padding: 24px 28px;
 }
 .recipe-img {
     display: block;
-    width: 300px;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin: 0 auto 15px;
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    margin: 0 0 18px;
 }
 .recipe-text {
     text-align: right;
@@ -197,7 +187,6 @@ input[type="password"]::-ms-reveal {
     max-width: 560px;
     height: 315px;
     border: none;
-    border-radius: 10px;
 }
 
 /* ===== טפסים (התחברות והרשמה) ===== */
@@ -211,9 +200,8 @@ input[type="password"]::-ms-reveal {
 .input-box {
     width: 250px;
     max-width: 100%;
-    padding: 6px;
-    border: 1px solid gray;
-    border-radius: 5px;
+    padding: 8px;
+    border: 1px solid #ccc;
 }
 .form-actions {
     text-align: center;
