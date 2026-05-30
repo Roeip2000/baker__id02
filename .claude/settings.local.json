@@ -75,7 +75,9 @@
       "Bash(where.exe dotnet *)",
       "Bash(powershell.exe *)",
       "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\18\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\amd64\\\\MSBuild.exe\" \"C:\\\\Users\\\\roeic\\\\Documents\\\\Projects\\\\baker__id02\\\\baker__id02.sln\" /t:Build /p:Configuration=Debug /p:Platform=\"Any CPU\" /verbosity:minimal /nologo /clp:Summary)",
-      "Bash(git status *)"
+      "Bash(git status *)",
+      "Bash(git fetch *)",
+      "Bash(git pull *)"
     ]
   }
 }
