@@ -31,11 +31,12 @@ namespace baker_ido
 
         private void BindUsers()
         {
-            // שאילתת SELECT זו סופרת את מספר הנרשמים המוצג בדף הניהול
+            // שאילתת SELECT זו מביאה את העמודות שמוצגות בטבלת הניהול
             string sql = "SELECT uName, fName, gender, isAdmin FROM Users";
             DataTable dt = Helper.ExecuteDataTable("Database1.mdf", sql);
 
-            lblCount.Text = dt.Rows.Count.ToString();
+            gvUsers.DataSource = dt;
+            gvUsers.DataBind();
         }
     }
 }
