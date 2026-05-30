@@ -15,16 +15,14 @@
 </asp:Content>
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="recipes-wrapper">
-
         <div class="recipe-box">
-
-            <%-- התמונה למעלה כבאנר, לפני המרכיבים --%>
-            <img src="/picture/choc_chip_cookies.jpg" class="recipe-img" alt="עוגיות שוקולד צ'יפס" />
 
             <div class="recipe-text">
 
                 <h3>עוגיות שוקולד צ'יפס קלאסיות</h3>
+
+                <%-- התמונה מתחת לכותרת המתכון --%>
+                <img src="/picture/choc_chip_cookies.jpg" class="recipe-img" alt="עוגיות שוקולד צ'יפס" />
                 <p class="recipe-intro">
                     עוגיות קלאסיות עם שוליים פריכים ומרכז רך ומלא שוקולד – מתכון פשוט וזריז שמתאים גם למתחילים,
                     ויוצא ממנו כ־20 עוגיות.
@@ -65,7 +63,5 @@
 
             </div>
         </div>
-
-    </div>
 
 </asp:Content>

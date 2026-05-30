@@ -15,16 +15,14 @@
 </asp:Content>
 <asp:Content ID="c3" ContentPlaceHolderID="MainContent" runat="server">
 
-    <div class="recipes-wrapper">
-
         <div class="recipe-box">
-
-            <%-- התמונה למעלה כבאנר, לפני המרכיבים --%>
-            <img src="/picture/chocolet.jpeg" class="recipe-img" alt="עוגת שוקולד בחושה" />
 
             <div class="recipe-text">
 
                 <h3>עוגת שוקולד בחושה</h3>
+
+                <%-- התמונה מתחת לכותרת המתכון --%>
+                <img src="/picture/chocolet.jpeg" class="recipe-img" alt="עוגת שוקולד בחושה" />
                 <p class="recipe-intro">
                     עוגת שוקולד עשירה וקלה להכנה – מערבבים הכול בקערה אחת ואופים, בלי מיקסר ובלי שלבים מסובכים.
                     מושלמת כשרוצים משהו מתוק וביתי מהר.
@@ -61,7 +59,5 @@
 
             </div>
         </div>
-
-    </div>
 
 </asp:Content>

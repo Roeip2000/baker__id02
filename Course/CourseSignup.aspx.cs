@@ -1,4 +1,5 @@
 using System;
+using System.Data;
 using System.Data.SqlClient;
 
 public partial class CourseSignup : System.Web.UI.Page
@@ -7,60 +8,47 @@ public partial class CourseSignup : System.Web.UI.Page
     {
     }
 
+    // הפעולה הזו רצה כשלוחצים על כפתור ההרשמה
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        // עוצר את ההרשמה אם שדות החובה ריקים
+        // אם אחד משדות החובה ריק - לא ממשיכים בהרשמה
         if (!Page.IsValid) return;
 
-        try
+        // פותחים חיבור למסד הנתונים (נסגר אוטומטית בסוף ה-using)
+        using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
         {
-            // פותח את מסד הנתונים ומוסיף את המשתמש החדש לטבלת Users
-            using (SqlConnection conn = Helper.ConnectToDb("Database1.mdf"))
-            {
-                conn.Open();
+            conn.Open();
 
-                // מוסיף משתמש רק אם שם המשתמש לא קיים כבר
-                string sql = @"INSERT INTO Users (uName, fName, gender, pw)
-                               SELECT @uName, @fName, @gender, @pw
-                               WHERE NOT EXISTS (SELECT 1 FROM Users WHERE uName=@uName)";
+            // שלב 1: בודקים אם שם המשתמש כבר קיים בטבלה
+            string checkSql = "SELECT uName FROM Users WHERE uName=@uName";
+            SqlCommand checkCmd = new SqlCommand(checkSql, conn);
+            checkCmd.Parameters.AddWithValue("@uName", txtUserName.Text.Trim());
 
-                SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@uName", txtUserName.Text.Trim());
-                cmd.Parameters.AddWithValue("@fName", txtFirstName.Text.Trim());
-                cmd.Parameters.AddWithValue("@gender", ddlGender.SelectedValue);
-                cmd.Parameters.AddWithValue("@pw", txtPassword.Text.Trim());
+            // ממלאים את התוצאה בטבלה זמנית בזיכרון
+            SqlDataAdapter da = new SqlDataAdapter(checkCmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
 
-                int rowsAffected = cmd.ExecuteNonQuery();
-                if (rowsAffected == 0)
-                {
-                    lblMsg.ForeColor = System.Drawing.Color.Red;
-                    lblMsg.Text = "שם משתמש כבר קיים, בחר שם אחר";
-                    return;
-                }
-            }
-
-            // הודעת הצלחה למשתמש
-            lblMsg.ForeColor = System.Drawing.Color.Green;
-            lblMsg.Text = "ההרשמה בוצעה בהצלחה!";
-        }
-        catch (SqlException ex)
-        {
-            // אם שם המשתמש נוסף כבר, מציג הודעה ברורה במקום שגיאת מסד נתונים
-            if (ex.Number == 2627 || ex.Number == 2601)
+            // אם נמצאה שורה - השם כבר תפוס, מציגים הודעה ועוצרים
+            if (dt.Rows.Count > 0)
             {
                 lblMsg.ForeColor = System.Drawing.Color.Red;
                 lblMsg.Text = "שם משתמש כבר קיים, בחר שם אחר";
                 return;
             }
 
-            lblMsg.ForeColor = System.Drawing.Color.Red;
-            lblMsg.Text = "שגיאה בהרשמה, נסה שוב";
+            // שלב 2: השם פנוי - מוסיפים את המשתמש החדש לטבלת Users
+            string insertSql = "INSERT INTO Users (uName, fName, gender, pw) VALUES (@uName, @fName, @gender, @pw)";
+            SqlCommand insertCmd = new SqlCommand(insertSql, conn);
+            insertCmd.Parameters.AddWithValue("@uName", txtUserName.Text.Trim());
+            insertCmd.Parameters.AddWithValue("@fName", txtFirstName.Text.Trim());
+            insertCmd.Parameters.AddWithValue("@gender", ddlGender.SelectedValue);
+            insertCmd.Parameters.AddWithValue("@pw", txtPassword.Text.Trim());
+            insertCmd.ExecuteNonQuery();
         }
-        catch (Exception)
-        {
-            // אם בכל זאת קרתה שגיאה במסד הנתונים - מציג הודעה ידידותית במקום לקרוס
-            lblMsg.ForeColor = System.Drawing.Color.Red;
-            lblMsg.Text = "שגיאה בהרשמה, נסה שוב";
-        }
+
+        // מציגים הודעת הצלחה למשתמש
+        lblMsg.ForeColor = System.Drawing.Color.Green;
+        lblMsg.Text = "ההרשמה בוצעה בהצלחה!";
     }
 }

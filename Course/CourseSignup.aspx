@@ -14,7 +14,7 @@
 
     <asp:Label ID="lblMsg" runat="server" CssClass="msg-text"></asp:Label>
 
-    <table class="form-table">
+    <table>
 
         <tr>
             <td>שם משתמש:</td>

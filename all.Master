@@ -37,9 +37,7 @@
     <div class="container">
         <asp:ContentPlaceHolder ID="MainContent" runat="server" />
         
-        <div class="site-footer-space">
-            <p class="footer-text">© 2026 Ido Bakery & Pastry</p>
-        </div>
+        <p class="footer-text">© 2026 Ido Bakery & Pastry</p>
     </div>
 
 </form>

@@ -7,7 +7,7 @@
     <div class="form-box permission-box">
         
         <h2 class="permission-title">אין לך הרשאה</h2>
-        <p class="permission-text">
+        <p>
             הדף הזה מיועד למנהל האתר בלבד.
             <br />
             אפשר לחזור לדף הראשי ולהמשיך לגלוש באתר.
